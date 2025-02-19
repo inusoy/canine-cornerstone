@@ -27,7 +27,10 @@ const MaintenancePage = () => {
           Zapraszamy wkrótce!
         </p>
         <div className="mt-8 text-sm text-muted-foreground">
-          Kontakt: info@szczekszczek.pl
+          Kontakt: 
+          <a href="tel:+48531931532" className="hover:text-primary ml-1">
+            +48 531 931 532
+          </a>
         </div>
       </div>
     </div>
