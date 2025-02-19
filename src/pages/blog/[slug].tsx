@@ -93,12 +93,20 @@ const BlogPost = () => {
             {/* Sidebar */}
             <aside className="lg:col-span-4 space-y-8">
               <div className="sticky top-24">
-                {/* Instagram Embed Placeholder */}
+                {/* Instagram Embed */}
                 <div className="bg-muted p-4 rounded-lg mb-8">
                   <h3 className="text-lg font-semibold mb-4">Follow Us on Instagram</h3>
-                  <div className="aspect-square bg-card rounded-lg flex items-center justify-center">
-                    <Instagram className="h-8 w-8 text-muted-foreground" />
-                    {/* Add Instagram embed code here */}
+                  <div className="aspect-square bg-card rounded-lg">
+                    {currentPost.instagramEmbed ? (
+                      <div 
+                        dangerouslySetInnerHTML={{ __html: currentPost.instagramEmbed }} 
+                        className="w-full h-full"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Instagram className="h-8 w-8 text-muted-foreground" />
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -174,6 +182,7 @@ const blogPosts = [
     slug: "understanding-dog-body-language",
     tags: ["Training", "Behavior", "Communication"],
     featuredQuote: "A wagging tail doesn't always mean a happy dog - understanding the nuances of canine body language is key to better communication.",
+    instagramEmbed: '<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3UAq7AIUZ_/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote><script async src="//www.instagram.com/embed.js"></script>',
   },
   {
     title: "Positive Reinforcement: A Guide for New Dog Owners",
@@ -204,6 +213,7 @@ const blogPosts = [
     slug: "positive-reinforcement-guide",
     tags: ["Training", "Positive Reinforcement", "Beginner Tips"],
     featuredQuote: "The timing of rewards is crucial - they must be immediate to create a clear connection with the desired behavior.",
+    instagramEmbed: '<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C3mAL-7I4uR/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote><script async src="//www.instagram.com/embed.js"></script>',
   }
 ];
 
