@@ -1,6 +1,7 @@
 
 import { useLocation, Navigate } from "react-router-dom";
 import { PawPrint } from "lucide-react";
+import { SocialLinks } from "@/components/navigation/SocialLinks";
 
 const MaintenancePage = () => {
   const { search } = useLocation();
@@ -27,10 +28,8 @@ const MaintenancePage = () => {
           Zapraszamy wkrótce!
         </p>
         <div className="mt-8 text-sm text-muted-foreground">
-          Kontakt: 
-          <a href="tel:+48531931532" className="hover:text-primary ml-1">
-            +48 531 931 532
-          </a>
+          <div className="mb-2">Znajdź nas na:</div>
+          <SocialLinks className="justify-center" showLabels />
         </div>
       </div>
     </div>
