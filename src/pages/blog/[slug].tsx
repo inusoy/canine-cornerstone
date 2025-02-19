@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 const BlogPost = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
   
   // Find current post and adjacent posts
   const currentPostIndex = blogPosts.findIndex(post => post.slug === slug);
@@ -36,12 +37,13 @@ const BlogPost = () => {
               <div className="space-y-4">
                 <div className="flex flex-wrap gap-2">
                   {currentPost.tags.map((tag, index) => (
-                    <span
+                    <Link
                       key={index}
-                      className="px-3 py-1 bg-muted text-sm rounded-full"
+                      to={`/search?q=${encodeURIComponent(tag)}`}
+                      className="px-3 py-1 bg-muted hover:bg-primary hover:text-primary-foreground text-sm rounded-full transition-colors"
                     >
                       {tag}
-                    </span>
+                    </Link>
                   ))}
                 </div>
                 <h1 className="text-4xl font-semibold">{currentPost.title}</h1>
