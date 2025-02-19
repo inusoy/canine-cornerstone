@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import { PawPrint, Instagram, Menu, X, Search as SearchIcon } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { services } from "@/components/ServicesSection";
 import { blogPosts } from "@/pages/blog/[slug]";
@@ -17,10 +18,23 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleSearch = (value: string) => {
-    setIsSearchOpen(false);
-    navigate(`/search?q=${encodeURIComponent(value)}`);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleNavigation = (sectionId: string) => {
+    if (location.pathname === "/") {
+      scrollToSection(sectionId);
+    } else {
+      navigate("/");
+      // Wait for navigation to complete before scrolling
+      setTimeout(() => scrollToSection(sectionId), 100);
+    }
   };
 
   return (
@@ -37,9 +51,12 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="relative group">
-              <span className="hover:text-primary transition-colors cursor-pointer">
+              <button
+                onClick={() => handleNavigation("services")}
+                className="hover:text-primary transition-colors cursor-pointer"
+              >
                 Training
-              </span>
+              </button>
               <div className="absolute left-0 mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="p-2 space-y-1">
                   <Link
@@ -75,11 +92,20 @@ const Navigation = () => {
                 </div>
               </div>
             </div>
+            <button
+              onClick={() => handleNavigation("testimonials")}
+              className="hover:text-primary transition-colors"
+            >
+              Testimonials
+            </button>
+            <button
+              onClick={() => handleNavigation("about")}
+              className="hover:text-primary transition-colors"
+            >
+              About
+            </button>
             <Link to="/blog" className="hover:text-primary transition-colors">
               Blog
-            </Link>
-            <Link to="/contact" className="hover:text-primary transition-colors">
-              Contact
             </Link>
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -100,7 +126,7 @@ const Navigation = () => {
             <Button
               variant="default"
               className="hover-lift"
-              onClick={() => document.getElementById("contact")?.scrollIntoView()}
+              onClick={() => handleNavigation("contact")}
             >
               Get Started
             </Button>
@@ -122,7 +148,15 @@ const Navigation = () => {
         <div className="md:hidden fixed inset-0 top-[65px] bg-background z-50">
           <div className="p-4 space-y-4 bg-background">
             <div className="space-y-2">
-              <h3 className="text-sm font-medium text-muted-foreground px-4">Training</h3>
+              <button
+                onClick={() => {
+                  handleNavigation("services");
+                  setIsMenuOpen(false);
+                }}
+                className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
+              >
+                Training Programs
+              </button>
               <Link
                 to="/training/nosework"
                 className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
@@ -160,19 +194,30 @@ const Navigation = () => {
               </Link>
             </div>
             <div className="border-t pt-4 space-y-4">
+              <button
+                onClick={() => {
+                  handleNavigation("testimonials");
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
+              >
+                Testimonials
+              </button>
+              <button
+                onClick={() => {
+                  handleNavigation("about");
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
+              >
+                About
+              </button>
               <Link
                 to="/blog"
                 className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Blog
-              </Link>
-              <Link
-                to="/contact"
-                className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
               </Link>
               <a
                 href="https://www.instagram.com/szczekszczekwroclaw/"
@@ -189,7 +234,7 @@ const Navigation = () => {
                   variant="default"
                   className="w-full"
                   onClick={() => {
-                    document.getElementById("contact")?.scrollIntoView();
+                    handleNavigation("contact");
                     setIsMenuOpen(false);
                   }}
                 >
