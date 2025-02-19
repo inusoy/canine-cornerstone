@@ -34,14 +34,17 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-4">
             <img 
               src="/lovable-uploads/23489cfb-856c-4f3f-908f-3aa9d5cb11b8.png" 
               alt="Szczek Szczek Logo" 
               className="h-8 w-8"
             />
-            <Link to="/" className="font-bryndan text-xl">
-              Szczek Szczek
+            <Link to="/" className="flex flex-col">
+              <span className="font-bryndan text-xl leading-tight">Szczek Szczek</span>
+              <span className="font-josefin text-xs tracking-wide text-muted-foreground">
+                Marta Stach | Trenerka i Behawiorystka Psów
+              </span>
             </Link>
           </div>
           
