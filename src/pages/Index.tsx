@@ -1,8 +1,8 @@
-
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { PawPrint } from "lucide-react";
+import { PawPrint, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   useEffect(() => {
@@ -31,22 +31,64 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <PawPrint className="h-6 w-6 text-primary animate-float" />
-              <span className="font-playfair text-xl font-semibold">
+              <Link to="/" className="font-playfair text-xl font-semibold">
                 Canine Academy
-              </span>
+              </Link>
             </div>
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="hover:text-primary transition-colors">
-                Services
-              </a>
-              <a href="#about" className="hover:text-primary transition-colors">
-                About
-              </a>
+              <div className="relative group">
+                <span className="hover:text-primary transition-colors cursor-pointer">
+                  Training
+                </span>
+                <div className="absolute left-0 mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="p-2 space-y-1">
+                    <Link
+                      to="/training/nosework"
+                      className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
+                    >
+                      Nosework
+                    </Link>
+                    <Link
+                      to="/training/obedience"
+                      className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
+                    >
+                      Obedience
+                    </Link>
+                    <Link
+                      to="/training/dog-school"
+                      className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
+                    >
+                      Dog School
+                    </Link>
+                    <Link
+                      to="/training/puppy-kindergarten"
+                      className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
+                    >
+                      Puppy Kindergarten
+                    </Link>
+                    <Link
+                      to="/training/socialisation-walks"
+                      className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
+                    >
+                      Socialisation Walks
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <Link to="/blog" className="hover:text-primary transition-colors">
+                Blog
+              </Link>
+              <Link to="/contact" className="hover:text-primary transition-colors">
+                Contact
+              </Link>
               <a
-                href="#testimonials"
+                href="https://www.instagram.com/szczekszczekwroclaw/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-primary transition-colors"
+                aria-label="Visit our Instagram"
               >
-                Testimonials
+                <Instagram className="h-5 w-5" />
               </a>
               <Button
                 variant="default"
@@ -100,6 +142,13 @@ const Index = () => {
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-muted-foreground mb-4">{service.description}</p>
                 <p className="font-semibold text-primary">{service.price}</p>
+                <Button
+                  variant="outline"
+                  className="mt-4 w-full"
+                  asChild
+                >
+                  <Link to={service.link}>Learn More</Link>
+                </Button>
               </Card>
             ))}
           </div>
@@ -220,18 +269,21 @@ const services = [
     description:
       "Master essential commands and establish a strong foundation for good behavior.",
     price: "From $299",
+    link: "/training/obedience",
   },
   {
-    title: "Advanced Training",
+    title: "Puppy Kindergarten",
     description:
-      "Take your dog's skills to the next level with advanced commands and off-leash control.",
-    price: "From $499",
+      "Give your puppy the best start with early socialization and basic training.",
+    price: "From $249",
+    link: "/training/puppy-kindergarten",
   },
   {
-    title: "Behavior Modification",
+    title: "Specialized Training",
     description:
-      "Address specific behavioral issues with personalized training programs.",
+      "From nosework to socialisation walks, find the perfect program for your dog.",
     price: "From $399",
+    link: "/training/nosework",
   },
 ];
 
