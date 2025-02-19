@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { PawPrint, Menu, X, Search as SearchIcon } from "lucide-react";
+import { Menu, X, Search as SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "./navigation/SocialLinks";
@@ -35,9 +35,13 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <PawPrint className="h-6 w-6 text-primary animate-float" />
+            <img 
+              src="/lovable-uploads/23489cfb-856c-4f3f-908f-3aa9d5cb11b8.png" 
+              alt="Szczek Szczek Logo" 
+              className="h-8 w-8"
+            />
             <Link to="/" className="font-playfair text-xl font-semibold">
-              Canine Academy
+              Szczek Szczek
             </Link>
           </div>
           
