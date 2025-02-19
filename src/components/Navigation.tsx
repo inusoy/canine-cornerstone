@@ -1,18 +1,12 @@
 
 import { useState } from "react";
-import { PawPrint, Instagram, Facebook, Menu, X, Search as SearchIcon } from "lucide-react";
+import { PawPrint, Menu, X, Search as SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { services } from "@/components/ServicesSection";
-import { blogPosts } from "@/pages/blog/[slug]";
-import {
-  CommandDialog,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command";
+import { SocialLinks } from "./navigation/SocialLinks";
+import { TrainingMenu } from "./navigation/TrainingMenu";
+import { SearchDialog } from "./navigation/SearchDialog";
+import { MobileMenu } from "./navigation/MobileMenu";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,7 +26,6 @@ const Navigation = () => {
       scrollToSection(sectionId);
     } else {
       navigate("/");
-      // Wait for navigation to complete before scrolling
       setTimeout(() => scrollToSection(sectionId), 100);
     }
   };
@@ -65,38 +58,7 @@ const Navigation = () => {
                 Training
               </button>
               <div className="absolute left-0 mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="p-2 space-y-1">
-                  <Link
-                    to="/training/nosework"
-                    className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                  >
-                    Nosework
-                  </Link>
-                  <Link
-                    to="/training/obedience"
-                    className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                  >
-                    Obedience
-                  </Link>
-                  <Link
-                    to="/training/dog-school"
-                    className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                  >
-                    Dog School
-                  </Link>
-                  <Link
-                    to="/training/puppy-kindergarten"
-                    className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                  >
-                    Puppy Kindergarten
-                  </Link>
-                  <Link
-                    to="/training/socialisation-walks"
-                    className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                  >
-                    Socialisation Walks
-                  </Link>
-                </div>
+                <TrainingMenu className="p-2 space-y-1" />
               </div>
             </div>
             <button
@@ -114,26 +76,7 @@ const Navigation = () => {
             <Link to="/blog" className="hover:text-primary transition-colors">
               Blog
             </Link>
-            <div className="flex items-center space-x-4">
-              <a
-                href="https://www.instagram.com/szczekszczekwroclaw/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-                aria-label="Visit our Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=100089173953561"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary transition-colors"
-                aria-label="Visit our Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-            </div>
+            <SocialLinks />
             <Button
               variant="default"
               className="hover-lift"
@@ -155,179 +98,15 @@ const Navigation = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-[65px] bg-background z-50">
-          <div className="p-4 space-y-4 bg-background">
-            <button
-              onClick={() => {
-                setIsSearchOpen(true);
-                setIsMenuOpen(false);
-              }}
-              className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
-            >
-              Search
-            </button>
-            <div className="space-y-2">
-              <button
-                onClick={() => {
-                  handleNavigation("services");
-                  setIsMenuOpen(false);
-                }}
-                className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
-              >
-                Training Programs
-              </button>
-              <Link
-                to="/training/nosework"
-                className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Nosework
-              </Link>
-              <Link
-                to="/training/obedience"
-                className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Obedience
-              </Link>
-              <Link
-                to="/training/dog-school"
-                className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Dog School
-              </Link>
-              <Link
-                to="/training/puppy-kindergarten"
-                className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Puppy Kindergarten
-              </Link>
-              <Link
-                to="/training/socialisation-walks"
-                className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Socialisation Walks
-              </Link>
-            </div>
-            <div className="border-t pt-4 space-y-4">
-              <button
-                onClick={() => {
-                  handleNavigation("about");
-                  setIsMenuOpen(false);
-                }}
-                className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
-              >
-                About
-              </button>
-              <button
-                onClick={() => {
-                  handleNavigation("testimonials");
-                  setIsMenuOpen(false);
-                }}
-                className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
-              >
-                Testimonials
-              </button>
-              <Link
-                to="/blog"
-                className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <div className="flex items-center space-x-4 px-4 py-2">
-                <a
-                  href="https://www.instagram.com/szczekszczekwroclaw/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 hover:text-primary transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Instagram className="h-5 w-5" />
-                  <span>Instagram</span>
-                </a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100089173953561"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 hover:text-primary transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Facebook className="h-5 w-5" />
-                  <span>Facebook</span>
-                </a>
-              </div>
-              <div className="px-4">
-                <Button
-                  variant="default"
-                  className="w-full"
-                  onClick={() => {
-                    handleNavigation("contact");
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  Get Started
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      <MobileMenu
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        onSearchOpen={() => setIsSearchOpen(true)}
+        onNavigation={handleNavigation}
+      />
 
       {/* Search Dialog */}
-      <CommandDialog open={isSearchOpen} onOpenChange={setIsSearchOpen}>
-        <CommandInput placeholder="Search trainings and blog posts..." />
-        <CommandList>
-          <CommandEmpty>No results found.</CommandEmpty>
-          <CommandGroup heading="Training Programs">
-            {services.map((service) => (
-              <CommandItem
-                key={service.link}
-                onSelect={() => {
-                  setIsSearchOpen(false);
-                  navigate(service.link);
-                }}
-              >
-                <div className="flex flex-col">
-                  <span>{service.title}</span>
-                  <span className="text-sm text-muted-foreground">
-                    {service.description}
-                  </span>
-                </div>
-              </CommandItem>
-            ))}
-          </CommandGroup>
-          <CommandGroup heading="Blog Posts">
-            {blogPosts.map((post) => (
-              <CommandItem
-                key={post.slug}
-                onSelect={() => {
-                  setIsSearchOpen(false);
-                  navigate(`/blog/${post.slug}`);
-                }}
-              >
-                <div className="flex flex-col">
-                  <span>{post.title}</span>
-                  <div className="flex gap-2 mt-1">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </CommandItem>
-            ))}
-          </CommandGroup>
-        </CommandList>
-      </CommandDialog>
+      <SearchDialog open={isSearchOpen} onOpenChange={setIsSearchOpen} />
     </nav>
   );
 };
