@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { PawPrint, Instagram, Menu, X, Search as SearchIcon } from "lucide-react";
+import { PawPrint, Instagram, Facebook, Menu, X, Search as SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { services } from "@/components/ServicesSection";
@@ -50,6 +50,13 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="hover:text-primary transition-colors"
+              aria-label="Open search"
+            >
+              <SearchIcon className="h-5 w-5" />
+            </button>
             <div className="relative group">
               <button
                 onClick={() => handleNavigation("services")}
@@ -93,36 +100,40 @@ const Navigation = () => {
               </div>
             </div>
             <button
-              onClick={() => handleNavigation("testimonials")}
-              className="hover:text-primary transition-colors"
-            >
-              Testimonials
-            </button>
-            <button
               onClick={() => handleNavigation("about")}
               className="hover:text-primary transition-colors"
             >
               About
             </button>
+            <button
+              onClick={() => handleNavigation("testimonials")}
+              className="hover:text-primary transition-colors"
+            >
+              Testimonials
+            </button>
             <Link to="/blog" className="hover:text-primary transition-colors">
               Blog
             </Link>
-            <button
-              onClick={() => setIsSearchOpen(true)}
-              className="hover:text-primary transition-colors"
-              aria-label="Open search"
-            >
-              <SearchIcon className="h-5 w-5" />
-            </button>
-            <a
-              href="https://www.instagram.com/szczekszczekwroclaw/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-              aria-label="Visit our Instagram"
-            >
-              <Instagram className="h-5 w-5" />
-            </a>
+            <div className="flex items-center space-x-4">
+              <a
+                href="https://www.instagram.com/szczekszczekwroclaw/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+                aria-label="Visit our Instagram"
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=100089173953561"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+                aria-label="Visit our Facebook"
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+            </div>
             <Button
               variant="default"
               className="hover-lift"
@@ -147,6 +158,15 @@ const Navigation = () => {
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 top-[65px] bg-background z-50">
           <div className="p-4 space-y-4 bg-background">
+            <button
+              onClick={() => {
+                setIsSearchOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
+            >
+              Search
+            </button>
             <div className="space-y-2">
               <button
                 onClick={() => {
@@ -196,21 +216,21 @@ const Navigation = () => {
             <div className="border-t pt-4 space-y-4">
               <button
                 onClick={() => {
-                  handleNavigation("testimonials");
-                  setIsMenuOpen(false);
-                }}
-                className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
-              >
-                Testimonials
-              </button>
-              <button
-                onClick={() => {
                   handleNavigation("about");
                   setIsMenuOpen(false);
                 }}
                 className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
               >
                 About
+              </button>
+              <button
+                onClick={() => {
+                  handleNavigation("testimonials");
+                  setIsMenuOpen(false);
+                }}
+                className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
+              >
+                Testimonials
               </button>
               <Link
                 to="/blog"
@@ -219,16 +239,28 @@ const Navigation = () => {
               >
                 Blog
               </Link>
-              <a
-                href="https://www.instagram.com/szczekszczekwroclaw/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-4 py-2 hover:bg-muted rounded-md transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Instagram className="h-5 w-5" />
-                <span>Instagram</span>
-              </a>
+              <div className="flex items-center space-x-4 px-4 py-2">
+                <a
+                  href="https://www.instagram.com/szczekszczekwroclaw/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Instagram className="h-5 w-5" />
+                  <span>Instagram</span>
+                </a>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100089173953561"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 hover:text-primary transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Facebook className="h-5 w-5" />
+                  <span>Facebook</span>
+                </a>
+              </div>
               <div className="px-4">
                 <Button
                   variant="default"
