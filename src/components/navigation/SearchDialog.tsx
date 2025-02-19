@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import { services } from "@/components/ServicesSection";
+import { allProducts } from "@/data/products";
 import { blogPosts } from "@/pages/blog/[slug]";
 import {
   CommandDialog,
@@ -25,18 +25,18 @@ export const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
       <CommandList>
         <CommandEmpty>No results found.</CommandEmpty>
         <CommandGroup heading="Training Programs">
-          {services.map((service) => (
+          {allProducts.map((product) => (
             <CommandItem
-              key={service.link}
+              key={product.id}
               onSelect={() => {
                 onOpenChange(false);
-                navigate(service.link);
+                navigate(product.link);
               }}
             >
               <div className="flex flex-col">
-                <span>{service.title}</span>
+                <span>{product.title}</span>
                 <span className="text-sm text-muted-foreground">
-                  {service.description}
+                  {product.description}
                 </span>
               </div>
             </CommandItem>

@@ -2,7 +2,7 @@
 import { useSearchParams } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { services } from "@/components/ServicesSection";
+import { allProducts } from "@/data/products";
 import { blogPosts } from "@/pages/blog/[slug]";
 import { Link } from "react-router-dom";
 
@@ -10,11 +10,11 @@ const Search = () => {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q")?.toLowerCase() || "";
 
-  // Filter services
-  const matchedServices = services.filter(
-    (service) =>
-      service.title.toLowerCase().includes(query) ||
-      service.description.toLowerCase().includes(query)
+  // Filter products
+  const matchedProducts = allProducts.filter(
+    (product) =>
+      product.title.toLowerCase().includes(query) ||
+      product.description.toLowerCase().includes(query)
   );
 
   // Filter blog posts
@@ -34,28 +34,28 @@ const Search = () => {
             Search Results for "{query}"
           </h1>
 
-          {matchedServices.length === 0 && matchedPosts.length === 0 && (
+          {matchedProducts.length === 0 && matchedPosts.length === 0 && (
             <p className="text-muted-foreground">
               No results found. Try a different search term.
             </p>
           )}
 
-          {matchedServices.length > 0 && (
+          {matchedProducts.length > 0 && (
             <div className="mb-12">
               <h2 className="text-2xl font-semibold mb-4">Training Programs</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                {matchedServices.map((service) => (
+                {matchedProducts.map((product) => (
                   <Link
-                    key={service.link}
-                    to={service.link}
+                    key={product.id}
+                    to={product.link}
                     className="block p-6 bg-card hover:bg-muted rounded-lg transition-colors"
                   >
                     <h3 className="text-xl font-semibold mb-2">
-                      {service.title}
+                      {product.title}
                     </h3>
-                    <p className="text-muted-foreground">{service.description}</p>
+                    <p className="text-muted-foreground">{product.description}</p>
                     <p className="text-primary font-semibold mt-2">
-                      {service.price}
+                      {product.price}
                     </p>
                   </Link>
                 ))}
