@@ -97,7 +97,7 @@ const Navigation = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 top-[65px] bg-background z-50">
-          <div className="p-4 space-y-4">
+          <div className="p-4 space-y-4 bg-background">
             <div className="space-y-2">
               <h3 className="text-sm font-medium text-muted-foreground px-4">Training</h3>
               <Link
