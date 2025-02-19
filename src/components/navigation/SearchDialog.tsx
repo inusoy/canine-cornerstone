@@ -71,3 +71,4 @@ export const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
     </CommandDialog>
   );
 };
+

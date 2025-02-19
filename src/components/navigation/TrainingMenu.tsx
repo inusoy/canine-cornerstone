@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { trainingProducts } from "@/data/products";
 
 interface TrainingMenuProps {
   onClick?: () => void;
@@ -8,26 +9,18 @@ interface TrainingMenuProps {
 }
 
 export const TrainingMenu = ({ onClick, className = "", mobile = false }: TrainingMenuProps) => {
-  const items = [
-    { title: "Nosework", path: "/training/nosework" },
-    { title: "Obedience", path: "/training/obedience" },
-    { title: "Dog School", path: "/training/dog-school" },
-    { title: "Puppy Kindergarten", path: "/training/puppy-kindergarten" },
-    { title: "Socialisation Walks", path: "/training/socialisation-walks" },
-  ];
-
   return (
     <div className={className}>
-      {items.map((item) => (
+      {trainingProducts.map((product) => (
         <Link
-          key={item.path}
-          to={item.path}
+          key={product.id}
+          to={product.link}
           className={`block px-4 py-2 hover:bg-muted rounded-md transition-colors ${
             mobile ? "text-base" : ""
           }`}
           onClick={onClick}
         >
-          {item.title}
+          {product.title}
         </Link>
       ))}
     </div>
