@@ -40,7 +40,7 @@ const Navigation = () => {
               alt="Szczek Szczek Logo" 
               className="h-8 w-8"
             />
-            <Link to="/" className="font-playfair text-xl font-semibold">
+            <Link to="/" className="font-bryndan text-xl">
               Szczek Szczek
             </Link>
           </div>
