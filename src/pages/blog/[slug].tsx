@@ -1,6 +1,6 @@
 
 import { ArrowLeft, ArrowRight, Instagram } from "lucide-react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -154,7 +154,7 @@ const BlogPost = () => {
   );
 };
 
-const blogPosts = [
+export const blogPosts = [
   {
     title: "Understanding Your Dog's Body Language",
     date: "March 15, 2024",
