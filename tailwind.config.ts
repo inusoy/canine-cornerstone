@@ -20,8 +20,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        inter: ["Inter", "sans-serif"],
+        bryndan: ["Bryndan Write", "cursive"],
+        josefin: ["Josefin Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
