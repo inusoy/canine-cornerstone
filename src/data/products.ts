@@ -42,7 +42,7 @@ export const trainingProducts: TrainingProduct[] = [
   {
     id: "puppy-kindergarten",
     type: "training",
-    title: "Puppy Kindergarten",
+    title: "PSIE PRZEDSZKOLE",
     description: "Give your puppy the best start with early socialization and basic training.",
     price: "From $249",
     link: "/training/puppy-kindergarten",
