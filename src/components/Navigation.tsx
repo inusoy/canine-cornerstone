@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X, Search as SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -17,18 +16,7 @@ const Navigation = () => {
   const handleNavigation = (event: React.MouseEvent, path: string) => {
     event.preventDefault();
     
-    // Check if path contains a section ID (starts with #)
-    if (path.startsWith('#')) {
-      // It's an anchor link - scroll to section on current page
-      const sectionId = path.substring(1);
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-      return;
-    }
-    
-    // Check if it's a section on the homepage
+    // Check if we're handling a homepage section
     if (path === "services" || path === "about" || path === "testimonials" || path === "contact") {
       if (location.pathname === "/home") {
         // Already on homepage, just scroll to section
@@ -37,7 +25,7 @@ const Navigation = () => {
           element.scrollIntoView({ behavior: "smooth" });
         }
       } else {
-        // Navigate to homepage then scroll to section
+        // Navigate to homepage with section info
         navigate("/home", { state: { scrollTo: path } });
       }
       return;

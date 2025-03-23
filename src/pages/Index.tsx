@@ -1,5 +1,5 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const location = useLocation();
-  const initialScrollComplete = useRef(false);
+  const [initialRender, setInitialRender] = useState(true);
 
   useEffect(() => {
     // Handle animations
@@ -34,7 +34,7 @@ const Index = () => {
 
   useEffect(() => {
     // Handle scrolling to section if coming from another page
-    if (location.state?.scrollTo && !initialScrollComplete.current) {
+    if (location.state?.scrollTo && initialRender) {
       const sectionId = location.state.scrollTo;
       const element = document.getElementById(sectionId);
       
@@ -42,11 +42,15 @@ const Index = () => {
         // Small timeout to ensure page is fully loaded
         setTimeout(() => {
           element.scrollIntoView({ behavior: "smooth" });
-          initialScrollComplete.current = true;
+          setInitialRender(false);
         }, 100);
       }
+    } else if (initialRender) {
+      // If there's no specific section to scroll to, ensure we're at the top
+      window.scrollTo(0, 0);
+      setInitialRender(false);
     }
-  }, [location.state]);
+  }, [location.state, initialRender]);
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
