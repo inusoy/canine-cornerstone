@@ -5,7 +5,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-6">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 fade-in">
-            Mam na imię Marta. Jestem certyfikowaną trenerką i behawiorystką psów, ale też psycholożką!
+            O mnie
           </h2>
           <div className="fade-in">
             <img
