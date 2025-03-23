@@ -5,7 +5,7 @@ export const trainingProducts: TrainingProduct[] = [
   {
     id: "nosework",
     type: "training",
-    title: "Nosework Training",
+    title: "Nosework",
     description: "Discover your dog's natural scenting abilities through fun and engaging nosework training.",
     price: "From $399",
     link: "/training/nosework",
@@ -42,7 +42,7 @@ export const trainingProducts: TrainingProduct[] = [
   {
     id: "puppy-kindergarten",
     type: "training",
-    title: "PSIE PRZEDSZKOLE",
+    title: "Psie Przedszkole",
     description: "Give your puppy the best start with early socialization and basic training.",
     price: "From $249",
     link: "/training/puppy-kindergarten",
@@ -64,7 +64,7 @@ export const trainingProducts: TrainingProduct[] = [
   {
     id: "dog-school",
     type: "training",
-    title: "Dog School",
+    title: "Psia Szkółka",
     description: "Comprehensive training programs for dogs of all ages and skill levels.",
     price: "From $349",
     link: "/training/dog-school",
