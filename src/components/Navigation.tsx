@@ -1,5 +1,6 @@
+
 import { useState } from "react";
-import { Menu, X, Search as SearchIcon } from "lucide-react";
+import { Menu, X, SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { SocialLinks } from "./navigation/SocialLinks";
