@@ -24,9 +24,8 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
   
   useEffect(() => {
-    if (pathname !== "/home") {
-      window.scrollTo(0, 0);
-    }
+    // Always scroll to top when changing pages
+    window.scrollTo(0, 0);
   }, [pathname]);
   
   return null;

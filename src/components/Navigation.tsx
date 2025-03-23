@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X, Search as SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -14,32 +14,37 @@ const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Scroll to top when navigating to a new page (but not when on the homepage)
-  useEffect(() => {
-    if (location.pathname !== "/home") {
-      window.scrollTo(0, 0);
-    }
-  }, [location.pathname]);
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleNavigation = (event: React.MouseEvent, sectionId: string) => {
-    event.preventDefault(); // Prevent default link behavior
+  const handleNavigation = (event: React.MouseEvent, path: string) => {
+    event.preventDefault();
     
-    if (location.pathname === "/home") {
-      // Already on homepage, just scroll
-      scrollToSection(sectionId);
-    } else {
-      // Navigate to homepage then scroll
-      navigate("/home");
-      // Use a slight delay to ensure the new page has loaded before scrolling
-      setTimeout(() => scrollToSection(sectionId), 100);
+    // Check if path contains a section ID (starts with #)
+    if (path.startsWith('#')) {
+      // It's an anchor link - scroll to section on current page
+      const sectionId = path.substring(1);
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+      return;
     }
+    
+    // Check if it's a section on the homepage
+    if (path === "services" || path === "about" || path === "testimonials" || path === "contact") {
+      if (location.pathname === "/home") {
+        // Already on homepage, just scroll to section
+        const element = document.getElementById(path);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // Navigate to homepage then scroll to section
+        navigate("/home", { state: { scrollTo: path } });
+      }
+      return;
+    }
+    
+    // Regular navigation to another page
+    navigate(path);
   };
 
   return (
@@ -121,10 +126,7 @@ const Navigation = () => {
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         onSearchOpen={() => setIsSearchOpen(true)}
-        onNavigation={(e, sectionId) => {
-          handleNavigation(e, sectionId);
-          setIsMenuOpen(false);
-        }}
+        onNavigation={handleNavigation}
       />
 
       {/* Search Dialog */}
