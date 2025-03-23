@@ -1,5 +1,8 @@
 
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ContactInfo } from "@/components/contact/ContactInfo";
@@ -14,7 +17,7 @@ const Kontakt = () => {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-semibold mb-6 text-center">Kontakt</h1>
             
-            <Card className="p-8 shadow-md">
+            <Card className="p-8 shadow-md mb-10">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <ContactInfo contactInfo={contactInfo} />
@@ -31,6 +34,47 @@ const Kontakt = () => {
                   ></iframe>
                 </div>
               </div>
+            </Card>
+
+            <Card className="p-8 shadow-md">
+              <h2 className="text-2xl font-semibold mb-6 text-center">Napisz do nas</h2>
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Imię</label>
+                  <Input
+                    type="text"
+                    placeholder="Twoje imię"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <Input
+                    type="email"
+                    placeholder="Twój email"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">
+                    Program szkoleniowy
+                  </label>
+                  <select className="w-full p-2 rounded-md border border-input">
+                    <option value="">Wybierz program</option>
+                    <option value="nosework">Nosework</option>
+                    <option value="obedience">Obedience</option>
+                    <option value="dog-school">Szkoła dla psów</option>
+                    <option value="puppy-kindergarten">Przedszkole dla szczeniąt</option>
+                    <option value="socialisation-walks">Socjalizacyjne spacery</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium mb-2">Wiadomość</label>
+                  <Textarea
+                    className="h-32"
+                    placeholder="Opowiedz nam o swoim psie i celach szkoleniowych"
+                  />
+                </div>
+                <Button className="w-full">Wyślij wiadomość</Button>
+              </form>
             </Card>
           </div>
         </div>

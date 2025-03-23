@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   return (
@@ -35,7 +36,9 @@ const ContactSection = () => {
                   placeholder="Tell us about your dog"
                 />
               </div>
-              <Button className="w-full hover-lift">Send Message</Button>
+              <Button className="w-full hover-lift" asChild>
+                <Link to="/kontakt">Send Message</Link>
+              </Button>
             </form>
           </Card>
         </div>
