@@ -12,7 +12,7 @@ const Nosework = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-semibold mb-6">Nosework</h1>
           <p className="text-lg text-muted-foreground mb-8">
-            Nosework jest sportem kynologicznym, zainspirowanym pracą psów w służbach np. przy detekcji materiałów wybuchowych lub narkotyków, poszukiwaniu ludzi czy udaremnianiu przemytów egzotycznych zwierząt. Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.
+            Nosework jest sportem kynologicznym, zainspirowanym pracą psów w służbach np. przy detekcji materiałów wybuchowych lub narkotyków, poszukiwaniu ludzi czy udaremnianiu przemytów egzotycznych zwierząt.
           </p>
           <div className="prose max-w-none">
             <img
@@ -22,9 +22,7 @@ const Nosework = () => {
             />
             <div className="space-y-4">
               <p>
-                Our nosework program helps dogs develop their natural scenting abilities
-                while building confidence and mental stimulation. Perfect for all breeds
-                and activity levels.
+                Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.
               </p>
               <h2 className="text-2xl font-semibold mt-8">What You'll Learn</h2>
               <ul className="list-disc pl-6 space-y-2">
