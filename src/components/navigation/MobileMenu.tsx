@@ -8,7 +8,7 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   onSearchOpen: () => void;
-  onNavigation: (sectionId: string) => void;
+  onNavigation: (e: React.MouseEvent, sectionId: string) => void;
 }
 
 export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: MobileMenuProps) => {
@@ -28,10 +28,7 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
         </button>
         <div className="space-y-2">
           <button
-            onClick={() => {
-              onNavigation("services");
-              onClose();
-            }}
+            onClick={(e) => onNavigation(e, "services")}
             className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
           >
             Training Programs
@@ -40,19 +37,13 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
         </div>
         <div className="border-t pt-4 space-y-4">
           <button
-            onClick={() => {
-              onNavigation("about");
-              onClose();
-            }}
+            onClick={(e) => onNavigation(e, "about")}
             className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
           >
             About
           </button>
           <button
-            onClick={() => {
-              onNavigation("testimonials");
-              onClose();
-            }}
+            onClick={(e) => onNavigation(e, "testimonials")}
             className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
           >
             Testimonials
@@ -69,10 +60,7 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
             <Button
               variant="default"
               className="w-full"
-              onClick={() => {
-                onNavigation("contact");
-                onClose();
-              }}
+              onClick={(e) => onNavigation(e, "contact")}
             >
               Get Started
             </Button>

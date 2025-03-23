@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, Search as SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -14,6 +14,11 @@ const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Scroll to top when navigating to a new page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -21,11 +26,16 @@ const Navigation = () => {
     }
   };
 
-  const handleNavigation = (sectionId: string) => {
-    if (location.pathname === "/") {
+  const handleNavigation = (event: React.MouseEvent, sectionId: string) => {
+    event.preventDefault(); // Prevent default link behavior
+    
+    if (location.pathname === "/home") {
+      // Already on homepage, just scroll
       scrollToSection(sectionId);
     } else {
-      navigate("/");
+      // Navigate to homepage then scroll
+      navigate("/home");
+      // Use a slight delay to ensure the new page has loaded before scrolling
       setTimeout(() => scrollToSection(sectionId), 100);
     }
   };
@@ -59,7 +69,7 @@ const Navigation = () => {
             </button>
             <div className="relative group">
               <button
-                onClick={() => handleNavigation("services")}
+                onClick={(e) => handleNavigation(e, "services")}
                 className="hover:text-primary transition-colors cursor-pointer"
               >
                 Training
@@ -69,13 +79,13 @@ const Navigation = () => {
               </div>
             </div>
             <button
-              onClick={() => handleNavigation("about")}
+              onClick={(e) => handleNavigation(e, "about")}
               className="hover:text-primary transition-colors"
             >
               About
             </button>
             <button
-              onClick={() => handleNavigation("testimonials")}
+              onClick={(e) => handleNavigation(e, "testimonials")}
               className="hover:text-primary transition-colors"
             >
               Testimonials
@@ -87,7 +97,7 @@ const Navigation = () => {
             <Button
               variant="default"
               className="hover-lift"
-              onClick={() => handleNavigation("contact")}
+              onClick={(e) => handleNavigation(e, "contact")}
             >
               Get Started
             </Button>
@@ -109,7 +119,10 @@ const Navigation = () => {
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         onSearchOpen={() => setIsSearchOpen(true)}
-        onNavigation={handleNavigation}
+        onNavigation={(e, sectionId) => {
+          handleNavigation(e, sectionId);
+          setIsMenuOpen(false);
+        }}
       />
 
       {/* Search Dialog */}
