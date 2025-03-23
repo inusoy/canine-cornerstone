@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { siteConfig } from "./config/site";
 import MaintenancePage from "./pages/Maintenance";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -26,7 +27,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MaintenancePage />} />
+          <Route 
+            path="/" 
+            element={siteConfig.maintenanceMode ? <MaintenancePage /> : <Navigate to="/home" replace />} 
+          />
           <Route path="/home" element={<Index />} />
           <Route path="/training/nosework" element={<Nosework />} />
           <Route path="/training/obedience" element={<Obedience />} />
