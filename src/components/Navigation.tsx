@@ -14,9 +14,11 @@ const Navigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Scroll to top when navigating to a new page
+  // Scroll to top when navigating to a new page (but not when on the homepage)
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (location.pathname !== "/home") {
+      window.scrollTo(0, 0);
+    }
   }, [location.pathname]);
 
   const scrollToSection = (sectionId: string) => {

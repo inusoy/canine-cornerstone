@@ -3,7 +3,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { siteConfig } from "./config/site";
 import MaintenancePage from "./pages/Maintenance";
 import Index from "./pages/Index";
@@ -18,6 +19,19 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/blog/[slug]";
 import Search from "./pages/Search";
 
+// ScrollToTop component that will handle scrolling behavior
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    if (pathname !== "/home") {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname]);
+  
+  return null;
+};
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -26,6 +40,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route 
             path="/" 
