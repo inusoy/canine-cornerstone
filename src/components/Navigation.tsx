@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X, SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -76,6 +77,9 @@ const Navigation = () => {
             </button>
             <Link to="/blog" className="hover:text-primary transition-colors">
               Blog
+            </Link>
+            <Link to="/kontakt" className="hover:text-primary transition-colors">
+              Kontakt
             </Link>
             <SocialLinks />
             <Button
