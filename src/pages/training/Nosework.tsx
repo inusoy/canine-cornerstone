@@ -24,12 +24,11 @@ const Nosework = () => {
               <p>
                 Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.
               </p>
-              <h2 className="text-2xl font-semibold mt-8">What You'll Learn</h2>
+              <h2 className="text-2xl font-semibold mt-8">Nosework w <b>Szczek Szczek</b> dla kogo?</h2>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Foundation scent detection skills</li>
-                <li>Search patterns and techniques</li>
-                <li>Building drive and motivation</li>
-                <li>Advanced search scenarios</li>
+                <li>dla psów, które nigdy nie miały styczności z noseworkiem,</li>
+                <li>dla psów na poziomie początkującym,</li>
+                <li>dla psów na poziomie klasy 0 i 1 w wiodących organizacjach nosework w Polsce.</li>
               </ul>
               <div className="mt-8">
                 <Button asChild>
