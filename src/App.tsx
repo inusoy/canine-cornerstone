@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,18 +17,7 @@ import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/blog/[slug]";
 import Search from "./pages/Search";
-
-// ScrollToTop component that will handle scrolling behavior
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  
-  useEffect(() => {
-    // Always scroll to top when pathname changes
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  
-  return null;
-};
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 

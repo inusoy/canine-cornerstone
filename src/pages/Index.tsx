@@ -1,5 +1,4 @@
-
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
@@ -15,7 +14,7 @@ const Index = () => {
 
   useEffect(() => {
     // Handle animations
-    const observerCallback = (entries) => {
+    const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("appear");
@@ -47,7 +46,7 @@ const Index = () => {
       }
     } else if (initialRender) {
       // If there's no specific section to scroll to, ensure we're at the top
-      window.scrollTo(0, 0);
+      // Remove this scroll behavior as it may conflict with ScrollToTop
       setInitialRender(false);
     }
   }, [location.state, initialRender]);
