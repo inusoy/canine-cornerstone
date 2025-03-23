@@ -28,9 +28,9 @@ const TrainingLayout = ({
   return (
     <>
       <Navigation />
-      <div className="min-h-screen pt-24">
+      <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-semibold mb-6">{title}</h1>
+          <h1 className="text-6xl font-bryndan mb-6 text-primary text-center">{title}</h1>
           <p className="text-lg text-muted-foreground mb-8">{subtitle}</p>
           <img
             src={imageSrc}

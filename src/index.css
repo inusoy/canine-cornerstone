@@ -15,16 +15,16 @@
 
 @layer base {
   :root {
-    --background: 60 30% 98%;
+    --background: 0 0% 96%;
     --foreground: 20 20% 5%;
     
-    --card: 60 30% 98%;
+    --card: 22 61% 89%;
     --card-foreground: 20 20% 5%;
     
     --popover: 60 30% 98%;
     --popover-foreground: 20 20% 5%;
     
-    --primary: 43 54% 52%;
+    --primary: 157 30% 35%;
     --primary-foreground: 60 30% 98%;
     
     --secondary: 24 5% 64%;
@@ -41,7 +41,7 @@
     
     --border: 20 5.9% 90%;
     --input: 20 5.9% 90%;
-    --ring: 43 54% 52%;
+    --ring: 157 30% 35%;
     
     --radius: 0.75rem;
   }
