@@ -7,6 +7,12 @@ interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
    * Show the text alongside the logo
    * @default true
    */
+  showLogo?: boolean
+  /**
+  /**
+   * Show the text alongside the logo
+   * @default true
+   */
   showText?: boolean
   /**
    * Size of the logo image
@@ -35,6 +41,7 @@ interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
   ({
+    showLogo = true,
     showText = true,
     size = "default",
     to = "/",
@@ -60,25 +67,25 @@ const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
         {...props}
       >
         <Link to={to} className="flex items-center space-x-4">
-          <img 
+          {showLogo && (<img 
             src="/lovable-uploads/23489cfb-856c-4f3f-908f-3aa9d5cb11b8.png" 
             alt="Szczek Szczek Logo" 
             className={cn(sizeClasses[size], imageClassName)}
-          />
+          />)}
           
           {showText && (
             <div className={cn("flex flex-col", textClassName)}>
               <span className={cn(
-                "font-josefin text-xl leading-tight uppercase", 
+                "font-josefin text-3xl leading-tight uppercase", 
                 onPrimaryBg && "text-primary-foreground"
               )}>
-                Szczek Szczek
+                Szczek
               </span>
               <span className={cn(
-                "font-josefin text-xs tracking-wide", 
-                onPrimaryBg ? "text-primary-foreground/80" : "text-muted-foreground"
+                "font-josefin text-3xl leading-tight uppercase", 
+                onPrimaryBg && "text-primary-foreground"
               )}>
-                Marta Stach
+                Szczek
               </span>
             </div>
           )}

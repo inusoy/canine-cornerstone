@@ -41,7 +41,7 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Logo size="lg" />
+          <Logo size="lg" showLogo={false}/>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
