@@ -19,7 +19,7 @@ const Navigation = () => {
     event.preventDefault();
     
     // Check if we're handling a homepage section
-    if (path === "services" || path === "about") {
+    if (path === "about") {
       if (location.pathname === "/home") {
         // Already on homepage, just scroll to section
         const element = document.getElementById(path);
@@ -54,7 +54,7 @@ const Navigation = () => {
             </button>
             <div className="relative group">
               <button
-                onClick={(e) => handleNavigation(e, "services")}
+                onClick={(e) => navigate("/offer")}
                 className="hover:text-primary transition-colors cursor-pointer uppercase"
               >
                 OFERTA

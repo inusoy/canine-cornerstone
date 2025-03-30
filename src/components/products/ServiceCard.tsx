@@ -6,9 +6,10 @@ import { useState, useEffect } from "react";
 
 interface ServiceCardProps {
   product: Product;
+  className?: string;
 }
 
-export const ServiceCard = ({ product }: ServiceCardProps) => {
+export const ServiceCard = ({ product, className = "" }: ServiceCardProps) => {
   const [iconExists, setIconExists] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -27,9 +28,9 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
   }, [product.id]);
 
   return (
-    <Link to={product.link} className="block group">
+    <Link to={product.link} className={`block group ${className}`}>
       <Card 
-        className="p-6 hover-lift fade-in bg-background text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300 flex flex-col items-center justify-center text-center h-full"
+        className="p-6 hover-lift fade-in bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300 flex flex-col items-center justify-center text-center h-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >

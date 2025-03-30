@@ -27,15 +27,13 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
           WYSZUKAJ
         </button>
         <div className="space-y-2">
-          <button
-            onClick={(e) => {
-              onNavigation(e, "services");
-              onClose();
-            }}
-            className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
+          <Link
+            to="/offer"
+            className="block w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
+            onClick={onClose}
           >
             OFERTA
-          </button>
+          </Link>
           <TrainingMenu onClick={onClose} mobile />
         </div>
         <div className="border-t pt-4 space-y-4">

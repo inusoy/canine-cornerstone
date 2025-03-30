@@ -18,6 +18,7 @@ import KonsultacjeBehawioralne from "./pages/training/KonsultacjeBehawioralne";
 import Kontakt from "./pages/Kontakt";
 import Gallery from "./pages/Gallery";
 import Search from "./pages/Search";
+import Offer from "./pages/Offer";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
             element={siteConfig.maintenanceMode ? <MaintenancePage /> : <Navigate to="/home" replace />} 
           />
           <Route path="/home" element={<Index />} />
+          <Route path="/offer" element={<Offer />} />
           <Route path="/training/nosework" element={<Nosework />} />
           <Route path="/training/psia-szkolka" element={<PsiaSzkolka />} />
           <Route path="/training/psie-przedszkole" element={<PsiePrzedszkole />} />
