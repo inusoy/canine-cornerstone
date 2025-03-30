@@ -22,9 +22,9 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
             onSearchOpen();
             onClose();
           }}
-          className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
+          className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
         >
-          Wyszukaj
+          WYSZUKAJ
         </button>
         <div className="space-y-2">
           <button
@@ -32,9 +32,9 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
               onNavigation(e, "services");
               onClose();
             }}
-            className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
+            className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
           >
-            Oferta
+            OFERTA
           </button>
           <TrainingMenu onClick={onClose} mobile />
         </div>
@@ -44,35 +44,35 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
               onNavigation(e, "about");
               onClose();
             }}
-            className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
+            className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
           >
-            O mnie
+            O MNIE
           </button>
           <Link
             to="/gallery"
-            className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
+            className="block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
             onClick={onClose}
           >
-            Galeria
+            GALERIA
           </Link>
           <Link
             to="/kontakt"
-            className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
+            className="block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
             onClick={onClose}
           >
-            Kontakt
+            KONTAKT
           </Link>
           <SocialLinks className="px-4" showLabels onItemClick={onClose} />
           <div className="px-4">
             <Button
               variant="default"
-              className="w-full"
+              className="w-full uppercase"
               onClick={() => {
                 window.location.href = "/training/sala-zabaw";
                 onClose();
               }}
             >
-              Sala Zabaw i Eksploracji
+              SALA ZABAW I EKSPLORACJI
             </Button>
           </div>
         </div>

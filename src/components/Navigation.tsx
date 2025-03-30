@@ -47,7 +47,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => setIsSearchOpen(true)}
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary transition-colors uppercase"
               aria-label="Open search"
             >
               <SearchIcon className="h-5 w-5" />
@@ -55,9 +55,9 @@ const Navigation = () => {
             <div className="relative group">
               <button
                 onClick={(e) => handleNavigation(e, "services")}
-                className="hover:text-primary transition-colors cursor-pointer"
+                className="hover:text-primary transition-colors cursor-pointer uppercase"
               >
-                Oferta
+                OFERTA
               </button>
               <div className="absolute left-0 mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <TrainingMenu className="p-2 space-y-1" />
@@ -65,23 +65,23 @@ const Navigation = () => {
             </div>
             <button
               onClick={(e) => handleNavigation(e, "about")}
-              className="hover:text-primary transition-colors"
+              className="hover:text-primary transition-colors uppercase"
             >
-              O mnie
+              O MNIE
             </button>
-            <Link to="/gallery" className="hover:text-primary transition-colors">
-              Galeria
+            <Link to="/gallery" className="hover:text-primary transition-colors uppercase">
+              GALERIA
             </Link>
-            <Link to="/kontakt" className="hover:text-primary transition-colors">
-              Kontakt
+            <Link to="/kontakt" className="hover:text-primary transition-colors uppercase">
+              KONTAKT
             </Link>
             <SocialLinks />
             <Button
               variant="default"
-              className="hover-lift"
+              className="hover-lift uppercase"
               onClick={() => navigate("/training/sala-zabaw")}
             >
-              Sala Zabaw i Eksploracji
+              SALA ZABAW I EKSPLORACJI
             </Button>
           </div>
 

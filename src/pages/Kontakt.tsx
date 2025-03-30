@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -31,8 +32,8 @@ const Kontakt = () => {
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Błąd formularza",
-        description: "Proszę wypełnić wszystkie wymagane pola",
+        title: "BŁĄD FORMULARZA",
+        description: "PROSZĘ WYPEŁNIĆ WSZYSTKIE WYMAGANE POLA",
         variant: "destructive"
       });
       return;
@@ -56,8 +57,8 @@ const Kontakt = () => {
       );
 
       toast({
-        title: "Wiadomość wysłana",
-        description: "Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe."
+        title: "WIADOMOŚĆ WYSŁANA",
+        description: "DZIĘKUJEMY ZA KONTAKT. ODPOWIEMY NAJSZYBCIEJ JAK TO MOŻLIWE."
       });
 
       // Reset form
@@ -70,8 +71,8 @@ const Kontakt = () => {
     } catch (error) {
       console.error("Error sending email:", error);
       toast({
-        title: "Błąd",
-        description: "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
+        title: "BŁĄD",
+        description: "NIE UDAŁO SIĘ WYSŁAĆ WIADOMOŚCI. SPRÓBUJ PONOWNIE PÓŹNIEJ.",
         variant: "destructive"
       });
     } finally {
@@ -85,7 +86,7 @@ const Kontakt = () => {
       <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-semibold mb-6 text-center">Kontakt</h1>
+            <h1 className="text-4xl font-semibold mb-6 text-center text-primary font-bryndan uppercase">KONTAKT</h1>
             
             <Card className="p-8 shadow-md mb-10">
               <div className="grid md:grid-cols-2 gap-8">
@@ -107,10 +108,10 @@ const Kontakt = () => {
             </Card>
 
             <Card className="p-8 shadow-md">
-              <h2 className="text-2xl font-semibold mb-6 text-center">Napisz do nas</h2>
+              <h2 className="text-2xl font-semibold mb-6 text-center text-primary font-bryndan uppercase">NAPISZ DO NAS</h2>
               <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Imię</label>
+                  <label className="block text-sm font-medium mb-2 uppercase">IMIĘ</label>
                   <Input
                     name="name"
                     type="text"
@@ -121,7 +122,7 @@ const Kontakt = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2 uppercase">EMAIL</label>
                   <Input
                     name="email"
                     type="email"
@@ -132,8 +133,8 @@ const Kontakt = () => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">
-                    Program szkoleniowy
+                  <label className="block text-sm font-medium mb-2 uppercase">
+                    PROGRAM SZKOLENIOWY
                   </label>
                   <select 
                     className="w-full p-2 rounded-md border border-input"
@@ -141,16 +142,16 @@ const Kontakt = () => {
                     value={formData.program}
                     onChange={handleChange}
                   >
-                    <option value="">Wybierz program</option>
-                    <option value="nosework">Nosework</option>
-                    <option value="obedience">Obedience</option>
-                    <option value="dog-school">Szkoła dla psów</option>
-                    <option value="puppy-kindergarten">Przedszkole dla szczeniąt</option>
-                    <option value="socialisation-walks">Socjalizacyjne spacery</option>
+                    <option value="">WYBIERZ PROGRAM</option>
+                    <option value="nosework">NOSEWORK</option>
+                    <option value="obedience">OBEDIENCE</option>
+                    <option value="dog-school">SZKOŁA DLA PSÓW</option>
+                    <option value="puppy-kindergarten">PRZEDSZKOLE DLA SZCZENIĄT</option>
+                    <option value="socialisation-walks">SOCJALIZACYJNE SPACERY</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Wiadomość</label>
+                  <label className="block text-sm font-medium mb-2 uppercase">WIADOMOŚĆ</label>
                   <Textarea
                     name="message"
                     className="h-32"
@@ -162,10 +163,10 @@ const Kontakt = () => {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full"
+                  className="w-full uppercase"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
+                  {isSubmitting ? "WYSYŁANIE..." : "WYŚLIJ WIADOMOŚĆ"}
                 </Button>
               </form>
             </Card>

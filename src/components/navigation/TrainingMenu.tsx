@@ -15,12 +15,12 @@ export const TrainingMenu = ({ onClick, className = "", mobile = false }: Traini
         <Link
           key={product.id}
           to={product.link}
-          className={`block px-4 py-2 hover:bg-muted rounded-md transition-colors ${
+          className={`block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase ${
             mobile ? "text-base" : ""
           }`}
           onClick={onClick}
         >
-          {product.title}
+          {product.title.toUpperCase()}
         </Link>
       ))}
     </div>

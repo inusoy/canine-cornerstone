@@ -25,11 +25,11 @@ export const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // ...existing validation and email sending logic...
+    
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Błąd formularza",
-        description: "Proszę wypełnić wszystkie wymagane pola",
+        title: "BŁĄD FORMULARZA",
+        description: "PROSZĘ WYPEŁNIĆ WSZYSTKIE WYMAGANE POLA",
         variant: "destructive"
       });
       return;
@@ -49,15 +49,15 @@ export const ContactForm = () => {
         '_kObRF1b779O1PnpK'
       );
       toast({
-        title: "Wiadomość wysłana",
-        description: "Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe."
+        title: "WIADOMOŚĆ WYSŁANA",
+        description: "DZIĘKUJEMY ZA KONTAKT. ODPOWIEMY NAJSZYBCIEJ JAK TO MOŻLIWE."
       });
       setFormData({ name: "", email: "", program: "", message: "" });
     } catch (error) {
       console.error("Error sending email:", error);
       toast({
-        title: "Błąd",
-        description: "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
+        title: "BŁĄD",
+        description: "NIE UDAŁO SIĘ WYSŁAĆ WIADOMOŚCI. SPRÓBUJ PONOWNIE PÓŹNIEJ.",
         variant: "destructive"
       });
     } finally {
@@ -66,75 +66,68 @@ export const ContactForm = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-2 gap-8">
-      <Card className="p-6 fade-in shadow-md">
+    <Card className="p-6 fade-in shadow-md">
+      <h3 className="text-xl font-semibold mb-4 text-center text-primary font-bryndan uppercase">NAPISZ DO NAS</h3>
+      <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
-          <ContactInfo contactInfo={contactInfo} />
+          <label className="block text-sm font-medium mb-2 uppercase">IMIĘ</label>
+          <Input
+            name="name"
+            type="text"
+            placeholder="Twoje imię"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
         </div>
-      </Card>
-      <Card className="p-6 fade-in shadow-md">
-        <h3 className="text-xl font-semibold mb-4 text-center">Napisz do nas</h3>
-        <form className="space-y-4" onSubmit={handleSubmit}>
-          <div>
-            <label className="block text-sm font-medium mb-2">Imię</label>
-            <Input
-              name="name"
-              type="text"
-              placeholder="Twoje imię"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">Email</label>
-            <Input
-              name="email"
-              type="email"
-              placeholder="Twój email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">
-              Program szkoleniowy
-            </label>
-            <select 
-              className="w-full p-2 rounded-md border border-input"
-              name="program"
-              value={formData.program}
-              onChange={handleChange}
-            >
-              <option value="">Wybierz program</option>
-              <option value="nosework">Nosework</option>
-              <option value="obedience">Obedience</option>
-              <option value="dog-school">Szkoła dla psów</option>
-              <option value="puppy-kindergarten">Przedszkole dla szczeniąt</option>
-              <option value="socialisation-walks">Socjalizacyjne spacery</option>
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">Wiadomość</label>
-            <Textarea
-              name="message"
-              className="h-32"
-              placeholder="Opowiedz nam o swoim psie i celach szkoleniowych"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <Button 
-            type="submit" 
-            className="w-full"
-            disabled={isSubmitting}
+        <div>
+          <label className="block text-sm font-medium mb-2 uppercase">EMAIL</label>
+          <Input
+            name="email"
+            type="email"
+            placeholder="Twój email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-2 uppercase">
+            PROGRAM SZKOLENIOWY
+          </label>
+          <select 
+            className="w-full p-2 rounded-md border border-input"
+            name="program"
+            value={formData.program}
+            onChange={handleChange}
           >
-            {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
-          </Button>
-        </form>
-      </Card>
-    </div>
+            <option value="">WYBIERZ PROGRAM</option>
+            <option value="nosework">NOSEWORK</option>
+            <option value="obedience">OBEDIENCE</option>
+            <option value="dog-school">SZKOŁA DLA PSÓW</option>
+            <option value="puppy-kindergarten">PRZEDSZKOLE DLA SZCZENIĄT</option>
+            <option value="socialisation-walks">SOCJALIZACYJNE SPACERY</option>
+          </select>
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-2 uppercase">WIADOMOŚĆ</label>
+          <Textarea
+            name="message"
+            className="h-32"
+            placeholder="Opowiedz nam o swoim psie i celach szkoleniowych"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <Button 
+          type="submit" 
+          className="w-full uppercase"
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? "WYSYŁANIE..." : "WYŚLIJ WIADOMOŚĆ"}
+        </Button>
+      </form>
+    </Card>
   );
 };

@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface TrainingLayoutProps {
   title: string;
@@ -25,12 +26,16 @@ const TrainingLayout = ({
   children,
   sidebarContent,
 }: TrainingLayoutProps) => {
+  const isMobile = useIsMobile();
+  
   return (
     <>
       <Navigation />
       <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-6xl font-bryndan mb-6 text-primary text-center">{title}</h1>
+          <h1 className={`text-5xl font-bryndan mb-6 text-primary ${isMobile ? 'text-center' : 'text-left'} uppercase`}>
+            {title}
+          </h1>
           <p className="text-lg text-muted-foreground mb-8">{subtitle}</p>
           <img
             src={imageSrc}
@@ -52,15 +57,14 @@ const TrainingLayout = ({
                     <div className="space-y-6">
                       {sidebarContent || (
                         <div className="space-y-4">
-                          <h3 className="text-2xl font-semibold">Book a Session</h3>
+                          <h3 className="text-2xl font-semibold uppercase text-primary font-bryndan">Zarezerwuj Sesję</h3>
                           <p>
-                            Ready to get started? Contact us to schedule your
-                            training session!
+                            Gotowy, by zacząć? Skontaktuj się z nami, aby zaplanować sesję treningową!
                           </p>
                         </div>
                       )}
-                      <Button asChild className="w-full">
-                        <Link to="/contact">Book a Session</Link>
+                      <Button asChild className="w-full uppercase">
+                        <Link to="/kontakt">ZAREZERWUJ SESJĘ</Link>
                       </Button>
                     </div>
                   </ScrollArea>
