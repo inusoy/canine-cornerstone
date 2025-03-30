@@ -29,12 +29,12 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
   return (
     <Link to={product.link} className="block group">
       <Card 
-        className="p-6 hover-lift fade-in bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300 flex flex-col items-center justify-center text-center h-full"
+        className="p-6 hover-lift fade-in bg-background text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300 flex flex-col items-center justify-center text-center h-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {iconExists && (
-          <div className="mb-4 w-64 h-64 flex items-center justify-center">
+          <div className="mb-4 w-40 h-40 flex items-center justify-center">
             <img 
               src={isHovered ? `/icons/dog-${product.id}-hover.svg` : `/icons/dog-${product.id}.svg`} 
               alt="" 
