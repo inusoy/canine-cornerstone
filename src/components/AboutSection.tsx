@@ -4,7 +4,7 @@ const AboutSection = () => {
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 fade-in">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary font-bryndan uppercase">
             O mnie
           </h2>
           <div className="fade-in">
