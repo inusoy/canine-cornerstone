@@ -1,5 +1,5 @@
 
-import { ProductCard } from "@/components/products/ProductCard";
+import { ServiceCard } from "@/components/products/ServiceCard";
 import { getHomePageProducts } from "@/data/products";
 
 const ServicesSection = () => {
@@ -13,7 +13,7 @@ const ServicesSection = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ServiceCard key={product.id} product={product} />
           ))}
         </div>
       </div>
