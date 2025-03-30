@@ -3,118 +3,154 @@ import { TrainingProduct, BundleProduct } from "@/types/product";
 
 export const trainingProducts: TrainingProduct[] = [
   {
-    id: "nosework",
-    type: "training",
-    title: "Nosework",
-    description: "Discover your dog's natural scenting abilities through fun and engaging nosework training.",
-    price: "From $399",
-    link: "/training/nosework",
-    showOnHomepage: true,
-    homepagePriority: 3,
-    isNew: true,
-    features: [
-      "Foundation scent detection skills",
-      "Search patterns and techniques",
-      "Building drive and motivation",
-      "Advanced search scenarios"
-    ],
-    duration: "6 weeks",
-    groupSize: "Max 4 dogs"
-  },
-  {
-    id: "obedience",
-    type: "training",
-    title: "Basic Obedience Training",
-    description: "Master essential commands and establish a strong foundation for good behavior.",
-    price: "From $299",
-    link: "/training/obedience",
-    showOnHomepage: true,
-    homepagePriority: 1,
-    features: [
-      "Sit, Stay, and Come",
-      "Loose-leash walking",
-      "Leave it and Drop it",
-      "Off-leash reliability"
-    ],
-    duration: "8 weeks",
-    groupSize: "Max 6 dogs"
-  },
-  {
-    id: "puppy-kindergarten",
+    id: "psie-przedszkole",
     type: "training",
     title: "Psie Przedszkole",
-    description: "Give your puppy the best start with early socialization and basic training.",
-    price: "From $249",
-    link: "/training/puppy-kindergarten",
+    description: "Zajęcia dla szczeniąt, które rozwijają pozytywne zachowania i umiejętności socjalizacyjne.",
+    price: "Od 249 zł",
+    link: "/training/psie-przedszkole",
     showOnHomepage: true,
-    homepagePriority: 2,
+    homepagePriority: 1,
     discount: {
       percentage: 15,
       validUntil: new Date("2024-05-01")
     },
     features: [
-      "Early socialization",
-      "Basic manners and commands",
-      "Bite inhibition",
-      "Confidence building"
+      "Wczesna socjalizacja",
+      "Podstawowe komendy",
+      "Nauka czystości",
+      "Budowanie pewności siebie"
     ],
-    duration: "6 weeks",
-    groupSize: "Max 6 puppies"
+    duration: "6 tygodni",
+    groupSize: "Max 6 szczeniąt"
   },
   {
-    id: "dog-school",
+    id: "psia-szkolka",
     type: "training",
     title: "Psia Szkółka",
-    description: "Comprehensive training programs for dogs of all ages and skill levels.",
-    price: "From $349",
-    link: "/training/dog-school",
-    showOnHomepage: false,
-    homepagePriority: 4,
+    description: "Kompleksowy program szkoleniowy dla psów w każdym wieku, koncentrujący się na posłuszeństwie i dobrej komunikacji.",
+    price: "Od 349 zł",
+    link: "/training/psia-szkolka",
+    showOnHomepage: true,
+    homepagePriority: 2,
     features: [
-      "Small group classes",
-      "Individual attention",
-      "Progressive skill development",
-      "Real-world practice scenarios"
+      "Podstawowe komendy",
+      "Chodzenie na luźnej smyczy",
+      "Przywołanie",
+      "Samokontrola"
     ],
-    duration: "12 weeks",
-    groupSize: "Max 8 dogs"
+    duration: "8 tygodni",
+    groupSize: "Max 6 psów"
   },
   {
-    id: "socialisation-walks",
+    id: "nosework",
     type: "training",
-    title: "Socialisation Walks",
-    description: "Structured group walks to help your dog develop social skills and confidence.",
-    price: "From $149",
-    link: "/training/socialisation-walks",
-    showOnHomepage: false,
+    title: "Nosework",
+    description: "Odkryj naturalne zdolności węchowe swojego psa poprzez zabawę i angażujący trening nosework.",
+    price: "Od 399 zł",
+    link: "/training/nosework",
+    showOnHomepage: true,
+    homepagePriority: 3,
+    isNew: true,
+    features: [
+      "Podstawy wykrywania zapachów",
+      "Techniki wyszukiwania",
+      "Budowanie motywacji do pracy",
+      "Zaawansowane scenariusze treningowe"
+    ],
+    duration: "6 tygodni",
+    groupSize: "Max 4 psy"
+  },
+  {
+    id: "spacery-socjalizacyjne",
+    type: "training",
+    title: "Spacery Socjalizacyjne",
+    description: "Zorganizowane spacery grupowe, które pomagają psu rozwijać umiejętności społeczne i pewność siebie.",
+    price: "Od 149 zł",
+    link: "/training/spacery-socjalizacyjne",
+    showOnHomepage: true,
+    homepagePriority: 4,
+    features: [
+      "Profesjonalny nadzór",
+      "Małe grupy dla bezpieczeństwa",
+      "Różnorodne środowiska",
+      "Monitorowanie zachowania"
+    ],
+    duration: "4 tygodnie",
+    groupSize: "Max 4 psy"
+  },
+  {
+    id: "sala-zabaw",
+    type: "training",
+    title: "Sala Zabaw i Eksploracji",
+    description: "Bezpieczna przestrzeń, gdzie Twój pies może bawić się, eksplorować i uczyć się pod nadzorem specjalistów.",
+    price: "Od 99 zł",
+    link: "/training/sala-zabaw",
+    showOnHomepage: true,
     homepagePriority: 5,
     features: [
-      "Professional supervision",
-      "Small groups for safety",
-      "Various environments",
-      "Behavior monitoring"
+      "Kontrolowane środowisko zabawy",
+      "Różnorodne przeszkody i zabawki",
+      "Ćwiczenia mentalne",
+      "Praca nad pewnością siebie"
     ],
-    duration: "4 weeks",
-    groupSize: "Max 4 dogs"
+    duration: "Sesje 60-minutowe",
+    groupSize: "Max 3 psy"
+  },
+  {
+    id: "treningi-indywidualne",
+    type: "training",
+    title: "Indywidualne Treningi",
+    description: "Spersonalizowane sesje szkoleniowe dostosowane do konkretnych potrzeb Twojego psa.",
+    price: "Od 199 zł",
+    link: "/training/treningi-indywidualne",
+    showOnHomepage: false,
+    homepagePriority: 6,
+    features: [
+      "Pełna uwaga trenera",
+      "Program dostosowany do potrzeb psa",
+      "Elastyczne terminy",
+      "Rozwiązywanie konkretnych problemów"
+    ],
+    duration: "Sesje 60-minutowe",
+    groupSize: "1 pies"
+  },
+  {
+    id: "konsultacje-behawioralne",
+    type: "training",
+    title: "Konsultacje Behawioralne",
+    description: "Specjalistyczne konsultacje pomagające zrozumieć i rozwiązać problemy behawioralne Twojego psa.",
+    price: "Od 249 zł",
+    link: "/training/konsultacje-behawioralne",
+    showOnHomepage: false,
+    homepagePriority: 7,
+    features: [
+      "Analiza zachowania psa",
+      "Plan działania i ćwiczeń",
+      "Wsparcie w implementacji",
+      "Follow-up po konsultacji"
+    ],
+    duration: "90-120 minut",
+    groupSize: "1 pies"
   }
 ];
 
 export const bundleProducts: BundleProduct[] = [
   {
-    id: "puppy-complete",
+    id: "pakiet-szczeniak",
     type: "bundle",
-    title: "Complete Puppy Package",
-    description: "Give your puppy the perfect start with our comprehensive training bundle.",
-    price: "From $549",
-    link: "/training/bundles/puppy-complete",
+    title: "Kompletny Pakiet dla Szczeniaka",
+    description: "Zapewnij swojemu szczeniakowi idealny start z naszym kompleksowym pakietem szkoleniowym.",
+    price: "Od 549 zł",
+    link: "/training/pakiety/pakiet-szczeniak",
     showOnHomepage: true,
     homepagePriority: 0,
     isNew: true,
     includedProducts: [
-      trainingProducts.find(p => p.id === "puppy-kindergarten"),
-      trainingProducts.find(p => p.id === "obedience")
+      trainingProducts.find(p => p.id === "psie-przedszkole"),
+      trainingProducts.find(p => p.id === "psia-szkolka")
     ] as TrainingProduct[],
-    savingsAmount: "Save $150",
+    savingsAmount: "Oszczędź 150 zł",
     discount: {
       percentage: 20,
       validUntil: new Date("2024-05-01")
