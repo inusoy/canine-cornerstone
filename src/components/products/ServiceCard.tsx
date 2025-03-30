@@ -29,7 +29,7 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
   return (
     <Link to={product.link} className="block group">
       <Card 
-        className="p-6 hover-lift fade-in bg-background text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300 flex flex-col items-center justify-center text-center h-full"
+        className="p-6 hover-lift fade-in bg-card text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300 flex flex-col items-center justify-center text-center h-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
