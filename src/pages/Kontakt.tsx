@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,8 +6,79 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { ContactInfo } from "@/components/contact/ContactInfo";
 import { contactInfo } from "@/data/contactInfo";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import { useToast } from "@/hooks/use-toast";
 
 const Kontakt = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    program: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Błąd formularza",
+        description: "Proszę wypełnić wszystkie wymagane pola",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Replace with your EmailJS service ID, template ID, and public key
+      await emailjs.send(
+        'service_jzmsyi5',
+        'template_i2n6ctp',
+        {
+          to_email: 'kontakt@szczekszczek.pl',
+          from_name: formData.name,
+          from_email: formData.email,
+          program: formData.program,
+          message: formData.message,
+        },
+        '_kObRF1b779O1PnpK'
+      );
+
+      toast({
+        title: "Wiadomość wysłana",
+        description: "Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe."
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        program: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast({
+        title: "Błąd",
+        description: "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <Navigation />
@@ -38,26 +108,39 @@ const Kontakt = () => {
 
             <Card className="p-8 shadow-md">
               <h2 className="text-2xl font-semibold mb-6 text-center">Napisz do nas</h2>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={handleSubmit}>
                 <div>
                   <label className="block text-sm font-medium mb-2">Imię</label>
                   <Input
+                    name="name"
                     type="text"
                     placeholder="Twoje imię"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Email</label>
                   <Input
+                    name="email"
                     type="email"
                     placeholder="Twój email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">
                     Program szkoleniowy
                   </label>
-                  <select className="w-full p-2 rounded-md border border-input">
+                  <select 
+                    className="w-full p-2 rounded-md border border-input"
+                    name="program"
+                    value={formData.program}
+                    onChange={handleChange}
+                  >
                     <option value="">Wybierz program</option>
                     <option value="nosework">Nosework</option>
                     <option value="obedience">Obedience</option>
@@ -69,11 +152,21 @@ const Kontakt = () => {
                 <div>
                   <label className="block text-sm font-medium mb-2">Wiadomość</label>
                   <Textarea
+                    name="message"
                     className="h-32"
                     placeholder="Opowiedz nam o swoim psie i celach szkoleniowych"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                   />
                 </div>
-                <Button className="w-full">Wyślij wiadomość</Button>
+                <Button 
+                  type="submit" 
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Wysyłanie..." : "Wyślij wiadomość"}
+                </Button>
               </form>
             </Card>
           </div>
