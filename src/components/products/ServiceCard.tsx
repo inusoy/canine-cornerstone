@@ -33,7 +33,8 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
             <img 
               src={`/icons/dog-${product.id}.svg`} 
               alt="" 
-              className="w-full h-full text-secondary group-hover:text-primary transition-colors duration-300"
+              className="w-full h-full group-hover:text-primary transition-colors duration-300"
+              style={{ filter: 'invert(34%) sepia(15%) saturate(1001%) hue-rotate(118deg) brightness(91%) contrast(86%)' }}
             />
           </div>
         )}

@@ -21,11 +21,6 @@ export const ProductBadges = ({ product }: ProductBadgesProps) => {
           {product.discount.percentage}% OFF
         </Badge>
       )}
-      {product.type === "bundle" && (
-        <Badge variant="secondary" className="bg-purple-500 text-white hover:bg-purple-600">
-          Bundle
-        </Badge>
-      )}
     </div>
   );
 };

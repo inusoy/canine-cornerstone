@@ -1,10 +1,9 @@
 
-import { TrainingProduct, BundleProduct } from "@/types/product";
+import { Product } from "@/types/product";
 
-export const trainingProducts: TrainingProduct[] = [
+export const products: Product[] = [
   {
     id: "psie-przedszkole",
-    type: "training",
     title: "Psie Przedszkole",
     description: "Zajęcia dla szczeniąt, które rozwijają pozytywne zachowania i umiejętności socjalizacyjne.",
     price: "Od 249 zł",
@@ -26,7 +25,6 @@ export const trainingProducts: TrainingProduct[] = [
   },
   {
     id: "psia-szkolka",
-    type: "training",
     title: "Psia Szkółka",
     description: "Kompleksowy program szkoleniowy dla psów w każdym wieku, koncentrujący się na posłuszeństwie i dobrej komunikacji.",
     price: "Od 349 zł",
@@ -44,7 +42,6 @@ export const trainingProducts: TrainingProduct[] = [
   },
   {
     id: "nosework",
-    type: "training",
     title: "Nosework",
     description: "Odkryj naturalne zdolności węchowe swojego psa poprzez zabawę i angażujący trening nosework.",
     price: "Od 399 zł",
@@ -63,7 +60,6 @@ export const trainingProducts: TrainingProduct[] = [
   },
   {
     id: "spacery-socjalizacyjne",
-    type: "training",
     title: "Spacery Socjalizacyjne",
     description: "Zorganizowane spacery grupowe, które pomagają psu rozwijać umiejętności społeczne i pewność siebie.",
     price: "Od 149 zł",
@@ -81,7 +77,6 @@ export const trainingProducts: TrainingProduct[] = [
   },
   {
     id: "sala-zabaw",
-    type: "training",
     title: "Sala Zabaw i Eksploracji",
     description: "Bezpieczna przestrzeń, gdzie Twój pies może bawić się, eksplorować i uczyć się pod nadzorem specjalistów.",
     price: "Od 99 zł",
@@ -99,7 +94,6 @@ export const trainingProducts: TrainingProduct[] = [
   },
   {
     id: "treningi-indywidualne",
-    type: "training",
     title: "Treningi Indywidualne",
     description: "Spersonalizowane sesje szkoleniowe dostosowane do konkretnych potrzeb Twojego psa.",
     price: "Od 199 zł",
@@ -117,7 +111,6 @@ export const trainingProducts: TrainingProduct[] = [
   },
   {
     id: "konsultacje-behawioralne",
-    type: "training",
     title: "Konsultacje Behawioralne",
     description: "Specjalistyczne konsultacje pomagające zrozumieć i rozwiązać problemy behawioralne Twojego psa.",
     price: "Od 249 zł",
@@ -135,36 +128,8 @@ export const trainingProducts: TrainingProduct[] = [
   }
 ];
 
-export const bundleProducts: BundleProduct[] = [
-  {
-    id: "pakiet-szczeniak",
-    type: "bundle",
-    title: "Kompletny Pakiet dla Szczeniaka",
-    description: "Zapewnij swojemu szczeniakowi idealny start z naszym kompleksowym pakietem szkoleniowym.",
-    price: "Od 549 zł",
-    link: "/training/pakiety/pakiet-szczeniak",
-    showOnHomepage: true,
-    homepagePriority: 0,
-    isNew: true,
-    includedProducts: [
-      trainingProducts.find(p => p.id === "psie-przedszkole"),
-      trainingProducts.find(p => p.id === "psia-szkolka")
-    ] as TrainingProduct[],
-    savingsAmount: "Oszczędź 150 zł",
-    discount: {
-      percentage: 20,
-      validUntil: new Date("2024-05-01")
-    }
-  }
-];
-
-export const allProducts: (TrainingProduct | BundleProduct)[] = [
-  ...trainingProducts,
-  ...bundleProducts
-];
-
 export const getHomePageProducts = () => {
-  return allProducts
+  return products
     .filter(product => product.showOnHomepage)
     .sort((a, b) => a.homepagePriority - b.homepagePriority);
 };
