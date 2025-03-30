@@ -1,7 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
 import { allProducts } from "@/data/products";
-import { blogPosts } from "@/pages/blog/[slug]";
 import {
   CommandDialog,
   CommandEmpty,
@@ -21,10 +20,10 @@ export const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
 
   return (
     <CommandDialog open={open} onOpenChange={onOpenChange}>
-      <CommandInput placeholder="Search trainings and blog posts..." />
+      <CommandInput placeholder="Wyszukaj szkolenia..." />
       <CommandList>
-        <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Training Programs">
+        <CommandEmpty>Brak wyników.</CommandEmpty>
+        <CommandGroup heading="Programy szkoleniowe">
           {allProducts.map((product) => (
             <CommandItem
               key={product.id}
@@ -42,33 +41,7 @@ export const SearchDialog = ({ open, onOpenChange }: SearchDialogProps) => {
             </CommandItem>
           ))}
         </CommandGroup>
-        <CommandGroup heading="Blog Posts">
-          {blogPosts.map((post) => (
-            <CommandItem
-              key={post.slug}
-              onSelect={() => {
-                onOpenChange(false);
-                navigate(`/blog/${post.slug}`);
-              }}
-            >
-              <div className="flex flex-col">
-                <span>{post.title}</span>
-                <div className="flex gap-2 mt-1">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </CommandItem>
-          ))}
-        </CommandGroup>
       </CommandList>
     </CommandDialog>
   );
 };
-

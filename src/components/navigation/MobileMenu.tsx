@@ -24,7 +24,7 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
           }}
           className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
         >
-          Search
+          Wyszukaj
         </button>
         <div className="space-y-2">
           <button
@@ -34,7 +34,7 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
             }}
             className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors"
           >
-            Training Programs
+            Oferta
           </button>
           <TrainingMenu onClick={onClose} mobile />
         </div>
@@ -46,23 +46,14 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
             }}
             className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
           >
-            About
-          </button>
-          <button
-            onClick={(e) => {
-              onNavigation(e, "testimonials");
-              onClose();
-            }}
-            className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors"
-          >
-            Testimonials
+            O mnie
           </button>
           <Link
-            to="/blog"
+            to="/gallery"
             className="block px-4 py-2 hover:bg-muted rounded-md transition-colors"
             onClick={onClose}
           >
-            Blog
+            Galeria
           </Link>
           <Link
             to="/kontakt"
@@ -76,12 +67,12 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
             <Button
               variant="default"
               className="w-full"
-              onClick={(e) => {
-                onNavigation(e, "contact");
+              onClick={() => {
+                window.location.href = "/training/sala-zabaw";
                 onClose();
               }}
             >
-              Get Started
+              Sala Zabaw i Eksploracji
             </Button>
           </div>
         </div>
