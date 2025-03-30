@@ -19,7 +19,7 @@ const Navigation = () => {
     event.preventDefault();
     
     // Check if we're handling a homepage section
-    if (path === "services" || path === "about" || path === "testimonials" || path === "contact") {
+    if (path === "services" || path === "about") {
       if (location.pathname === "/home") {
         // Already on homepage, just scroll to section
         const element = document.getElementById(path);
@@ -57,7 +57,7 @@ const Navigation = () => {
                 onClick={(e) => handleNavigation(e, "services")}
                 className="hover:text-primary transition-colors cursor-pointer"
               >
-                Training
+                Oferta
               </button>
               <div className="absolute left-0 mt-2 w-64 bg-background border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <TrainingMenu className="p-2 space-y-1" />
@@ -67,16 +67,10 @@ const Navigation = () => {
               onClick={(e) => handleNavigation(e, "about")}
               className="hover:text-primary transition-colors"
             >
-              About
+              O mnie
             </button>
-            <button
-              onClick={(e) => handleNavigation(e, "testimonials")}
-              className="hover:text-primary transition-colors"
-            >
-              Testimonials
-            </button>
-            <Link to="/blog" className="hover:text-primary transition-colors">
-              Blog
+            <Link to="/gallery" className="hover:text-primary transition-colors">
+              Galeria
             </Link>
             <Link to="/kontakt" className="hover:text-primary transition-colors">
               Kontakt
@@ -85,9 +79,9 @@ const Navigation = () => {
             <Button
               variant="default"
               className="hover-lift"
-              onClick={(e) => handleNavigation(e, "contact")}
+              onClick={() => navigate("/training/sala-zabaw")}
             >
-              Get Started
+              Sala Zabaw i Eksploracji
             </Button>
           </div>
 

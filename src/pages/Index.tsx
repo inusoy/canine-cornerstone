@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
 import AboutSection from "@/components/AboutSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -57,7 +57,6 @@ const Index = () => {
       <HeroSection />
       <ServicesSection />
       <AboutSection />
-      <TestimonialsSection />
       <ContactSection />
       <Footer />
     </div>

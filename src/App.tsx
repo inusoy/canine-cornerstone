@@ -4,7 +4,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import { siteConfig } from "./config/site";
 import MaintenancePage from "./pages/Maintenance";
 import Index from "./pages/Index";
@@ -17,8 +16,7 @@ import SalaZabaw from "./pages/training/SalaZabaw";
 import TreningiIndywidualne from "./pages/training/TreningiIndywidualne";
 import KonsultacjeBehawioralne from "./pages/training/KonsultacjeBehawioralne";
 import Kontakt from "./pages/Kontakt";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/blog/[slug]";
+import Gallery from "./pages/Gallery";
 import Search from "./pages/Search";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -47,8 +45,7 @@ const App = () => (
           {/* Redirect from old contact page to kontakt */}
           <Route path="/contact" element={<Navigate to="/kontakt" replace />} />
           <Route path="/kontakt" element={<Kontakt />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
