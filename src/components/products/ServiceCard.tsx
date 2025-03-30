@@ -34,7 +34,7 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         {iconExists && (
-          <div className="mb-4 w-16 h-16 flex items-center justify-center">
+          <div className="mb-4 w-64 h-64 flex items-center justify-center">
             <img 
               src={isHovered ? `/icons/dog-${product.id}-hover.svg` : `/icons/dog-${product.id}.svg`} 
               alt="" 
@@ -42,7 +42,7 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
             />
           </div>
         )}
-        <h3 className="text-xl font-semibold uppercase font-bryndan">{product.title}</h3>
+        <h3 className="text-xl font-semibold uppercase font-josefin">{product.title}</h3>
       </Card>
     </Link>
   );
