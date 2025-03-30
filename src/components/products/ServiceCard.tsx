@@ -34,7 +34,7 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         {iconExists && (
-          <div className="mb-4 w-64 h-64 flex items-center justify-center">
+          <div className="mb-4 w-40 h-40 flex items-center justify-center">
             <img 
               src={isHovered ? `/icons/dog-${product.id}-hover.svg` : `/icons/dog-${product.id}.svg`} 
               alt="" 
