@@ -10,10 +10,12 @@ import MaintenancePage from "./pages/Maintenance";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Nosework from "./pages/training/Nosework";
-import Obedience from "./pages/training/Obedience";
-import DogSchool from "./pages/training/DogSchool";
-import PuppyKindergarten from "./pages/training/PuppyKindergarten";
-import SocialisationWalks from "./pages/training/SocialisationWalks";
+import PsiaSzkolka from "./pages/training/PsiaSzkolka";
+import PsiePrzedszkole from "./pages/training/PsiePrzedszkole";
+import SpacerySocjalizacyjne from "./pages/training/SpacerySocjalizacyjne";
+import SalaZabaw from "./pages/training/SalaZabaw";
+import TreningiIndywidualne from "./pages/training/TreningiIndywidualne";
+import KonsultacjeBehawioralne from "./pages/training/KonsultacjeBehawioralne";
 import Kontakt from "./pages/Kontakt";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/blog/[slug]";
@@ -36,10 +38,12 @@ const App = () => (
           />
           <Route path="/home" element={<Index />} />
           <Route path="/training/nosework" element={<Nosework />} />
-          <Route path="/training/obedience" element={<Obedience />} />
-          <Route path="/training/dog-school" element={<DogSchool />} />
-          <Route path="/training/puppy-kindergarten" element={<PuppyKindergarten />} />
-          <Route path="/training/socialisation-walks" element={<SocialisationWalks />} />
+          <Route path="/training/psia-szkolka" element={<PsiaSzkolka />} />
+          <Route path="/training/psie-przedszkole" element={<PsiePrzedszkole />} />
+          <Route path="/training/spacery-socjalizacyjne" element={<SpacerySocjalizacyjne />} />
+          <Route path="/training/sala-zabaw" element={<SalaZabaw />} />
+          <Route path="/training/treningi-indywidualne" element={<TreningiIndywidualne />} />
+          <Route path="/training/konsultacje-behawioralne" element={<KonsultacjeBehawioralne />} />
           {/* Redirect from old contact page to kontakt */}
           <Route path="/contact" element={<Navigate to="/kontakt" replace />} />
           <Route path="/kontakt" element={<Kontakt />} />
