@@ -27,12 +27,12 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
   }, [product.id]);
 
   return (
-    <Card 
-      className="p-6 hover-lift fade-in bg-background/50 backdrop-blur-sm flex flex-col items-center justify-center text-center"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Link to={product.link} className="group flex flex-col items-center">
+    <Link to={product.link} className="block group">
+      <Card 
+        className="p-6 hover-lift fade-in bg-background text-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-300 flex flex-col items-center justify-center text-center h-full"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {iconExists && (
           <div className="mb-4 w-16 h-16 flex items-center justify-center">
             <img 
@@ -42,8 +42,8 @@ export const ServiceCard = ({ product }: ServiceCardProps) => {
             />
           </div>
         )}
-        <h3 className="text-xl font-semibold text-primary uppercase font-bryndan">{product.title}</h3>
-      </Link>
-    </Card>
+        <h3 className="text-xl font-semibold uppercase font-bryndan">{product.title}</h3>
+      </Card>
+    </Link>
   );
 };
