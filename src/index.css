@@ -46,7 +46,7 @@
   }
  
   * {
-    @apply border-border scroll-smooth uppercase;
+    @apply border-border scroll-smooth;
   }
 
   body {
