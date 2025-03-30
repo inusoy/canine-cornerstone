@@ -74,15 +74,15 @@ const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
           />)}
           
           {showText && (
-            <div className={cn("flex flex-col", textClassName)}>
+            <div className={cn("flex flex-col justify-center -mb-1", textClassName)}>
               <span className={cn(
-                "font-josefin text-3xl leading-tight uppercase", 
+                "font-josefin text-3xl leading-none uppercase", 
                 onPrimaryBg && "text-primary-foreground"
               )}>
                 Szczek
               </span>
               <span className={cn(
-                "font-josefin text-3xl leading-tight uppercase", 
+                "font-josefin text-3xl leading-none uppercase", 
                 onPrimaryBg && "text-primary-foreground"
               )}>
                 Szczek
