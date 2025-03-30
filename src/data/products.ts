@@ -128,6 +128,14 @@ export const products: Product[] = [
   }
 ];
 
+// Export all products for search functionality
+export const allProducts = products;
+
+// Export only training-related products for the training menu
+export const trainingProducts = products.filter(product => 
+  product.link.startsWith("/training/")
+);
+
 export const getHomePageProducts = () => {
   return products
     .filter(product => product.showOnHomepage)
