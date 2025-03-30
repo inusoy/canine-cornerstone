@@ -75,14 +75,16 @@ const Navigation = () => {
             <Link to="/kontakt" className="hover:text-primary transition-colors uppercase">
               KONTAKT
             </Link>
-            <SocialLinks />
-            <Button
-              variant="default"
-              className="hover-lift uppercase"
-              onClick={() => navigate("/training/sala-zabaw")}
-            >
-              SALA ZABAW I EKSPLORACJI
-            </Button>
+            <div className="flex items-center space-x-4">
+              <Button
+                variant="default"
+                className="hover-lift uppercase"
+                onClick={() => navigate("/training/sala-zabaw")}
+              >
+                SALA ZABAW I EKSPLORACJI
+              </Button>
+              <SocialLinks />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

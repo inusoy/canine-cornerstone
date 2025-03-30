@@ -62,7 +62,6 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
           >
             KONTAKT
           </Link>
-          <SocialLinks className="px-4" showLabels onItemClick={onClose} />
           <div className="px-4">
             <Button
               variant="default"
@@ -75,6 +74,7 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
               SALA ZABAW I EKSPLORACJI
             </Button>
           </div>
+          <SocialLinks className="px-4" showLabels onItemClick={onClose} />
         </div>
       </div>
     </div>
