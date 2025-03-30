@@ -100,7 +100,7 @@ export const trainingProducts: TrainingProduct[] = [
   {
     id: "treningi-indywidualne",
     type: "training",
-    title: "Indywidualne Treningi",
+    title: "Treningi Indywidualne",
     description: "Spersonalizowane sesje szkoleniowe dostosowane do konkretnych potrzeb Twojego psa.",
     price: "Od 199 zł",
     link: "/training/treningi-indywidualne",
