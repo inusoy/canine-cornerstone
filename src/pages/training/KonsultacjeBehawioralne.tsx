@@ -1,4 +1,3 @@
-
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
 import PriceTag from "@/components/training/PriceTag";
@@ -8,8 +7,6 @@ const KonsultacjeBehawioralne = () => {
     <TrainingLayout
       title="Konsultacje Behawioralne"
       subtitle=""
-      iconName="dog-konsultacje-behawioralne"
-      imageAlt="Konsultacja behawioralna z psem"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
@@ -44,7 +41,6 @@ const KonsultacjeBehawioralne = () => {
         Ten typ konsultacji będzie dobry dla świeżo upieczonych opiekunów szczeniaczka. Opowiem na nich m.in. jak prawidłowo socjalizować psa, jak nauczyć czystości, jak dobrze budować relację, jak zaspokajać psie potrzeby i jak dbać o szczeniaczkowe emocje. Oprócz tego odpowiem na nurtujące Was pytania i pomogę sprawić, żeby życie ze szczeniaczkiem, mimo trudów, było niezapomnianą przygodą.
       </p>
       <p>Konsultacje odbywają się u Was w domu i trwają 90 minut.</p>
-
     </TrainingLayout>
   );
 };

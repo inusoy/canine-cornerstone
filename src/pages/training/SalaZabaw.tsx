@@ -1,4 +1,3 @@
-
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
 import PriceTag from "@/components/training/PriceTag";
@@ -8,8 +7,6 @@ const SalaZabaw = () => {
     <TrainingLayout
       title="Sala Zabaw i Eksploracji"
       subtitle=""
-      iconName="dog-sala-zabaw"
-      imageAlt="Psy w sali zabaw"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

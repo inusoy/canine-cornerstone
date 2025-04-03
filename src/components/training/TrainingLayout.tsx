@@ -10,8 +10,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 interface TrainingLayoutProps {
   title: string;
   subtitle: string;
-  iconName?: string;
-  imageAlt: string;
   children: ReactNode;
   sidebarContent?: ReactNode;
 }
@@ -19,8 +17,6 @@ interface TrainingLayoutProps {
 const TrainingLayout = ({
   title,
   subtitle,
-  iconName,
-  imageAlt,
   children,
   sidebarContent,
 }: TrainingLayoutProps) => {
@@ -40,16 +36,6 @@ const TrainingLayout = ({
           </h1>
           <p className="text-lg text-muted-foreground mb-8">{subtitle}</p>
 
-          {iconName && (
-            <div className="flex justify-center items-center mb-8">
-              <img
-                src={`/icons/${iconName}-hover.svg`}
-                alt={imageAlt}
-                className="w-40 h-40 object-contain"
-              />
-            </div>
-          )}
-
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main content */}
             <div className="lg:col-span-2 space-y-6 prose max-w-none">
@@ -63,9 +49,6 @@ const TrainingLayout = ({
                   <ScrollArea className="max-h-[calc(100vh-200px)]">
                     <div className="space-y-6">
                       {sidebarContent}
-                      {/* <Button asChild className="w-full uppercase">
-                        <Link to="/kontakt">ZAREZERWUJ SESJĘ</Link>
-                      </Button> */}
                     </div>
                   </ScrollArea>
                 </Card>

@@ -1,4 +1,3 @@
-
 import TrainingLayout from "@/components/training/TrainingLayout";
 import PriceTag from "@/components/training/PriceTag";
 import SignupInfo from "@/components/training/SignupInfo";
@@ -8,8 +7,6 @@ const SpacerySocjalizacyjne = () => {
     <TrainingLayout
       title="Spacery Socjalizacyjne"
       subtitle=""
-      iconName="dog-spacery-socjalizacyjne"
-      imageAlt="Psy na spacerze socjalizacyjnym"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
