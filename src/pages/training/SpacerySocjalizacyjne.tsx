@@ -8,8 +8,8 @@ const SpacerySocjalizacyjne = () => {
     <TrainingLayout
       title="Spacery Socjalizacyjne"
       subtitle=""
-      imageSrc="https://images.unsplash.com/photo-1487252665478-49b61b47f302"
-      imageAlt="Psy na spacerze socjalizacyjnym"
+      iconName="dog-spacery-socjalizacyjne"
+      iconAlt="Psy na spacerze socjalizacyjnym"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

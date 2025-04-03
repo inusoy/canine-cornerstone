@@ -8,8 +8,8 @@ const TreningiIndywidualne = () => {
     <TrainingLayout
       title="Indywidualne Treningi"
       subtitle=""
-      imageSrc="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01"
-      imageAlt="Trening indywidualny z psem"
+      iconName="dog-treningi-indywidualne"
+      iconAlt="Trening indywidualny z psem"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

@@ -8,8 +8,8 @@ const PsiaSzkolka = () => {
     <TrainingLayout
       title="Psia Szkółka"
       subtitle=""
-      imageSrc="https://images.unsplash.com/photo-1582562124811-c09040d0a901"
-      imageAlt="Szkolenie w Psiej Szkółce"
+      iconName="dog-psia-szkolka"
+      iconAlt="Szkolenie w Psiej Szkółce"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

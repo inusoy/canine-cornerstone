@@ -1,3 +1,4 @@
+
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
 import PriceTag from "@/components/training/PriceTag";
@@ -7,8 +8,8 @@ const KonsultacjeBehawioralne = () => {
     <TrainingLayout
       title="Konsultacje Behawioralne"
       subtitle=""
-      imageSrc="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc"
-      imageAlt="Konsultacja behawioralna z psem"
+      iconName="dog-konsultacje-behawioralne"
+      iconAlt="Konsultacja behawioralna z psem"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

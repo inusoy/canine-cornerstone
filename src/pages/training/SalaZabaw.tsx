@@ -8,8 +8,8 @@ const SalaZabaw = () => {
     <TrainingLayout
       title="Sala Zabaw i Eksploracji"
       subtitle=""
-      imageSrc="https://images.unsplash.com/photo-1568393691622-c7ba131d63b4"
-      imageAlt="Psy w sali zabaw"
+      iconName="dog-sala-zabaw"
+      iconAlt="Psy w sali zabaw"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
