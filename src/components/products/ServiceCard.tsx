@@ -51,7 +51,7 @@ export const ServiceCard = ({ product, fullWidth = false }: ServiceCardProps) =>
             />
           </div>
         )}
-        <h3 className="text-xl font-semibold uppercase font-josefin">
+        <h3 className={cn("text-xl font-semibold uppercase font-josefin", isHovered && "text-card")}>
           {product.title}
         </h3>
       </Card>
