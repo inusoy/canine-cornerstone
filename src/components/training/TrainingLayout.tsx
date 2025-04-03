@@ -44,13 +44,19 @@ const TrainingLayout = ({
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="sticky top-28">
+              <div className={isMobile ? "" : "sticky top-28"}>
                 <Card className="p-6 shadow-md">
-                  <ScrollArea className="max-h-[calc(100vh-200px)]">
+                  {isMobile ? (
                     <div className="space-y-6">
                       {sidebarContent}
                     </div>
-                  </ScrollArea>
+                  ) : (
+                    <ScrollArea className="max-h-[calc(100vh-200px)]">
+                      <div className="space-y-6">
+                        {sidebarContent}
+                      </div>
+                    </ScrollArea>
+                  )}
                 </Card>
               </div>
             </div>

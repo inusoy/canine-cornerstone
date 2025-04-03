@@ -8,7 +8,7 @@ interface PriceTagProps {
 
 const PriceTag = ({ children, className = "" }: PriceTagProps) => {
   return (
-    <p className={cn("text-2xl font-semibold text-primary", className)}>
+    <p className={cn("text-xl font-semibold text-primary", className)}>
       {children}
     </p>
   );
