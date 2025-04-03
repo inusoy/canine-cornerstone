@@ -55,7 +55,7 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
         {customLinks.map((link, index) => (
           <li key={index} className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span><a href={link.url}>{link.text}</a></span>
+            <span className="text-primary hover:underline"><a href={link.url}>{link.text}</a></span>
           </li>
         ))}
       </ul>

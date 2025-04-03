@@ -1,6 +1,7 @@
 
 import TrainingLayout from "@/components/training/TrainingLayout";
 import PriceTag from "@/components/training/PriceTag";
+import SignupInfo from "@/components/training/SignupInfo";
 
 const SpacerySocjalizacyjne = () => {
   return (
@@ -27,14 +28,13 @@ const SpacerySocjalizacyjne = () => {
               <span><b>Dla kogo?</b>
                 <ul>
                   Dla psów, które nie mają zbyt wielu psich przyjaciół, reagują zbyt emocjonalnie na inne psy. Dla psów, które szczekają lub ciągną do innych psów, albo na spacerach nie zwracają uwagi na opiekuna.
-
-                  <h3 className="text-2xl font-semibold">JAK SIĘ ZAPISAĆ?</h3>
                 </ul></span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <span>Poprzez formularz zgłoszeniowy.</span>
             </li>
+            <SignupInfo showFacebook={false} showInstagram={false} showSMS={false} showContactForm={false} customLinks={[{ url: "https://forms.gle/domaQzLmYNScRwhk9", text: "Formularz" }]}/>
           </ul>
           <PriceTag>80 zł/spacer</PriceTag>
         </div>

@@ -30,7 +30,7 @@ const SalaZabaw = () => {
                   Salka zabaw i eksploracji jest dla każdego psa, niezależnie od wieku, wielkości czy rasy. Szczególnie mile widziane są lękuski, dla których to miejsce będzie idealne do otworzenia się.
                 </ul></span>
             </li>
-            <SignupInfo showContactForm={false}/>
+            <SignupInfo showFacebook={false} showInstagram={false} showSMS={false} showContactForm={false} customLinks={[{ url: "https://forms.gle/zUhMB9hN1WJxXBPS6", text: "Rezerwacja lokalu" }]}/>
           </ul>
           <PriceTag>140 zł/90 min*</PriceTag> <p className="font-semibold text-primary">*czas może być krótszy, bo to Twój pies decyduje</p>
         </div>
