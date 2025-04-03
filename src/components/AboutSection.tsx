@@ -9,7 +9,7 @@ const AboutSection = () => {
           </h2>
           <div className="fade-in">
             <img
-              src="public/images/_DSC7003.jpg"
+              src="/images/_DSC7003.jpg"
               alt="Trainer with dogs"
               className="w-full h-full object-cover rounded-lg mb-4"
             />

@@ -8,6 +8,7 @@ import EventFilter from '@/components/events/EventFilter';
 import EmptyEvents from '@/components/events/EmptyEvents';
 import { Event } from '@/types/event';
 import wydarzenia from '@/data/wydarzenia.json';
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const SpotkaniaJPsiarzy: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
@@ -48,6 +49,7 @@ const SpotkaniaJPsiarzy: React.FC = () => {
   };
 
   const hasUpcomingEvents = events.some(event => new Date(event.date) >= new Date());
+  const isMobile = useIsMobile();
 
   return (
     <>
@@ -58,8 +60,12 @@ const SpotkaniaJPsiarzy: React.FC = () => {
       
       <Navigation />
       
-      <main className="container mx-auto px-4 pt-24 pb-12">
-        <h1 className="text-3xl md:text-4xl font-bold mb-6 mt-8">SPOTKANIA PSIARZY</h1>
+      <main className="container mx-auto px-4 pt-32 pb-12">
+      <h1
+            className={`text-5xl font-bryndan mb-6 text-primary ${
+              isMobile ? "text-center" : "text-left"
+            } uppercase`}
+          >SPOTKANIA PSIARZY</h1>
         
         <p className="mb-8 text-lg">
           Dołącz do naszych spotkań dla miłośników psów! Organizujemy regularne wydarzenia, 

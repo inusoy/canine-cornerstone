@@ -25,7 +25,7 @@ const TrainingLayout = ({
   return (
     <>
       <Navigation />
-      <div className="min-h-screen pt-24 pb-16">
+      <div className="min-h-screen pt-32 pb-16">
         <div className="container mx-auto px-4">
           <h1
             className={`text-5xl font-bryndan mb-6 text-primary ${
