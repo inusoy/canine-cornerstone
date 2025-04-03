@@ -4,4 +4,5 @@ export interface Product {
   title: string;
   link: string;
   homepagePriority: number;
+  fullWidth?: boolean;
 }

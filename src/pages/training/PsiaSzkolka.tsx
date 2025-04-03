@@ -1,5 +1,6 @@
 
 import TrainingLayout from "@/components/training/TrainingLayout";
+import SignupInfo from "@/components/training/SignupInfo";
 
 const PsiaSzkolka = () => {
   return (
@@ -19,47 +20,35 @@ const PsiaSzkolka = () => {
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <span><b>Lokalizacja:</b><ul>Sala i teren przy Gwareckiej 8/3L.</ul>
-</span>
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <span><b>Dla kogo?</b>
-              <ul>
-              Dla psów od 5. miesiąca życia w górę w momencie startu kursu, bez ograniczenia wieku.
-          <li className="flex items-start">
+                <ul>
+                  Dla psów od 5. miesiąca życia w górę w momencie startu kursu, bez ograniczenia wieku.
+                </ul></span>
+            </li>
+            <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <span> <b>Ile spotkań?</b><ul>6 spotkań po 45-60 minut</ul>
-</span>
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <span> <b>Kiedy?</b><ul>Grupy w weekendy i w tygodniu.</ul>
-              <h3 className="text-2xl font-semibold">JAK SIĘ ZAPISAĆ?</h3>
-</span>
+              </span>
             </li>
-          </ul></span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span> Poprzez wiadomość prywatną na Facebooku(hiperłącze),</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span> Poprzez wiadomość prywatną na Instagramie(hiperłącze),</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>  Smsem +48 504 267 825.</span>
-            </li>
+            <SignupInfo showContactForm={false} />
           </ul>
           <p className="font-semibold text-primary">600 zł/pakiet</p>
         </div>
       }
     >
       <p>
-      Mały, wielki, gruby, chudy, jamnik, golden czy doberman, każdy pies powinien znać podstawy posłuszeństwa.
+        Mały, wielki, gruby, chudy, jamnik, golden czy doberman, każdy pies powinien znać podstawy posłuszeństwa.
       </p>
-      
+
       <h2 className="text-2xl font-semibold mt-8">CZEGO UCZY PSIA SZKÓŁKA W SZCZEK SZCZEK?</h2>
       <ul className="list-disc pl-6 space-y-2">
         <li>Jak motywować, bawić się i skupiać na sobie psa.</li>
@@ -68,10 +57,10 @@ const PsiaSzkolka = () => {
         <li>Cierpliwości i samokontroli.</li>
         <li>Jak ćwiczyć z psem i zwiększać odpowiednio poziom trudności.</li>
       </ul>
-      
+
       <h2 className="text-2xl font-semibold mt-8">CO OTRZYMACIE?</h2>
       <p>
-      Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, dostaniecie na start powitalny prezent, coś dla psa i człowieka, a na zakończenie dyplom. Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji lub nosework.
+        Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, dostaniecie na start powitalny prezent, coś dla psa i człowieka, a na zakończenie dyplom. Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji lub nosework.
       </p>
       <p>Zadbajcie o Waszą relację i wspólne życie już dziś!</p>
       <h2 className="text-2xl font-semibold mt-8">WAŻNE</h2>

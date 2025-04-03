@@ -1,5 +1,5 @@
-
 import TrainingLayout from "@/components/training/TrainingLayout";
+import SignupInfo from "@/components/training/SignupInfo";
 
 const Nosework = () => {
   return (
@@ -19,28 +19,16 @@ const Nosework = () => {
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <span> <b>Lokalizacja:</b><ul>Sala na Gwareckiej 8/3L we Wrocławiu lub w terenie (po wcześniejszym ustaleniu)</ul>
-</span>
+              </span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
               <span><b>Dla kogo?</b>
-              <ul>
+                <ul>
                   Dla psów na poziomie początkującym i na poziomie klas 0 oraz 1 w wiodących organizacjach nosework w Polsce.
-          <h3 className="text-2xl font-semibold">JAK SIĘ ZAPISAĆ?</h3>
-          </ul></span>
+                </ul></span>
             </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span> Poprzez wiadomość prywatną na Facebooku(hiperłącze),</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span> Poprzez wiadomość prywatną na Instagramie(hiperłącze),</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>  Smsem +48 504 267 825.</span>
-            </li>
+            <SignupInfo showContactForm={false}/>
           </ul>
           <p className="font-semibold text-primary">80 zł/45 min</p>
         </div>
@@ -48,13 +36,13 @@ const Nosework = () => {
     >
       <h2 className="text-2xl font-semibold mt-8">CZYM JEST NOSEWORK?</h2>
       <p>Nosework jest sportem kynologicznym, zainspirowanym pracą psów w służbach np. przy detekcji materiałów wybuchowych lub narkotyków, poszukiwaniu ludzi czy udaremnianiu przemytów egzotycznych zwierząt.</p>
-<p>Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.
- wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.</p>
-      
+      <p>Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.
+        wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.</p>
+
       <h2 className="text-2xl font-semibold mt-8">NOSEWORK DLA KAŻDEGO PSA (I OPIEKUNA)?</h2>
       <p>Tak! Nosework jest świetnym sportem, bo mogą go uprawiać psy w każdym wieku, każdej wielkości i rasy. Nie wymaga specjalnej sprawności fizycznej, można go ćwiczyć w domach i na spacerach.
 
-Dodatkowo, dobrze stawiane w noseworku wyzwania, świetnie zwiększają pewność siebie u psa, męczą psią głowę i pomagają w kontroli emocji i samoregulacji. Nie zapominajmy, że węszenie jest dla psów samo w sobie przyjemne i daje psom dużo satysfakcji.</p>
+        Dodatkowo, dobrze stawiane w noseworku wyzwania, świetnie zwiększają pewność siebie u psa, męczą psią głowę i pomagają w kontroli emocji i samoregulacji. Nie zapominajmy, że węszenie jest dla psów samo w sobie przyjemne i daje psom dużo satysfakcji.</p>
     </TrainingLayout>
   );
 };

@@ -1,4 +1,3 @@
-
 import { ServiceCard } from "@/components/products/ServiceCard";
 import { trainingProducts } from "@/data/products";
 
@@ -11,7 +10,15 @@ const ServicesSection = () => {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {trainingProducts.map((product) => (
-            <ServiceCard key={product.id} product={product} />
+            <div 
+              key={product.id} 
+              className={product.fullWidth ? "col-span-full" : ""}
+            >
+              <ServiceCard 
+                product={product} 
+                fullWidth={product.fullWidth}
+              />
+            </div>
           ))}
         </div>
       </div>

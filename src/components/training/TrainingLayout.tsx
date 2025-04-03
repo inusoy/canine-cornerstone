@@ -55,17 +55,10 @@ const TrainingLayout = ({
                 <Card className="p-6 shadow-md">
                   <ScrollArea className="max-h-[calc(100vh-200px)]">
                     <div className="space-y-6">
-                      {sidebarContent || (
-                        <div className="space-y-4">
-                          <h3 className="text-2xl font-semibold uppercase text-primary font-bryndan">Zarezerwuj Sesję</h3>
-                          <p>
-                            Gotowy, by zacząć? Skontaktuj się z nami, aby zaplanować sesję treningową!
-                          </p>
-                        </div>
-                      )}
-                      <Button asChild className="w-full uppercase">
+                      {sidebarContent}
+                      {/* <Button asChild className="w-full uppercase">
                         <Link to="/kontakt">ZAREZERWUJ SESJĘ</Link>
-                      </Button>
+                      </Button> */}
                     </div>
                   </ScrollArea>
                 </Card>
