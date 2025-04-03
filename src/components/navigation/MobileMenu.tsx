@@ -56,6 +56,13 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
             GALERIA
           </Link>
           <Link
+            to="/spotkania-psiarzy"
+            className="block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
+            onClick={onClose}
+          >
+            SPOTKANIA PSIARZY
+          </Link>
+          <Link
             to="/kontakt"
             className="block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
             onClick={onClose}

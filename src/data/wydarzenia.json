@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": "1",
+    "instagramUrl": "https://www.instagram.com/p/C5uQ_U6IQ3u/",
+    "title": "Spacer z psami w Parku Południowym",
+    "description": "Zapraszamy na wspólny spacer z psami w Parku Południowym. Doskonała okazja do socjalizacji psów i poznania innych miłośników czworonogów. Spotykamy się przy głównym wejściu do parku.",
+    "date": "2025-04-20",
+    "price": "Bezpłatne",
+    "formUrl": "https://forms.gle/zUhMB9hN1WJxXBPS6"
+  },
+  {
+    "id": "2",
+    "instagramUrl": "https://www.instagram.com/p/C5J_FUqowJF/",
+    "title": "Trening grupowy na Polach Marsowych",
+    "description": "Trening grupowy dla psów wszystkich ras i wielkości. Będziemy ćwiczyć podstawowe komendy oraz pracować nad koncentracją psów w warunkach rozpraszających. Zajęcia prowadzi doświadczony trener.",
+    "date": "2025-05-15",
+    "price": "50 zł",
+    "formUrl": "https://forms.gle/zUhMB9hN1WJxXBPS6"
+  },
+  {
+    "id": "3",
+    "instagramUrl": "https://www.instagram.com/p/C4lrJRXIMhW/",
+    "title": "Piknik z psami na Wyspie Słodowej",
+    "description": "Zapraszamy na piknik z psami na Wyspie Słodowej. W programie: konkursy z nagrodami, konsultacje z behawiorystą i weterynarzem, strefa relaksu dla psów i ich opiekunów. Przynieś własny koc i przekąski!",
+    "date": "2025-06-10",
+    "price": "30 zł",
+    "formUrl": "https://forms.gle/zUhMB9hN1WJxXBPS6"
+  },
+  {
+    "id": "4",
+    "instagramUrl": "https://www.instagram.com/p/C4U6OXkIqP_/",
+    "title": "Warsztaty noseworku w terenie",
+    "description": "Warsztaty noseworku dla psów w terenie. Nauczymy, jak wykorzystać naturalny talent węchowy psa do wspólnej zabawy i pracy. Warsztaty przeznaczone są dla psów w każdym wieku, które nigdy wcześniej nie miały do czynienia z noseworkiem.",
+    "date": "2024-03-01",
+    "price": "120 zł",
+    "formUrl": "https://forms.gle/zUhMB9hN1WJxXBPS6"
+  }
+]
