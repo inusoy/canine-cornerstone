@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { SocialLinks } from "./SocialLinks";
@@ -11,11 +10,26 @@ interface MobileMenuProps {
   onNavigation: (e: React.MouseEvent, path: string) => void;
 }
 
+const mobileMenuStyles = {
+  overflowY: "auto",
+  WebkitOverflowScrolling: "touch",
+  overscrollBehavior: "contain",
+  maxHeight: "100vh",
+};
+
 export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: MobileMenuProps) => {
   if (!isOpen) return null;
 
+  const handleTouchMove = (e: React.TouchEvent) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div className="md:hidden fixed inset-0 top-[65px] bg-background z-50">
+    <div
+      className="md:hidden fixed inset-0 top-[65px] bg-background z-50"
+      style={mobileMenuStyles}
+      onTouchMove={handleTouchMove}
+    >
       <div className="p-4 space-y-4 bg-background">
         <button
           onClick={() => {

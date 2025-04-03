@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, SearchIcon } from "lucide-react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -36,6 +35,43 @@ const Navigation = () => {
     // Regular navigation to another page
     navigate(path);
   };
+
+  // Modify your toggle function to handle body class
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    
+    // Add this to prevent background scrolling
+    if (!isMenuOpen) {
+      // Menu is opening
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+    } else {
+      // Menu is closing
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    }
+  };
+
+  // Add effect to reset body styles on route changes
+  useEffect(() => {
+    const resetBodyStyles = () => {
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+    
+    // Reset on route change
+    const handleRouteChange = () => resetBodyStyles();
+    window.addEventListener('popstate', handleRouteChange);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('popstate', handleRouteChange);
+      resetBodyStyles(); // Reset on component unmount
+    };
+  }, []);
 
   return (
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md z-50 border-b">
@@ -93,7 +129,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             className="md:hidden text-foreground p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMenu}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
