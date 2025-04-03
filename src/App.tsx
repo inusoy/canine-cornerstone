@@ -18,7 +18,6 @@ import KonsultacjeBehawioralne from "./pages/training/KonsultacjeBehawioralne";
 import Kontakt from "./pages/Kontakt";
 import Gallery from "./pages/Gallery";
 import Search from "./pages/Search";
-import SpotkaniaP from "./pages/SpotkaniaP";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -47,7 +46,6 @@ const App = () => (
           <Route path="/contact" element={<Navigate to="/kontakt" replace />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/spotkania" element={<SpotkaniaP />} />
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

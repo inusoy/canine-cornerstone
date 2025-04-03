@@ -72,9 +72,6 @@ const Navigation = () => {
             <Link to="/gallery" className="hover:text-primary transition-colors uppercase">
               GALERIA
             </Link>
-            <Link to="/spotkania" className="hover:text-primary transition-colors uppercase">
-              SPOTKANIA PSIARZY
-            </Link>
             <Link to="/kontakt" className="hover:text-primary transition-colors uppercase">
               KONTAKT
             </Link>
