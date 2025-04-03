@@ -4,14 +4,14 @@ const AboutSection = () => {
     <section id="about" className="py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-6">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-12 text-primary font-bryndan uppercase">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center mb-4 text-primary font-bryndan uppercase">
             O mnie
           </h2>
           <div className="fade-in">
             <img
-              src="https://images.unsplash.com/photo-1517022812141-23620dba5c23"
+              src="public/images/_DSC7003.jpg"
               alt="Trainer with dogs"
-              className="w-full h-72 object-cover rounded-lg mb-8"
+              className="w-full h-full object-cover rounded-lg mb-4"
             />
           </div>
           <p className="text-lg text-muted-foreground fade-in">
