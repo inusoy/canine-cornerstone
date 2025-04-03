@@ -1,6 +1,7 @@
 
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
+import PriceTag from "@/components/training/PriceTag";
 
 const TreningiIndywidualne = () => {
   return (
@@ -24,7 +25,7 @@ const TreningiIndywidualne = () => {
             </li>
             <SignupInfo showContactForm={false}/>
           </ul>
-          <p className="font-semibold text-primary">120 zł + ewentualny dojazd/60 min</p>
+          <PriceTag>120 zł + ewentualny dojazd/60 min</PriceTag>
         </div>
       }
     >

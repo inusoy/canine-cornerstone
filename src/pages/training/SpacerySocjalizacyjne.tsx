@@ -1,5 +1,6 @@
 
 import TrainingLayout from "@/components/training/TrainingLayout";
+import PriceTag from "@/components/training/PriceTag";
 
 const SpacerySocjalizacyjne = () => {
   return (
@@ -35,7 +36,7 @@ const SpacerySocjalizacyjne = () => {
               <span>Poprzez formularz zgłoszeniowy.</span>
             </li>
           </ul>
-          <p className="font-semibold text-primary">80 zł/spacer</p>
+          <PriceTag>80 zł/spacer</PriceTag>
         </div>
       }
     >

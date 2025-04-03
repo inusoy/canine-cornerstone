@@ -1,6 +1,7 @@
 
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
+import PriceTag from "@/components/training/PriceTag";
 
 const PsiaSzkolka = () => {
   return (
@@ -41,7 +42,7 @@ const PsiaSzkolka = () => {
             </li>
             <SignupInfo showContactForm={false} />
           </ul>
-          <p className="font-semibold text-primary">600 zł/pakiet</p>
+          <PriceTag>600 zł/pakiet</PriceTag>
         </div>
       }
     >

@@ -1,5 +1,6 @@
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
+import PriceTag from "@/components/training/PriceTag";
 
 const PsiePrzedszkole = () => {
   return (
@@ -38,7 +39,7 @@ const PsiePrzedszkole = () => {
             </li>
             <SignupInfo showContactForm={false}/>
           </ul>
-          <p className="font-semibold text-primary">600 zł/grupowe lub 750 zł/indywidualne</p>
+          <PriceTag>600 zł/grupowe lub 750 zł/indywidualne</PriceTag>
         </div>
       }
     >

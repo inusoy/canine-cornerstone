@@ -31,31 +31,31 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
         {showFacebook && (
           <li className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span> Poprzez wiadomość prywatną na <a href="https://www.facebook.com/profile.php?id=100089173953561" className="text-primary hover:underline">Facebooku</a>,</span>
+            <span> Poprzez wiadomość prywatną na <a href="https://www.facebook.com/profile.php?id=100089173953561">Facebooku</a>,</span>
           </li>
         )}
         {showInstagram && (
           <li className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span> Poprzez wiadomość prywatną na <a href="https://www.instagram.com/szczekszczekwroclaw/" className="text-primary hover:underline">Instagramie</a>,</span>
+            <span> Poprzez wiadomość prywatną na <a href="https://www.instagram.com/szczekszczekwroclaw/">Instagramie</a>,</span>
           </li>
         )}
         {showSMS && (
           <li className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span>SMSem <a href="tel:+48504267825" className="text-primary hover:underline">+48 504 267 825</a>.</span>
+            <span>SMSem <a href="tel:+48504267825">+48 504 267 825</a>.</span>
           </li>
         )}
         {showContactForm && (
           <li className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span>Przez <a href="/kontakt" className="text-primary hover:underline">formularz kontaktowy</a>.</span>
+            <span>Przez <a href="/kontakt">formularz kontaktowy</a>.</span>
           </li>
         )}
         {customLinks.map((link, index) => (
           <li key={index} className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span><a href={link.url} className="text-primary hover:underline">{link.text}</a></span>
+            <span><a href={link.url}>{link.text}</a></span>
           </li>
         ))}
       </ul>

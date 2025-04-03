@@ -1,5 +1,6 @@
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
+import PriceTag from "@/components/training/PriceTag";
 
 const Nosework = () => {
   return (
@@ -30,7 +31,7 @@ const Nosework = () => {
             </li>
             <SignupInfo showContactForm={false}/>
           </ul>
-          <p className="font-semibold text-primary">80 zł/45 min</p>
+          <PriceTag>80 zł/45 min</PriceTag>
         </div>
       }
     >

@@ -1,6 +1,7 @@
 
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
+import PriceTag from "@/components/training/PriceTag";
 
 const SalaZabaw = () => {
   return (
@@ -31,7 +32,7 @@ const SalaZabaw = () => {
             </li>
             <SignupInfo showContactForm={false}/>
           </ul>
-          <p className="font-semibold text-primary">140 zł/90 min*</p> <p className="font-semibold text-primary">*czas może być krótszy, bo to Twój pies decyduje</p>
+          <PriceTag>140 zł/90 min*</PriceTag> <p className="font-semibold text-primary">*czas może być krótszy, bo to Twój pies decyduje</p>
         </div>
       }
     >
