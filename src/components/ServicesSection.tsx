@@ -1,11 +1,8 @@
 
 import { ServiceCard } from "@/components/products/ServiceCard";
-import { products } from "@/data/products";
+import { trainingProducts } from "@/data/products";
 
 const ServicesSection = () => {
-  // Use all products instead of just homepage products
-  const allProducts = products;
-
   return (
     <section id="services" className="py-20">
       <div className="container mx-auto px-4">
@@ -13,7 +10,7 @@ const ServicesSection = () => {
           OFERTA
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {allProducts.map((product) => (
+          {trainingProducts.map((product) => (
             <ServiceCard key={product.id} product={product} />
           ))}
         </div>
