@@ -9,7 +9,7 @@ const PsiePrzedszkole = () => {
       title="Psie Przedszkole"
       subtitle=""
       iconName="dog-psie-przedszkole"
-      iconAlt="Szczenięta podczas szkolenia"
+      imageAlt="Szczenięta podczas szkolenia"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

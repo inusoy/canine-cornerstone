@@ -9,7 +9,7 @@ const KonsultacjeBehawioralne = () => {
       title="Konsultacje Behawioralne"
       subtitle=""
       iconName="dog-konsultacje-behawioralne"
-      iconAlt="Konsultacja behawioralna z psem"
+      imageAlt="Konsultacja behawioralna z psem"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

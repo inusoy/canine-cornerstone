@@ -9,7 +9,7 @@ const SpacerySocjalizacyjne = () => {
       title="Spacery Socjalizacyjne"
       subtitle=""
       iconName="dog-spacery-socjalizacyjne"
-      iconAlt="Psy na spacerze socjalizacyjnym"
+      imageAlt="Psy na spacerze socjalizacyjnym"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
@@ -41,12 +41,12 @@ const SpacerySocjalizacyjne = () => {
       }
     >
       <p>
-        Spacery socjalizacyjne to najbezpieczniejsza i jedna z najlepszych form poznawania psów ze sobą. Dzięki kontrolowanym warunkom, szanowaniu granic i nie forsowaniu interakcji, psy mogą w spokoju poznawać się i „rozmawiać” ze sobą.
+        Spacery socjalizacyjne to najbezpieczniejsza i jedna z najlepszych form poznawania psów ze sobą. Dzięki kontrolowanym warunkom, szanowaniu granic i nie forsowaniu interakcji, psy mogą w spokoju poznawać się i „rozmawiać" ze sobą.
       </p>
       <p>W psich relacjach, tak jak ludzkich, nie chodzi tylko o ilość, ale i o jakość!</p>
 
       <h2 className="text-2xl font-semibold mt-8">DLACZEGO NAZYWAM SWOJE SPACERY KOMUNIKACYJNYMI?</h2>
-      <p>Bo dzięki kontrolowanym warunkom, i szanowaniu granic psy mogą w spokoju poznawać się i „rozmawiać” ze sobą, co jest głównym celem moich spacerów.</p>
+      <p>Bo dzięki kontrolowanym warunkom, i szanowaniu granic psy mogą w spokoju poznawać się i „rozmawiać" ze sobą, co jest głównym celem moich spacerów.</p>
       <h2 className="text-2xl font-semibold mt-8">CZY TO ZNACZY, ŻE PIES BĘDZIE NA SIŁĘ WPYCHANY W INTERAKCJE I ZMUSZANY DO KONTAKTU?</h2>
       <p>Nie! Uważam, że psy powinny zapoznawać się i uczyć komunikacji w spokojnym tempie z odpowiednio dobranymi psami. Poza tym, każdy pies jest inny, dla jednego ważnym aspektem nauki będzie stawianie granic, a dla drugiego wyjście z interakcji lub w ogóle omijanie psów.</p>
       <h2 className="text-2xl font-semibold mt-8">CO WYRÓŻNIA SPACERY SOCJALIZACYJNE SZCZEK SZCZEK?</h2>
@@ -56,7 +56,7 @@ const SpacerySocjalizacyjne = () => {
         <li>Spotykamy się w małych grupach 2-3 psy (w grupach dobrze mi znanych do 4 psów).</li>
         <li>Psy są na smyczach i linkach.</li>
         <li>Cały czas jestem z Wami, dbam o odległości, kieruję interakcjami i tłumaczę Wam, co się dzieje. W razie większych odległości, każdy opiekun dostaje krótkofalówkę, przez którą można się komunikować.</li>
-        <li>Pomagamy psom „rozmawiać” między sobą.</li>
+        <li>Pomagamy psom „rozmawiać" między sobą.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-8">CO DAJĄ PSOM SPACERY SOCJALIZACYJNE?</h2>

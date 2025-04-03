@@ -9,7 +9,7 @@ const Nosework = () => {
       title="Nosework"
       subtitle=""
       iconName="dog-nosework"
-      iconAlt="Dog doing nosework"
+      imageAlt="Dog doing nosework"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

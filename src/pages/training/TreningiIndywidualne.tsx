@@ -9,7 +9,7 @@ const TreningiIndywidualne = () => {
       title="Indywidualne Treningi"
       subtitle=""
       iconName="dog-treningi-indywidualne"
-      iconAlt="Trening indywidualny z psem"
+      imageAlt="Trening indywidualny z psem"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

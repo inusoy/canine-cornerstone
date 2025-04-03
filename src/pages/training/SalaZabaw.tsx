@@ -9,7 +9,7 @@ const SalaZabaw = () => {
       title="Sala Zabaw i Eksploracji"
       subtitle=""
       iconName="dog-sala-zabaw"
-      iconAlt="Psy w sali zabaw"
+      imageAlt="Psy w sali zabaw"
       sidebarContent={
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
