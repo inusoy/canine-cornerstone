@@ -5,75 +5,77 @@ const PsiePrzedszkole = () => {
   return (
     <TrainingLayout
       title="Psie Przedszkole"
-      subtitle="Zapewnij swojemu szczeniakowi najlepszy start w życie dzięki wczesnej socjalizacji i szkoleniu."
+      subtitle=""
       imageSrc="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1"
       imageAlt="Szczenięta podczas szkolenia"
       sidebarContent={
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Informacje o programie</h3>
-          <ul className="space-y-2">
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>6-tygodniowy program dla szczeniąt</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Dla szczeniąt w wieku 8-20 tygodni</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Maksymalnie 6 szczeniąt w grupie</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Czas na zabawę i socjalizację</span>
-            </li>
-          </ul>
-          <div className="p-3 bg-muted rounded-md">
-            <p className="font-semibold text-primary mb-1">Oferta specjalna:</p>
-            <p className="text-sm">15% zniżki przy zapisie przed 1 maja 2024</p>
-          </div>
-          <p className="font-semibold text-primary">Od 249 zł</p>
-        </div>
-      }
-    >
-      <p>
-        Nasz program Psiego Przedszkola jest zaprojektowany, aby pomóc młodym psom
-        rozwijać kluczowe umiejętności społeczne i podstawowe posłuszeństwo
-        w bezpiecznym, kontrolowanym środowisku.
-      </p>
-      
-      <h2 className="text-2xl font-semibold mt-8">Korzyści z programu</h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Wczesna socjalizacja</li>
-        <li>Podstawowe maniery i komendy</li>
-        <li>Nauka zahamowania siły gryzienia</li>
-        <li>Budowanie pewności siebie</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Kluczowy okres rozwoju</h2>
-      <p>
-        Pierwsze kilka miesięcy życia szczenięcia to krytyczny okres socjalizacji. W tym czasie szczenięta są najbardziej otwarte na nowe doświadczenia i naukę. Nasze Psie Przedszkole wykorzystuje ten etap rozwoju, aby:
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Zapoznać szczenięta z różnymi widokami, dźwiękami i fakturami w pozytywny sposób</li>
-        <li>Wprowadzić kontrolowany kontakt z innymi szczeniętami i ludźmi</li>
-        <li>Rozpocząć podstawowe szkolenie, które będzie kontynuowane przez całe życie psa</li>
-        <li>Zapobiegać problemom behawioralnym zanim się pojawią</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Program zajęć</h2>
-      <p>
-        Każdy tydzień koncentruje się na innym aspekcie rozwoju szczenięcia:
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Tydzień 1:</strong> Wprowadzenie i podstawowe ćwiczenia koncentracji</li>
-        <li><strong>Tydzień 2:</strong> Akceptacja dotyku i pielęgnacji</li>
-        <li><strong>Tydzień 3:</strong> Podstawowe komendy: siad, waruj i przywołanie</li>
-        <li><strong>Tydzień 4:</strong> Podstawy chodzenia na smyczy</li>
-        <li><strong>Tydzień 5:</strong> Zapobieganie problemom (skakanie, gryzienie)</li>
-        <li><strong>Tydzień 6:</strong> Wyzwania środowiskowe i budowanie pewności siebie</li>
-      </ul>
+        <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
+        <ul className="space-y-2">
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span><b>Zajęcia grupowe (2-3 psy) lub indywidualne</b></span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span><b>Lokalizacja:</b><ul>Sala na Gwareckiej 8/3L.</ul>
+</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span><b>Dla kogo?</b>
+            <ul>
+            Dla szczeniaków od 2. do 5. miesiąca życia w momencie startu kursu.
+        <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span> <b>Ile spotkań?</b><ul>6 spotkań po 45-60 minut</ul>
+</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span> <b>Kiedy?</b><ul>Grupy w weekendy i w tygodniu.</ul>
+            <h3 className="text-2xl font-semibold">JAK SIĘ ZAPISAĆ?</h3>
+</span>
+          </li>
+        </ul></span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span> Poprzez wiadomość prywatną na Facebooku(hiperłącze),</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span> Poprzez wiadomość prywatną na Instagramie(hiperłącze),</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span>  Smsem +48 504 267 825.</span>
+          </li>
+        </ul>
+        <p className="font-semibold text-primary">600 zł/grupowe lub 750 zł/indywidualne</p>
+      </div>
+    }
+  >
+    <p>
+    Bycie opiekunem szczeniaczka to nie tylko przyjemność, ale także wielka odpowiedzialność!
+    </p>
+    <p>Tak jak u ludzi, u psów okres dziecięcy (szczenięcy) jest bardzo istotny dla dalszego rozwoju! Dlatego tak ważne jest to, żeby nie zaniedbać tego czasu i wesprzeć swojego psa w prawidłowym starcie w pieskowe życie. Jak to zrobić? Poprzez odpowiednią socjalizację, habituację, budowanie relacji i wprowadzenie do podstaw posłuszeństwa!</p>
+    
+    <h2 className="text-2xl font-semibold mt-8">CZEGO UCZY PSIEDSZKOLE W SZCZEK SZCZEK?</h2>
+    <ul className="list-disc pl-6 space-y-2">
+      <li>Jak motywować, bawić się i skupiać na sobie szczeniaka.</li>
+      <li>Podstaw posłuszeństwa m.in. do mnie, siad, zostań, zostaw, na miejsce, noga, poczekaj - proszę.</li>
+      <li>Pewności siebie poprzez elementy integracji sensorycznej.</li>
+      <li>Jak prawidłowo socjalizować psa.</li>
+      <li>Wprowadzenia do treningu kooperacyjnego.</li>
+    </ul>
+    
+    <h2 className="text-2xl font-semibold mt-8">CO OTRZYMACIE?</h2>
+    <p>
+    Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, dostaniecie na start powitalny prezent, coś dla psa i człowieka, a na zakończenie dyplom. Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji.
+    </p>
+    <p>Zadbajcie o Waszą relację i dalsze wspólne życie już dziś!</p>
+    
     </TrainingLayout>
   );
 };

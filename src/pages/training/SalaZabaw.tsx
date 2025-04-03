@@ -5,82 +5,56 @@ const SalaZabaw = () => {
   return (
     <TrainingLayout
       title="Sala Zabaw i Eksploracji"
-      subtitle="Bezpieczna przestrzeń, gdzie Twój pies może bawić się, eksplorować i uczyć się pod nadzorem specjalistów."
+      subtitle=""
       imageSrc="https://images.unsplash.com/photo-1568393691622-c7ba131d63b4"
       imageAlt="Psy w sali zabaw"
       sidebarContent={
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Informacje o sali</h3>
-          <ul className="space-y-2">
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Sesje 60-minutowe</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Maksymalnie 3 psy na sesję</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Różnorodne wyposażenie i przeszkody</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Profesjonalny nadzór</span>
-            </li>
-          </ul>
-          <p className="font-semibold text-primary">Od 99 zł</p>
-        </div>
+        <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
+        <ul className="space-y-2">
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span><b>Zajęcia indywidualne</b></span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span> <b>Lokalizacja:</b><ul>Sala na Gwareckiej 8/3L we Wrocławiu</ul>
+</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span><b>Dla kogo?</b>
+            <ul>
+            Salka zabaw i eksploracji jest dla każdego psa, niezależnie od wieku, wielkości czy rasy. Szczególnie mile widziane są lękuski, dla których to miejsce będzie idealne do otworzenia się.
+
+        <h3 className="text-2xl font-semibold">JAK SIĘ ZAPISAĆ?</h3>
+        </ul></span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span> Poprzez wiadomość prywatną na Facebooku(hiperłącze),</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span> Poprzez wiadomość prywatną na Instagramie(hiperłącze),</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span>  Smsem +48 504 267 825.</span>
+          </li>
+        </ul>
+        <p className="font-semibold text-primary">140 zł/90 min*</p> <p className="font-semibold text-primary">*czas może być krótszy, bo to Twój pies decyduje</p>
+      </div>
       }
     >
+       <h2 className="text-2xl font-semibold mt-8">CZYM JEST SALA ZABAW I EKSPLORACJI?</h2>
       <p>
-        Nasza Sala Zabaw i Eksploracji to specjalnie zaprojektowana przestrzeń,
-        gdzie psy mogą bezpiecznie bawić się, odkrywać nowe bodźce i rozwijać
-        umiejętności społeczne pod okiem doświadczonych trenerów.
-      </p>
-      
-      <h2 className="text-2xl font-semibold mt-8">Korzyści</h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Bezpieczne środowisko do zabawy i eksploracji</li>
-        <li>Stymulacja mentalna i fizyczna</li>
-        <li>Rozwój umiejętności społecznych</li>
-        <li>Budowanie pewności siebie</li>
-        <li>Możliwość poznania innych psów</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Wyposażenie sali</h2>
-      <p>
-        Nasza sala wyposażona jest w różnorodne elementy zapewniające kompleksową stymulację dla psów:
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Przeszkody agility (tunele, slalomy, mostki)</li>
-        <li>Platformy i podesty o różnych wysokościach</li>
-        <li>Różnorodne faktury podłoża</li>
-        <li>Interaktywne zabawki i węchowe wyzwania</li>
-        <li>Elementy do ćwiczeń równowagi i koordynacji</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Rodzaje sesji</h2>
-      <p>
-        Oferujemy różne rodzaje sesji w naszej sali zabaw:
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Sesja indywidualna:</strong> Tylko Twój pies w całej sali</li>
-        <li><strong>Sesja dobrana:</strong> Twój pies i 1-2 kompatybilne psy</li>
-        <li><strong>Sesja eksploracyjna:</strong> Nacisk na odkrywanie nowych bodźców</li>
-        <li><strong>Sesja zręcznościowa:</strong> Elementy agility i ćwiczeń zwinności</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Wymagania</h2>
-      <p>
-        Aby zapewnić bezpieczne i pozytywne doświadczenie, wymagamy:
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Aktualnych szczepień</li>
-        <li>Wstępnej oceny temperamentu psa</li>
-        <li>Braku agresji wobec ludzi i innych psów</li>
-        <li>Podstawowego posłuszeństwa (reagowanie na imię, przywołanie)</li>
-      </ul>
+      Sala zabaw i eksploracji to pierwsze takie miejsce dla psów na mapie Wrocławia. Odpowiednio przystosowana sala pozwoli Twojemu psu zaspokoić potrzeby węszenia, eksploracji i stymulacji umysłowej.</p>
+
+<p>Koncept sali opiera się na jak największej decyzyjności psów. Psy podczas pobytu na sali, motywowane poukrywanymi w najróżniejszych miejscach smaczkami, zwiedzają ją. Podczas zwiedzania, psy rozwiązują różnego rodzaju zagadki węchowe i  intelektualne, a przy tym pokonują różnego rodzaju przeszkody sensoryczne, ale i obcują z przedmiotami, które mogą wywoływać strach.</p>
+
+<p>Za każdym razem ustawienie salki może być inne, co zapewnia psom różnorodność i brak nudy. Najważniejsze jest to, że pies sam wybiera sposób w jaki przeszukuję salkę, dzięki czemu buduje pewność siebie i niezależność. Ostatecznie jednak jest to miejsce, w którym pies może się zrelaksować i być psem.</p>
+<p>Podczas całej aktywności jestem przy Was obecna, więc nie ma zmartwienia, że nie będziecie wiedzieć, co robić. Wizyta na salce trwa 90 min (w tym rozkładanie smaczków), ale tak naprawdę to pies zadecyduje ile będzie trwał jego czas na salce.</p>    
     </TrainingLayout>
   );
 };

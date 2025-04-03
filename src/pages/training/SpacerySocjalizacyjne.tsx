@@ -5,82 +5,76 @@ const SpacerySocjalizacyjne = () => {
   return (
     <TrainingLayout
       title="Spacery Socjalizacyjne"
-      subtitle="Ustrukturyzowane spacery grupowe pomagające psu rozwijać umiejętności społeczne i pewność siebie."
+      subtitle=""
       imageSrc="https://images.unsplash.com/photo-1487252665478-49b61b47f302"
       imageAlt="Psy na spacerze socjalizacyjnym"
       sidebarContent={
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Informacje o spacerach</h3>
+          <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
           <ul className="space-y-2">
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>4-tygodniowy harmonogram</span>
+              <span><b>Małe grupy 2-4 psy</b></span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>Maksymalnie 4 psy w grupie</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Różne lokalizacje każdego tygodnia</span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Odpowiednie dla psów od 6 miesięcy</span>
-            </li>
-          </ul>
-          <p className="font-semibold text-primary">Od 149 zł</p>
-        </div>
+              <span> <b>Lokalizacja:</b><ul>Różne parki i lasy we Wrocławiu i okolicach.</ul>
+</span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span><b>Dla kogo?</b>
+            <ul>
+            Dla psów, które nie mają zbyt wielu psich przyjaciół, reagują zbyt emocjonalnie na inne psy. Dla psów, które szczekają lub ciągną do innych psów, albo na spacerach nie zwracają uwagi na opiekuna.
+
+        <h3 className="text-2xl font-semibold">JAK SIĘ ZAPISAĆ?</h3>
+        </ul></span>
+          </li>
+          <li className="flex items-start">
+            <span className="text-primary mr-2">•</span>
+            <span>Poprzez formularz zgłoszeniowy.</span>
+          </li>
+        </ul>
+        <p className="font-semibold text-primary">80 zł/spacer</p>
+      </div>
       }
     >
       <p>
-        Nasze spacery socjalizacyjne zapewniają kontrolowane środowisko, w którym psy
-        mogą wchodzić w interakcje z innymi, jednocześnie ucząc się odpowiednich
-        manier podczas spacerów i etykiety społecznej.
+      Spacery socjalizacyjne to najbezpieczniejsza i jedna z najlepszych form poznawania psów ze sobą. Dzięki kontrolowanym warunkom, szanowaniu granic i nie forsowaniu interakcji, psy mogą w spokoju poznawać się i „rozmawiać” ze sobą.
       </p>
+      <p>W psich relacjach, tak jak ludzkich, nie chodzi tylko o ilość, ale i o jakość!</p>
       
-      <h2 className="text-2xl font-semibold mt-8">Cechy spacerów</h2>
+      <h2 className="text-2xl font-semibold mt-8">DLACZEGO NAZYWAM SWOJE SPACERY KOMUNIKACYJNYMI?</h2>
+      <p>Bo dzięki kontrolowanym warunkom, i szanowaniu granic psy mogą w spokoju poznawać się i „rozmawiać” ze sobą, co jest głównym celem moich spacerów.</p>
+      <h2 className="text-2xl font-semibold mt-8">CZY TO ZNACZY, ŻE PIES BĘDZIE NA SIŁĘ WPYCHANY W INTERAKCJE I ZMUSZANY DO KONTAKTU?</h2>
+      <p>Nie! Uważam, że psy powinny zapoznawać się i uczyć komunikacji w spokojnym tempie z odpowiednio dobranymi psami. Poza tym, każdy pies jest inny, dla jednego ważnym aspektem nauki będzie stawianie granic, a dla drugiego wyjście z interakcji lub w ogóle omijanie psów.</p>
+      <h2 className="text-2xl font-semibold mt-8">CO WYRÓŻNIA SPACERY SOCJALIZACYJNE SZCZEK SZCZEK?</h2>
+      <p>Nie ma u mnie losowych grup, psy na spacerze są dobierane do siebie, dlatego samo zgłoszenie nie daje gwarancji uczestnictwa w spacerze. Nie znajdziecie u mnie również części treningowej i masy sypiących się smaczków, bo chcę, żeby psia komunikacja była jak najmniej zaburzona. Stawiam na psią decyzyjność (nie byle jaką, podejmowane decyzje mają być dobre) i rozbudowywanie psiego wachlarza komunikacyjnego.</p>
+      <h2 className="text-2xl font-semibold mt-8">JAK WYGLĄDA SPACER SOCJALIZACYJNY?</h2>
       <ul className="list-disc pl-6 space-y-2">
-        <li>Profesjonalny nadzór</li>
-        <li>Małe grupy dla bezpieczeństwa</li>
-        <li>Różnorodne środowiska</li>
-        <li>Monitorowanie zachowania</li>
+        <li>Spotykamy się w małych grupach 2-3 psy (w grupach dobrze mi znanych do 4 psów).</li>
+        <li>Psy są na smyczach i linkach.</li>
+        <li>Cały czas jestem z Wami, dbam o odległości, kieruję interakcjami i tłumaczę Wam, co się dzieje. W razie większych odległości, każdy opiekun dostaje krótkofalówkę, przez którą można się komunikować.</li>
+        <li>Pomagamy psom „rozmawiać” między sobą.</li>
       </ul>
       
-      <h2 className="text-2xl font-semibold mt-8">Dlaczego spacery grupowe są ważne</h2>
+      <h2 className="text-2xl font-semibold mt-8">CO DAJĄ PSOM SPACERY SOCJALIZACYJNE?</h2>
+      <ul className="list-disc pl-6 space-y-2">
+        <li>Pies uczy się radzić sobie z emocjami.</li>
+        <li>Poprawia się relacja psa z opiekunem.</li>
+        <li>Pies uczy się komunikować z innymi psami.</li>
+        <li>Mogą nawiązać się psie przyjaźnie.</li>
+      </ul>
+      
+      <h2 className="text-2xl font-semibold mt-8">CO ZYSKASZ TY?</h2>
       <p>
-        Spacery socjalizacyjne oferują korzyści, których nie zapewnią indywidualne spacery:
+      Wytłumaczę Ci interakcje na linii pies - pies, w sposób, który pomoże przenieść tę wiedzę na interakcje w życiu codziennym. Nauczę Cię też odpowiednio pracować smyczą i ustawieniami ciała, żeby Twój pies miał w Tobie oparcie, co dodatkowo wzmocni Waszą relację. Jeśli będzie trzeba, postaramy się też opanować Twoje negatywne odczucia i emocje np. strach przed wychodzeniem z psem.
       </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Nauka odpowiedniego powitania z innymi psami</li>
-        <li>Ćwiczenie skupienia przy rozpraszaczach</li>
-        <li>Budowanie pewności siebie w różnych środowiskach</li>
-        <li>Poprawa manier na smyczy w realnych sytuacjach</li>
-        <li>Monitorowana socjalizacja z profesjonalnym przewodnictwem</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Lokalizacje spacerów</h2>
+     
+      <h2 className="text-2xl font-semibold mt-8">WAŻNE</h2>
       <p>
-        Każdego tygodnia odwiedzamy inne środowisko, aby zapewnić różnorodne doświadczenia:
+      Spacer socjalizacyjny nie jest terapią, ani treningiem posłuszeństwa. Jeśli Twój pies ma wiele zachowań niepożądanych lub wykazuje problemy behawioralne - napisz do mnie. Być może Twój pies i tak świetnie poradzi sobie na spacerze, a może jednak najpierw będzie potrzebna konsultacja. Nie wstydź się pytać.
       </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Tydzień 1:</strong> Spacer po parku miejskim z umiarkowanymi rozpraszaczami</li>
-        <li><strong>Tydzień 2:</strong> Szlak przyrodniczy z naturalnymi przeszkodami</li>
-        <li><strong>Tydzień 3:</strong> Środowisko miejskie z ruchem ulicznym i pieszymi</li>
-        <li><strong>Tydzień 4:</strong> Mieszane środowisko z różnymi wyzwaniami</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Wymagania</h2>
-      <p>
-        Aby uczestniczyć w naszych spacerach socjalizacyjnych, wymagamy:
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Aktualnych szczepień</li>
-        <li>Podstawowych umiejętności chodzenia na smyczy</li>
-        <li>Braku agresywnego zachowania wobec ludzi</li>
-        <li>Odpowiednio dopasowanych szelek lub obroży</li>
-        <li>Standardowej smyczy 2-metrowej (bez smyczy automatycznych)</li>
-      </ul>
     </TrainingLayout>
   );
 };

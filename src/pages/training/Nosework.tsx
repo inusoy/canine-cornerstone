@@ -5,61 +5,56 @@ const Nosework = () => {
   return (
     <TrainingLayout
       title="Nosework"
-      subtitle="Nosework jest sportem kynologicznym, zainspirowanym pracą psów w służbach np. przy detekcji materiałów wybuchowych lub narkotyków, poszukiwaniu ludzi czy udaremnianiu przemytów egzotycznych zwierząt."
+      subtitle=""
       imageSrc="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1"
       imageAlt="Dog doing nosework"
       sidebarContent={
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Nosework Training</h3>
+          <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
           <ul className="space-y-2">
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>Small group sessions (max 4 dogs)</span>
+              <span><b>Zajęcia indywidualne</b></span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>6-week program</span>
+              <span> <b>Lokalizacja:</b><ul>Sala na Gwareckiej 8/3L we Wrocławiu lub w terenie (po wcześniejszym ustaleniu)</ul>
+</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>All materials provided</span>
+              <span><b>Dla kogo?</b>
+              <ul>
+                  Dla psów na poziomie początkującym i na poziomie klas 0 oraz 1 w wiodących organizacjach nosework w Polsce.
+          <h3 className="text-2xl font-semibold">JAK SIĘ ZAPISAĆ?</h3>
+          </ul></span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>Certificate upon completion</span>
+              <span> Poprzez wiadomość prywatną na Facebooku(hiperłącze),</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span> Poprzez wiadomość prywatną na Instagramie(hiperłącze),</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span>  Smsem +48 504 267 825.</span>
             </li>
           </ul>
-          <p className="font-semibold text-primary">Starting from 399 PLN</p>
+          <p className="font-semibold text-primary">80 zł/45 min</p>
         </div>
       }
     >
-      <p>
-        Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.
-      </p>
+      <h2 className="text-2xl font-semibold mt-8">CZYM JEST NOSEWORK?</h2>
+      <p>Nosework jest sportem kynologicznym, zainspirowanym pracą psów w służbach np. przy detekcji materiałów wybuchowych lub narkotyków, poszukiwaniu ludzi czy udaremnianiu przemytów egzotycznych zwierząt.</p>
+<p>Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.
+ wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.</p>
       
-      <h2 className="text-2xl font-semibold mt-8">Nosework w <b>Szczek Szczek</b> dla kogo?</h2>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>dla psów, które nigdy nie miały styczności z noseworkiem,</li>
-        <li>dla psów na poziomie początkującym,</li>
-        <li>dla psów na poziomie klasy 0 i 1 w wiodących organizacjach nosework w Polsce.</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Benefits of Nosework</h2>
-      <p>
-        Nosework to aktywność, która ma wiele zalet:
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Mentalne zmęczenie psa - 15 minut węszenia może zmęczyć psa tak, jak godzinny spacer</li>
-        <li>Budowanie pewności siebie u psa</li>
-        <li>Doskonała aktywność dla psów starszych, po kontuzjach lub nieśmiałych</li>
-        <li>Wzmacnianie więzi między psem a przewodnikiem</li>
-        <li>Nauka koncentracji i skupienia na zadaniu</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Our Approach</h2>
-      <p>
-        Nasze zajęcia z nosework prowadzone są metodami pozytywnymi, z naciskiem na budowanie motywacji psa do pracy. Zaczynamy od podstaw, ucząc psa szukania jedzenia, przez zabawki, aż po zapachy. Każdy pies pracuje we własnym tempie.
-      </p>
+      <h2 className="text-2xl font-semibold mt-8">NOSEWORK DLA KAŻDEGO PSA (I OPIEKUNA)?</h2>
+      <p>Tak! Nosework jest świetnym sportem, bo mogą go uprawiać psy w każdym wieku, każdej wielkości i rasy. Nie wymaga specjalnej sprawności fizycznej, można go ćwiczyć w domach i na spacerach.
+
+Dodatkowo, dobrze stawiane w noseworku wyzwania, świetnie zwiększają pewność siebie u psa, męczą psią głowę i pomagają w kontroli emocji i samoregulacji. Nie zapominajmy, że węszenie jest dla psów samo w sobie przyjemne i daje psom dużo satysfakcji.</p>
     </TrainingLayout>
   );
 };

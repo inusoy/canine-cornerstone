@@ -5,69 +5,77 @@ const PsiaSzkolka = () => {
   return (
     <TrainingLayout
       title="Psia Szkółka"
-      subtitle="Kompleksowe programy szkoleniowe dla psów w każdym wieku i na każdym poziomie umiejętności."
+      subtitle=""
       imageSrc="https://images.unsplash.com/photo-1582562124811-c09040d0a901"
       imageAlt="Szkolenie w Psiej Szkółce"
       sidebarContent={
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Szczegóły programu</h3>
+          <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
           <ul className="space-y-2">
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>8-tygodniowy program</span>
+              <span><b>Zajęcia grupowe (2-3 psy)</b></span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>Maksymalnie 6 psów w grupie</span>
+              <span><b>Lokalizacja:</b><ul>Sala i teren przy Gwareckiej 8/3L.</ul>
+</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>Raporty z postępów i oceny</span>
+              <span><b>Dla kogo?</b>
+              <ul>
+              Dla psów od 5. miesiąca życia w górę w momencie startu kursu, bez ograniczenia wieku.
+          <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span> <b>Ile spotkań?</b><ul>6 spotkań po 45-60 minut</ul>
+</span>
             </li>
             <li className="flex items-start">
               <span className="text-primary mr-2">•</span>
-              <span>Materiały szkoleniowe w pakiecie</span>
+              <span> <b>Kiedy?</b><ul>Grupy w weekendy i w tygodniu.</ul>
+              <h3 className="text-2xl font-semibold">JAK SIĘ ZAPISAĆ?</h3>
+</span>
+            </li>
+          </ul></span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span> Poprzez wiadomość prywatną na Facebooku(hiperłącze),</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span> Poprzez wiadomość prywatną na Instagramie(hiperłącze),</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-primary mr-2">•</span>
+              <span>  Smsem +48 504 267 825.</span>
             </li>
           </ul>
-          <p className="font-semibold text-primary">Od 349 zł</p>
+          <p className="font-semibold text-primary">600 zł/pakiet</p>
         </div>
       }
     >
       <p>
-        Nasza Psia Szkółka zapewnia ustrukturyzowane środowisko nauki, w którym
-        psy mogą rozwijać niezbędne umiejętności, jednocześnie dobrze się bawiąc
-        i socjalizując z innymi.
+      Mały, wielki, gruby, chudy, jamnik, golden czy doberman, każdy pies powinien znać podstawy posłuszeństwa.
       </p>
       
-      <h2 className="text-2xl font-semibold mt-8">Cechy programu</h2>
+      <h2 className="text-2xl font-semibold mt-8">CZEGO UCZY PSIA SZKÓŁKA W SZCZEK SZCZEK?</h2>
       <ul className="list-disc pl-6 space-y-2">
-        <li>Małe grupy szkoleniowe</li>
-        <li>Indywidualne podejście</li>
-        <li>Stopniowy rozwój umiejętności</li>
-        <li>Ćwiczenia w realnych sytuacjach</li>
+        <li>Jak motywować, bawić się i skupiać na sobie psa.</li>
+        <li>Praktycznych podstaw posłuszeństwa m.in. do mnie, siad, zostań, zostaw, na miejsce, noga, poczekaj - proszę.</li>
+        <li>Posłuszeństwa w obecności innych psów.</li>
+        <li>Cierpliwości i samokontroli.</li>
+        <li>Jak ćwiczyć z psem i zwiększać odpowiednio poziom trudności.</li>
       </ul>
       
-      <h2 className="text-2xl font-semibold mt-8">Program szkolenia</h2>
+      <h2 className="text-2xl font-semibold mt-8">CO OTRZYMACIE?</h2>
       <p>
-        Nasz program Psiej Szkółki został zaprojektowany, aby zapewnić kompleksową edukację dla Twojego psa, obejmującą wszystkie aspekty zachowania i posłuszeństwa:
+      Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, dostaniecie na start powitalny prezent, coś dla psa i człowieka, a na zakończenie dyplom. Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji lub nosework.
       </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li><strong>Tygodnie 1-3:</strong> Podstawowe komendy, praca nad skupieniem i umiejętności chodzenia na smyczy</li>
-        <li><strong>Tygodnie 4-6:</strong> Średniozaawansowane komendy, trening z rozpraszaczami i socjalizacja</li>
-        <li><strong>Tygodnie 7-8:</strong> Zaawansowane umiejętności, praca na dystans i zastosowanie w codziennym życiu</li>
-      </ul>
-      
-      <h2 className="text-2xl font-semibold mt-8">Co zabrać</h2>
-      <p>
-        Aby zapewnić najlepsze doświadczenie w naszej Psiej Szkółce, prosimy o zabranie:
-      </p>
-      <ul className="list-disc pl-6 space-y-2">
-        <li>Dobrze dopasowanej obroży lub szelek</li>
-        <li>Smyczy o długości 2 metrów (bez smyczy automatycznych)</li>
-        <li>Ulubionych przysmaków i zabawek psa</li>
-        <li>Kliker treningowy (opcjonalnie)</li>
-        <li>Woda i miska dla psa</li>
-      </ul>
+      <p>Zadbajcie o Waszą relację i wspólne życie już dziś!</p>
+      <h2 className="text-2xl font-semibold mt-8">WAŻNE</h2>
+      <p>Psia szkółka nie służy do rozwiązywania problemów behawioralnych, więc jeśli obawiasz się, że Twój pies sobie nie poradzi lub ma problemy behawioralne - skontaktuj się ze mną. Zobaczymy, co możemy z tym zrobić.</p>
     </TrainingLayout>
   );
 };
