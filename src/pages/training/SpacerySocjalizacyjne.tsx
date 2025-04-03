@@ -31,7 +31,15 @@ const SpacerySocjalizacyjne = () => {
               <span className="text-primary mr-2">•</span>
               <span>Poprzez formularz zgłoszeniowy.</span>
             </li>
-            <SignupInfo showFacebook={false} showInstagram={false} showSMS={false} showContactForm={false} customLinks={[{ url: "https://forms.gle/domaQzLmYNScRwhk9", text: "Formularz" }]}/>
+            <SignupInfo
+              showFacebook={false}
+              showInstagram={false}
+              showSMS={false}
+              showContactForm={false}
+              showButton={true}
+              buttonText="zapisz się"
+              buttonUrl="https://forms.gle/domaQzLmYNScRwhk9"
+            />
           </ul>
           <PriceTag>80 zł/spacer</PriceTag>
         </div>

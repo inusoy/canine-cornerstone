@@ -35,7 +35,11 @@ const PsiePrzedszkole = () => {
               <span> <b>Kiedy?</b><ul>Grupy w weekendy i w tygodniu.</ul>
               </span>
             </li>
-            <SignupInfo showContactForm={false}/>
+            <SignupInfo
+              showContactForm={false}
+              showButton={true}
+              buttonText="Kalendarz"
+              buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing" />
           </ul>
           <PriceTag>600 zł/grupowe lub 750 zł/indywidualne</PriceTag>
         </div>

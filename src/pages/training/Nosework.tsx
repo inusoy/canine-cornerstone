@@ -27,7 +27,11 @@ const Nosework = () => {
                   Dla psów na poziomie początkującym i na poziomie klas 0 oraz 1 w wiodących organizacjach nosework w Polsce.
                 </ul></span>
             </li>
-            <SignupInfo showContactForm={false}/>
+            <SignupInfo
+              showContactForm={false}
+              showButton={true}
+              buttonText="Kalendarz"
+              buttonUrl="https://docs.google.com/spreadsheets/d/1oJpjSC_Kk1AhqFknc1E0G9OvWTG0lTc6_3RWykzk3xs/edit?usp=sharing" />
           </ul>
           <PriceTag>80 zł/45 min</PriceTag>
         </div>

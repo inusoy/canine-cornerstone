@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from "@/components/ui/button";
 
 // Interfejs dla niestandardowego linku
 interface CustomLink {
@@ -14,6 +15,9 @@ interface SignupInfoProps {
   showContactForm?: boolean;
   customLinks?: CustomLink[];
   title?: string;
+  showButton?: boolean;
+  buttonText?: string;
+  buttonUrl?: string;
 }
 
 export const SignupInfo: React.FC<SignupInfoProps> = ({
@@ -22,7 +26,10 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
   showSMS = true,
   showContactForm = true,
   customLinks = [],
-  title = "JAK SIĘ ZAPISAĆ?"
+  title = "JAK SIĘ ZAPISAĆ?",
+  showButton = false,
+  buttonText = "",
+  buttonUrl = ""
 }) => {
   return (
     <div>
@@ -59,6 +66,16 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
           </li>
         ))}
       </ul>
+      {showButton && (
+        <div className="mt-4">
+          <Button 
+            className="w-full bg-primary text-white hover-lift uppercase font-josefin"
+            onClick={() => window.open(buttonUrl, "_blank")}
+          >
+            {buttonText}
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
