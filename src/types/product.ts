@@ -5,4 +5,6 @@ export interface Product {
   link: string;
   homepagePriority: number;
   fullWidth?: boolean;
+  description?: string;
+  price?: string;
 }
