@@ -1,8 +1,7 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar, ChevronDown, ChevronUp, ExternalLink, CalendarPlus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { formatDate } from '@/lib/date-utils';
 import { Event } from '@/types/event';
 
@@ -12,7 +11,26 @@ interface EventCardProps {
 
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const isPastEvent = new Date(event.date) < new Date();
+  
+  // Extract post ID from Instagram URL
+  const getPostId = (url: string) => {
+    const regex = /\/p\/([^/]+)/;
+    const match = url.match(regex);
+    return match ? match[1] : '';
+  };
+  
+  // Trigger Instagram embed script after component mount or update
+  useEffect(() => {
+    setIsLoading(true);
+    if (window.instgrm) {
+      window.instgrm.Embeds.process();
+      // Add a small delay to allow processing to complete
+      const timer = setTimeout(() => setIsLoading(false), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [event.instagramUrl]);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -37,18 +55,34 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     <Card className={`overflow-hidden transition-all duration-300 mb-6 ${isPastEvent ? 'opacity-70' : ''}`}>
       <div className="relative" onClick={toggleExpand}>
         <div className="cursor-pointer">
-          <div className="aspect-video overflow-hidden bg-gray-200 relative">
-            <iframe
-              src={`${event.instagramUrl.replace('/p/', '/embed/p/')}`}
-              className="w-full h-full border-none"
-              allowFullScreen
-            />
+          <div className="relative">
+            {/* Instagram embed with loading state */}
+            <div className="instagram-embed-container">
+              {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-muted/50 z-10">
+                  <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
+              <blockquote 
+                className="instagram-media" 
+                data-instgrm-permalink={event.instagramUrl}
+                data-instgrm-version="14"
+                data-instgrm-captioned="false"
+                data-instgrm-hidecaption="true"
+              >
+                <a href={event.instagramUrl} target="_blank" rel="noopener noreferrer">
+                  Zobacz post na Instagramie
+                </a>
+              </blockquote>
+            </div>
+
             {isPastEvent && (
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <span className="text-white font-bold text-lg uppercase">Wydarzenie minione</span>
               </div>
             )}
           </div>
+          
           <div className="p-4 bg-card text-card-foreground">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
@@ -100,5 +134,16 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
     </Card>
   );
 };
+
+// Add TypeScript declaration for instgrm global
+declare global {
+  interface Window {
+    instgrm?: {
+      Embeds: {
+        process: () => void;
+      };
+    };
+  }
+}
 
 export default EventCard;
