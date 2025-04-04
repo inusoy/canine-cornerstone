@@ -8,51 +8,75 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 const galleryImages = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1568393691622-c7ba131d63b4",
-    alt: "Psy w sali zabaw",
-    title: "Sala Zabaw"
+    src: "gallery/1.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1535868647677-300dbf3d78d1",
-    alt: "Szkolenie psa",
-    title: "Psia Szkółka"
+    src: "gallery/2.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1517022812141-23620dba5c23",
-    alt: "Pies uczestniczący w treningu Nosework",
-    title: "Nosework"
+    src: "gallery/3.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1552053831-71594a27632d",
-    alt: "Spacer socjalizacyjny",
-    title: "Spacery Socjalizacyjne"
+    src: "gallery/4.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1537204696486-967f1b7198c8",
-    alt: "Trening indywidualny",
-    title: "Indywidualne Treningi"
+    src: "gallery/5.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1541599540903-216a46ca1dc0",
-    alt: "Konsultacja behawioralna",
-    title: "Konsultacje Behawioralne"
+    src: "gallery/6.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
-    alt: "Psy podczas zabawy",
-    title: "Zabawy grupowe"
+    src: "gallery/7.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
   },
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1549291981-56d443d5e2a2",
-    alt: "Sesja treningowa",
-    title: "Trening posłuszeństwa"
+    src: "gallery/8.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
+  },
+  {
+    id: 9,
+    src: "gallery/9.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
+  },
+  {
+    id: 10,
+    src: "gallery/10.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
+  },
+  {
+    id: 11,
+    src: "gallery/11.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
+  },
+  {
+    id: 12,
+    src: "gallery/12.jpg",
+    alt: "Heban szczeniaczek",
+    title: "Heban szczeniaczek"
   },
 ];
 

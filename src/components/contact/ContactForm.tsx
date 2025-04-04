@@ -5,8 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
-import { ContactInfo } from "@/components/contact/ContactInfo";
-import { contactInfo } from "@/data/contactInfo";
 
 export const ContactForm = () => {
   const { toast } = useToast();
@@ -37,7 +35,7 @@ export const ContactForm = () => {
     setIsSubmitting(true);
     try {
       await emailjs.send(
-        'service_jzmsyi5',
+        'service_cajh2hl',
         'template_i2n6ctp',
         {
           to_email: 'kontakt@szczekszczek.pl',

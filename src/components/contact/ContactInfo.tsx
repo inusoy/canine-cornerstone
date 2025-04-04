@@ -25,6 +25,7 @@ interface ContactInfoProps {
   options?: Partial<ContactInfoDisplayOptions>;
   className?: string;
   centered?: boolean;
+  onPrimaryBg?: boolean; // Add this prop to control hover colors
 }
 
 export const ContactInfo = ({
@@ -32,6 +33,7 @@ export const ContactInfo = ({
   options = defaultOptions,
   className,
   centered = false,
+  onPrimaryBg = false, // Default to false
 }: ContactInfoProps) => {
   const displayOptions = { ...defaultOptions, ...options };
   
@@ -55,7 +57,13 @@ export const ContactInfo = ({
             {!centered && (
               <Phone className="h-5 w-5 text-primary" />
             )}
-            <a href={`tel:${contactInfo.phone}`} className="transition-colors hover:text-primary">
+            <a 
+              href={`tel:${contactInfo.phone}`} 
+              className={cn(
+                "transition-colors", 
+                onPrimaryBg ? "hover:text-white" : "hover:text-primary"
+              )}
+            >
               {contactInfo.phone}
             </a>
           </div>
@@ -66,7 +74,13 @@ export const ContactInfo = ({
             {!centered && (
               <Mail className="h-5 w-5 text-primary" />
             )}
-            <a href={`mailto:${contactInfo.email}`} className="transition-colors hover:text-primary">
+            <a 
+              href={`mailto:${contactInfo.email}`} 
+              className={cn(
+                "transition-colors", 
+                onPrimaryBg ? "hover:text-white" : "hover:text-primary"
+              )}
+            >
               {contactInfo.email}
             </a>
           </div>
@@ -80,7 +94,10 @@ export const ContactInfo = ({
             {centered ? (
               <a 
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactInfo.address)}`} 
-                className="transition-colors hover:text-primary-foreground/75"
+                className={cn(
+                  "transition-colors", 
+                  onPrimaryBg ? "hover:text-white" : "hover:text-primary-foreground/75"
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
               >

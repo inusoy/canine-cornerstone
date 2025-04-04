@@ -16,35 +16,35 @@
   :root {
     --background: 0 0% 96%;
     --foreground: 20 20% 5%;
-    
+
     --card: 21 64% 89%;
     --card-foreground: 20 20% 5%;
-    
+
     --popover: 60 30% 98%;
     --popover-foreground: 20 20% 5%;
-    
+
     --primary: 157 30% 35%;
     --primary-foreground: 60 30% 98%;
-    
+
     --secondary: 24 5% 64%;
     --secondary-foreground: 20 20% 5%;
-    
+
     --muted: 60 30% 96%;
     --muted-foreground: 20 20% 40%;
-    
+
     --accent: 157 30% 35%;
     --accent-foreground: 60 30% 98%;
-    
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 60 30% 98%;
-    
+
     --border: 20 5.9% 90%;
     --input: 20 5.9% 90%;
     --ring: 157 30% 35%;
-    
+
     --radius: 0.75rem;
   }
- 
+
   * {
     @apply border-border scroll-smooth;
   }
@@ -53,10 +53,15 @@
     @apply bg-background text-foreground font-josefin;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-josefin uppercase tracking-wide;
   }
-  
+
   .font-bryndan {
     @apply uppercase;
   }
@@ -66,11 +71,11 @@
   .fade-in {
     @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
   }
-  
+
   .fade-in.appear {
     @apply opacity-100 translate-y-0;
   }
-  
+
   .hover-lift {
     @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-md;
   }
@@ -83,7 +88,8 @@
 
   .instagram-embed-container {
     position: relative;
-    padding-bottom: 136%; /* Provides space for Instagram content */
+    padding-bottom: 136%;
+    /* Provides space for Instagram content */
     height: 0;
     overflow: hidden;
     background-color: #f6f6f6;
@@ -99,18 +105,26 @@
     margin: 0 !important;
     padding: 0 !important;
   }
-  
+
+  @media (max-width: 767px) {
+    /* .mobile-text-justify {
+      text-align: justify;
+    } */
+  }
+
   .animate-float {
     animation: float 4s ease-in-out infinite;
   }
-  
+
   @keyframes float {
     0% {
       transform: translateY(0px);
     }
+
     50% {
       transform: translateY(-20px);
     }
+
     100% {
       transform: translateY(0px);
     }

@@ -5,7 +5,7 @@ import { contactInfo } from "@/data/contactInfo";
 
 const Footer = () => {
   return (
-    <footer className="py-8 border-t bg-primary">
+    <footer className="py-8 border-t bg-primary uppercase">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center text-center mb-8">
           <Logo 
@@ -20,6 +20,7 @@ const Footer = () => {
             contactInfo={contactInfo}
             className="text-primary-foreground/90 max-w-md"
             centered={true}
+            onPrimaryBg={true}
           />
           
         </div>
