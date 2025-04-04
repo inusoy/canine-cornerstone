@@ -38,6 +38,8 @@ export const ServiceCard = ({ product, fullWidth = false }: ServiceCardProps) =>
         )}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        onTouchStart={() => setIsHovered(true)}
+        onTouchEnd={() => setIsHovered(false)}
       >
         {iconExists && (
           <div className={cn(
