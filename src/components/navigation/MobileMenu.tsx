@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { SocialLinks } from "./SocialLinks";
 import { TrainingMenu } from "./TrainingMenu";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -35,16 +36,16 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
           WYSZUKAJ
         </button>
         <div className="space-y-2">
-          <button
-            onClick={(e) => {
-              onNavigation(e, "services");
-              onClose();
-            }}
-            className="w-full text-left font-medium px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
-          >
-            OFERTA
-          </button>
-          <TrainingMenu onClick={onClose} mobile />
+          <Accordion type="single" collapsible>
+            <AccordionItem value="offer" className="border-none">
+              <AccordionTrigger className="py-2 px-4 hover:bg-muted rounded-md transition-colors uppercase font-medium">
+                OFERTA
+              </AccordionTrigger>
+              <AccordionContent className="pt-1">
+                <TrainingMenu onClick={onClose} mobile className="pl-2" />
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
         <div className="border-t pt-4 space-y-4">
           <button

@@ -5,7 +5,7 @@ import PriceTag from "@/components/training/PriceTag";
 const SalaZabaw = () => {
   return (
     <TrainingLayout
-      title="Sala Zabaw i Eksploracji"
+      title="Sala Zabaw i&#160;Eksploracji"
       subtitle=""
       sidebarContent={
         <div className="space-y-4">
@@ -31,7 +31,7 @@ const SalaZabaw = () => {
               showContactForm={false} 
               showButton={true}
               buttonText="Kalendarz"
-              buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing"
+              buttonUrl="https://docs.google.com/spreadsheets/d/1qSLtZhnc_hfJAbuphwoWLf5KRl-Ij0PMi72gTBPUYsU/edit?usp=drive_link"
               price="140 zł/90 min*"
               priceAsterisk="*czas może być krótszy, bo to Twój pies decyduje"
             />

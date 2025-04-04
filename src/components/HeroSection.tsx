@@ -1,19 +1,23 @@
+import { Logo } from "./ui/logo";
+import { useIsMobile } from "@/hooks/use-mobile";
+
 const HeroSection = () => {
   return (
-    <section className="pt-36 pb-28 px-4 relative">
+    <section className="relative flex flex-col justify-center min-h-screen px-4 md:pt-36 md:pb-28">
       <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto text-center space-y-10">
-          {/* Optional small decorative element */}
-          <div className="w-24 h-1 bg-primary/30 mx-auto mb-6"></div>
-          
-          <h1 className="text-5xl md:text-7xl font-semibold leading-tight fade-in">
-            Szkoła dla&#160;psów
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-32">
+          {!useIsMobile() && (<Logo showText={false} className="mx-auto justify-center" size="lg96" />
+          )}
+          {useIsMobile() && (<Logo showText={false} className="mx-auto justify-center" size="lg48" />
+          )}
+          <h1 className="text-4xl md:text-7xl font-semibold leading-tight fade-in flex flex-col items-center">
+            <span className="block">Szczek&#160;Szczek</span>
+            <span className="block text-[0.85em]">Szkoła&#160;dla&#160;psów</span>
           </h1>
-          
-          <p className="text-xl text-muted-foreground fade-in uppercase tracking-wider max-w-2xl mx-auto">
-            Zadbaj o Wasze wspólne życie już&#160;dziś.
+
+          <p className="text-xl text-muted-foreground fade-in uppercase tracking-wider max-w-2xl mx-auto pt-1">
+            Zadbaj o Wasze wspólne&#160;życie&#160;już&#160;dziś.
           </p>
-          
         </div>
       </div>
     </section>

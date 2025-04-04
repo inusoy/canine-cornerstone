@@ -18,7 +18,7 @@ interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {
    * Size of the logo image
    * @default "default"
    */
-  size?: "sm" | "default" | "lg" | "lg2" | "lg3" | "lg4"
+  size?: "sm" | "default" | "lg" | "lg2" | "lg3" | "lg4" | "lg48" | "lg96"
   /**
    * Link to navigate to when clicking the logo
    * @default "/"
@@ -58,6 +58,8 @@ const Logo = React.forwardRef<HTMLDivElement, LogoProps>(
       lg2: "h-12 w-12",
       lg3: "h-14 w-14",
       lg4: "h-16 w-16",
+      lg48: "h-48 w-48",
+      lg96: "h-96 w-96",
     }
 
     return (
