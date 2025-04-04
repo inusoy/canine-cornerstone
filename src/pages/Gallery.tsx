@@ -33,50 +33,50 @@ const galleryImages = [
   {
     id: 5,
     src: "gallery/5.jpg",
-    alt: "Heban szczeniaczek",
-    title: "Heban szczeniaczek"
+    alt: "Heban",
+    title: "Heban"
   },
   {
     id: 6,
     src: "gallery/6.jpg",
-    alt: "Heban szczeniaczek",
-    title: "Heban szczeniaczek"
+    alt: "Heban",
+    title: "Heban"
   },
   {
     id: 7,
     src: "gallery/7.jpg",
-    alt: "Heban szczeniaczek",
-    title: "Heban szczeniaczek"
+    alt: "Heban",
+    title: "Heban"
   },
   {
     id: 8,
     src: "gallery/8.jpg",
-    alt: "Heban szczeniaczek",
-    title: "Heban szczeniaczek"
+    alt: "Heban",
+    title: "Heban"
   },
   {
     id: 9,
     src: "gallery/9.jpg",
-    alt: "Heban szczeniaczek",
-    title: "Heban szczeniaczek"
+    alt: "Heban",
+    title: "Heban"
   },
   {
     id: 10,
     src: "gallery/10.jpg",
-    alt: "Heban szczeniaczek",
-    title: "Heban szczeniaczek"
+    alt: "Heban",
+    title: "Heban"
   },
   {
     id: 11,
     src: "gallery/11.jpg",
-    alt: "Heban szczeniaczek",
-    title: "Heban szczeniaczek"
+    alt: "Heban",
+    title: "Heban"
   },
   {
     id: 12,
     src: "gallery/12.jpg",
-    alt: "Heban szczeniaczek",
-    title: "Heban szczeniaczek"
+    alt: "Heban",
+    title: "Heban"
   },
 ];
 
