@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="relative flex flex-col justify-center min-h-screen px-4 md:pt-36 md:pb-28">
       <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-32">
+        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           {!useIsMobile() && (<Logo showText={false} className="mx-auto justify-center" size="lg96" />
           )}
           {useIsMobile() && (<Logo showText={false} className="mx-auto justify-center" size="lg48" />

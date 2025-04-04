@@ -15,7 +15,7 @@ const Kontakt = () => {
             <h1 className="text-4xl font-semibold mb-6 text-center text-primary font-bryndan uppercase">KONTAKT</h1>
             
             <Card className="p-8 shadow-md mb-10">
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-8 uppercase">
                 <div>
                   <ContactInfo contactInfo={contactInfo} />
                 </div>
