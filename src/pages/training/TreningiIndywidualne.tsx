@@ -20,9 +20,8 @@ const TreningiIndywidualne = () => {
               <span> <b>Lokalizacja:</b><ul>Sala na Gwareckiej 8/3l we Wrocławiu lub umówione wcześniej miejsce.</ul>
               </span>
             </li>
-            <SignupInfo showContactForm={false}/>
+            <SignupInfo showContactForm={false} price="120 zł + ewentualny dojazd/60 min" />
           </ul>
-          <PriceTag>120 zł + ewentualny dojazd/60 min</PriceTag>
         </div>
       }
     >

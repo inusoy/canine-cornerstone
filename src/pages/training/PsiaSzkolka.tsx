@@ -41,9 +41,10 @@ const PsiaSzkolka = () => {
               showContactForm={false}
               showButton={true}
               buttonText="Kalendarz"
-              buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing" />
+              buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing"
+              price="600 zł/pakiet"
+              />
           </ul>
-          <PriceTag>600 zł/pakiet</PriceTag>
         </div>
       }
     >

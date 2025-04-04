@@ -39,9 +39,9 @@ const SpacerySocjalizacyjne = () => {
               showButton={true}
               buttonText="zapisz się"
               buttonUrl="https://forms.gle/domaQzLmYNScRwhk9"
+              price="80 zł/spacer"
             />
           </ul>
-          <PriceTag>80 zł/spacer</PriceTag>
         </div>
       }
     >

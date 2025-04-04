@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import PriceTag from './PriceTag';
 
 // Interfejs dla niestandardowego linku
 interface CustomLink {
@@ -13,11 +14,12 @@ interface SignupInfoProps {
   showInstagram?: boolean;
   showSMS?: boolean;
   showContactForm?: boolean;
-  customLinks?: CustomLink[];
   title?: string;
   showButton?: boolean;
   buttonText?: string;
   buttonUrl?: string;
+  price?: string;
+  priceAsterisk?: string;
 }
 
 export const SignupInfo: React.FC<SignupInfoProps> = ({
@@ -25,11 +27,12 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
   showInstagram = true,
   showSMS = true,
   showContactForm = true,
-  customLinks = [],
   title = "JAK SIĘ ZAPISAĆ?",
   showButton = false,
   buttonText = "",
-  buttonUrl = ""
+  buttonUrl = "",
+  price = "",
+  priceAsterisk = "",
 }) => {
   return (
     <div>
@@ -59,16 +62,17 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
             <span>Przez <a href="/kontakt">formularz kontaktowy</a>.</span>
           </li>
         )}
-        {customLinks.map((link, index) => (
-          <li key={index} className="flex items-start">
-            <span className="text-primary mr-2">•</span>
-            <span className="text-primary hover:underline"><a href={link.url}>{link.text}</a></span>
-          </li>
-        ))}
       </ul>
+      {price && (
+        <PriceTag>
+          {price}
+        </PriceTag>
+      )}
+      {priceAsterisk && (
+        <p className="text-sm text-primary mt-2">{priceAsterisk}</p>)}
       {showButton && (
         <div className="mt-4">
-          <Button 
+          <Button
             className="w-full bg-primary text-white hover-lift uppercase font-josefin"
             onClick={() => window.open(buttonUrl, "_blank")}
           >

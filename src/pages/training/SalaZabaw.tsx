@@ -32,9 +32,10 @@ const SalaZabaw = () => {
               showButton={true}
               buttonText="Kalendarz"
               buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing"
+              price="140 zł/90 min*"
+              priceAsterisk="*czas może być krótszy, bo to Twój pies decyduje"
             />
-          </ul>
-          <PriceTag>140 zł/90 min*</PriceTag> <p className="font-semibold text-primary">*czas może być krótszy, bo to Twój pies decyduje</p>
+          </ul>          
         </div>
       }
     >

@@ -31,9 +31,9 @@ const Nosework = () => {
               showContactForm={false}
               showButton={true}
               buttonText="Kalendarz"
-              buttonUrl="https://docs.google.com/spreadsheets/d/1oJpjSC_Kk1AhqFknc1E0G9OvWTG0lTc6_3RWykzk3xs/edit?usp=sharing" />
+              buttonUrl="https://docs.google.com/spreadsheets/d/1oJpjSC_Kk1AhqFknc1E0G9OvWTG0lTc6_3RWykzk3xs/edit?usp=sharing" 
+              price="80 zł/45 min"/>
           </ul>
-          <PriceTag>80 zł/45 min</PriceTag>
         </div>
       }
     >

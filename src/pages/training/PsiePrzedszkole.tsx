@@ -39,9 +39,10 @@ const PsiePrzedszkole = () => {
               showContactForm={false}
               showButton={true}
               buttonText="Kalendarz"
-              buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing" />
+              buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing"
+              price="600 zł/grupowe lub 750 zł/indywidualne"
+              />
           </ul>
-          <PriceTag>600 zł/grupowe lub 750 zł/indywidualne</PriceTag>
         </div>
       }
     >
