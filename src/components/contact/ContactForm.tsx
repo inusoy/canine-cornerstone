@@ -64,9 +64,9 @@ export const ContactForm = () => {
   };
 
   return (
-    <Card className="p-6 fade-in shadow-md">
-      <h3 className="text-xl font-semibold mb-4 text-center text-primary font-bryndan uppercase">NAPISZ DO NAS</h3>
-      <form className="space-y-4" onSubmit={handleSubmit}>
+    <Card className="p-8 shadow-md">
+      <h3 className="text-2xl font-semibold mb-6 text-center text-primary font-bryndan uppercase">NAPISZ DO NAS</h3>
+      <form className="space-y-4 font-josefin" onSubmit={handleSubmit}>
         <div>
           <label className="block text-sm font-medium mb-2 uppercase">IMIĘ</label>
           <Input
@@ -105,6 +105,7 @@ export const ContactForm = () => {
             <option value="dog-school">SZKOŁA DLA PSÓW</option>
             <option value="puppy-kindergarten">PRZEDSZKOLE DLA SZCZENIĄT</option>
             <option value="socialisation-walks">SOCJALIZACYJNE SPACERY</option>
+            <option value="other">INNE</option>
           </select>
         </div>
         <div>
