@@ -10,25 +10,19 @@ interface MobileMenuProps {
   onNavigation: (e: React.MouseEvent, path: string) => void;
 }
 
-const mobileMenuStyles = {
-  overflowY: "auto",
-  WebkitOverflowScrolling: "touch",
-  overscrollBehavior: "contain",
-  maxHeight: "100vh",
-};
-
 export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: MobileMenuProps) => {
   if (!isOpen) return null;
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    e.stopPropagation();
-  };
 
   return (
     <div
       className="md:hidden fixed inset-0 top-[65px] bg-background z-50"
-      style={mobileMenuStyles}
-      onTouchMove={handleTouchMove}
+      style={{
+        overflowY: "auto",
+        WebkitOverflowScrolling: "touch",
+        overscrollBehavior: "contain",
+        maxHeight: "100vh",
+        height: "calc(100vh - 65px)" // Add explicit height
+      }}
     >
       <div className="p-4 space-y-4 bg-background">
         <button

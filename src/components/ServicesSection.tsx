@@ -1,5 +1,5 @@
 import { ServiceCard } from "@/components/products/ServiceCard";
-import { trainingProducts } from "@/data/products";
+import { allProducts } from "@/data/products";
 
 const ServicesSection = () => {
   return (
@@ -9,7 +9,7 @@ const ServicesSection = () => {
           OFERTA
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mobile-text-justify">
-          {trainingProducts.map((product) => (
+          {allProducts.map((product) => (
             <div 
               key={product.id} 
               className={product.fullWidth ? "col-span-full" : ""}

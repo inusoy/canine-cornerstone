@@ -65,7 +65,7 @@ export const ContactForm = () => {
 
   return (
     <Card className="p-8 shadow-md">
-      <h3 className="text-2xl font-semibold mb-6 text-center text-primary font-bryndan uppercase">NAPISZ DO NAS</h3>
+      <h3 className="text-2xl font-semibold mb-6 text-center text-primary font-bryndan uppercase">NAPISZ DO MNIE</h3>
       <form className="space-y-4 font-josefin" onSubmit={handleSubmit}>
         <div>
           <label className="block text-sm font-medium mb-2 uppercase">IMIĘ</label>

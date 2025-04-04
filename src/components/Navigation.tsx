@@ -36,21 +36,27 @@ const Navigation = () => {
     navigate(path);
   };
 
-  // Modify your toggle function to handle body class
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    const newMenuState = !isMenuOpen;
+    setIsMenuOpen(newMenuState);
     
-    // Add this to prevent background scrolling
-    if (!isMenuOpen) {
+    // Fix body scroll lock
+    if (newMenuState) {
       // Menu is opening
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
+      document.body.style.top = '0';
+      document.body.style.left = '0';
+      document.body.style.right = '0';
     } else {
-      // Menu is closing
+      // Menu is closing - restore scroll position
+      const scrollY = document.body.style.top;
       document.body.style.overflow = '';
       document.body.style.position = '';
-      document.body.style.width = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
   };
 

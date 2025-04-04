@@ -44,11 +44,18 @@ const products: Product[] = [
     title: "Konsultacje Behawioralne",
     link: "/training/konsultacje-behawioralne",
     homepagePriority: 7,
+  },
+  {
+    id: "spotkania-psiarzy",
+    title: "Spotkania Psiarzy",
+    link: "/spotkania-psiarzy",
+    homepagePriority: 101,
+    fullWidth: true,
   }
 ];
 
 // Export all products for search functionality
-export const allProducts = products;
+export const allProducts = products.sort((a, b) => a.homepagePriority - b.homepagePriority);
 
 // Export only training-related products for the training menu and homepage
 // This is a filtered and sorted version of the products array
