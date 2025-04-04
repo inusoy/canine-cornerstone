@@ -27,10 +27,6 @@ const SpacerySocjalizacyjne = () => {
                   Dla psów, które nie mają zbyt wielu psich przyjaciół, reagują zbyt emocjonalnie na inne psy. Dla psów, które szczekają lub ciągną do innych psów, albo na spacerach nie zwracają uwagi na opiekuna.
                 </ul></span>
             </li>
-            <li className="flex items-start">
-              <span className="text-primary mr-2">•</span>
-              <span>Poprzez formularz zgłoszeniowy.</span>
-            </li>
             <SignupInfo
               showFacebook={false}
               showInstagram={false}

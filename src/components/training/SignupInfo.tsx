@@ -59,7 +59,7 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
         {showContactForm && (
           <li className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span>Przez <a href="/kontakt">formularz kontaktowy</a>.</span>
+            <span>Przez formularz zgłoszeniowy.</span>
           </li>
         )}
       </ul>
