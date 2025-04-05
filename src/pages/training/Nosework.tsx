@@ -39,8 +39,7 @@ const Nosework = () => {
     >
       <h2 className="text-2xl font-semibold mt-8">CZYM JEST NOSEWORK?</h2>
       <p>Nosework jest sportem kynologicznym, zainspirowanym pracą psów w służbach np. przy detekcji materiałów wybuchowych lub narkotyków, poszukiwaniu ludzi czy udaremnianiu przemytów egzotycznych zwierząt.</p>
-      <p>Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.
-        wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.</p>
+      <p>Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.</p>
 
       <h2 className="text-2xl font-semibold mt-8">NOSEWORK DLA KAŻDEGO PSA (I OPIEKUNA)?</h2>
       <p>Tak! Nosework jest świetnym sportem, bo mogą go uprawiać psy w każdym wieku, każdej wielkości i rasy. Nie wymaga specjalnej sprawności fizycznej, można go ćwiczyć w domach i na spacerach.
