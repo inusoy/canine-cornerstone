@@ -67,7 +67,7 @@ const SpotkaniaJPsiarzy: React.FC = () => {
         >SPOTKANIA PSIARZY</h1>
 
         <p className="mb-8 text-lg">
-          Na spotkaniach psiarzy będziemy podejmować się najróżniejszych aktywności, od rozmów, przez planszówki, picie herbaty, rzeczy kreatywne i rozwijające. Będzie to bezpieczna, spokojna i przyjemna przestrzeń, w której będzie można poznać ciekawych ludzi, a może nawet znaleźć nowe, niepsie hobby… Nawet jeśli coś wydaje się „nie twoje”, to warto wychodzić ze strefy komfortu i poznawać nowe aktywności!
+          Na spotkaniach psiarzy będziemy podejmować się najróżniejszych aktywności, od rozmów, przez planszówki, picie herbaty, rzeczy kreatywne i rozwijające. Będzie to bezpieczna, spokojna i przyjemna przestrzeń, w której będzie można poznać ciekawych ludzi, a może nawet znaleźć nowe, niepsie hobby… Nawet jeśli coś wydaje się „nie Twoje”, to warto wychodzić ze strefy komfortu i poznawać nowe aktywności!
         </p>
 
         <EventFilter
