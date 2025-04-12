@@ -25,18 +25,18 @@ const SpotkaniaJPsiarzy: React.FC = () => {
     const now = new Date();
     // Filter events based on date
     let filtered = events;
-    
+
     if (!showPastEvents) {
       filtered = events.filter(event => new Date(event.date) >= now);
     }
-    
+
     // Sort events by date
     filtered = [...filtered].sort((a, b) => {
       const dateA = new Date(a.date).getTime();
       const dateB = new Date(b.date).getTime();
       return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
     });
-    
+
     setFilteredEvents(filtered);
   }, [events, showPastEvents, sortOrder]);
 
@@ -57,29 +57,28 @@ const SpotkaniaJPsiarzy: React.FC = () => {
         <title>Spotkania Psiarzy | Szczek Szczek Wrocław</title>
         <meta name="description" content="Zobacz nadchodzące spotkania dla miłośników psów we Wrocławiu organizowane przez Szczek Szczek." />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="container mx-auto px-4 pt-32 pb-12">
-      <h1
-            className={`text-5xl font-bryndan mb-6 text-primary ${
-              isMobile ? "text-center" : "text-left"
+        <h1
+          className={`text-5xl font-bryndan mb-6 text-primary ${isMobile ? "text-center" : "text-left"
             } uppercase`}
-          >SPOTKANIA PSIARZY</h1>
-        
+        >SPOTKANIA PSIARZY</h1>
+
         <p className="mb-8 text-lg">
-          Dołącz do naszych spotkań dla miłośników psów! Organizujemy regularne wydarzenia, 
-          które pomagają w socjalizacji czworonogów i umożliwiają wymianę doświadczeń między 
-          właścicielami. Sprawdź poniżej nadchodzące spotkania i zapisz się już dziś!
+
+          NA SPOTKANIACH PSIARZY BĘDZIEMY PODEJMOWAĆ SIĘ NAJRÓŻNIEJSZYCH AKTYWNOŚCI, OD ROZMÓW, PRZEZ PLANSZÓWKI, PICIE HERBATY, RZECZY KREATYWNE I ROZWIJAJĄCE. BĘDZIE TO BEZPIECZNA, SPOKOJNA I PRZYJEMNA PRZESTRZEŃ, W KTÓREJ BĘDZIE MOŻNA POZNAĆ CIEKAWYCH LUDZI, A MOŻE NAWET ZNALEŹĆ NOWE, NIEPSIE HOBBY… nawet jeśli coś wydaje się „NIE TWOJE”, TO WARTO WYCHODZIĆ ZE STREFY KOMFORTU I POZNAWAĆ NOWE AKTYWNOŚCI!
+
         </p>
-        
-        <EventFilter 
+
+        <EventFilter
           showPastEvents={showPastEvents}
           onToggleShowPastEvents={toggleShowPastEvents}
           sortOrder={sortOrder}
           onChangeSortOrder={toggleSortOrder}
         />
-        
+
         {filteredEvents.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredEvents.map(event => (
@@ -90,7 +89,7 @@ const SpotkaniaJPsiarzy: React.FC = () => {
           (!showPastEvents && !hasUpcomingEvents) && <EmptyEvents />
         )}
       </main>
-      
+
       <Footer />
     </>
   );
