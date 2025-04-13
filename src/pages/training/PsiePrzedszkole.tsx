@@ -8,15 +8,15 @@ const PsiePrzedszkole = () => {
     <>
       <Helmet>
         <title>Psie Przedszkole dla szczeniąt | Szczek Szczek Wrocław</title>
-        <meta 
-          name="description" 
-          content="Zajęcia dla szczeniąt od 2. do 5. miesiąca życia. Uczymy socjalizacji, podstaw posłuszeństwa i budowania relacji. Zajęcia grupowe i indywidualne we Wrocławiu." 
+        <meta
+          name="description"
+          content="Zajęcia dla szczeniąt od 2. do 5. miesiąca życia. Uczymy socjalizacji, podstaw posłuszeństwa i budowania relacji. Zajęcia grupowe i indywidualne we Wrocławiu."
         />
         <link rel="canonical" href="/training/psie-przedszkole" />
         <meta property="og:title" content="Psie Przedszkole dla szczeniąt | Szczek Szczek Wrocław" />
-        <meta 
-          property="og:description" 
-          content="Wsparcie dla Twojego szczeniaka w prawidłowym starcie w pieskowe życie poprzez socjalizację, habituację i podstawy posłuszeństwa." 
+        <meta
+          property="og:description"
+          content="Wsparcie dla Twojego szczeniaka w prawidłowym starcie w pieskowe życie poprzez socjalizację, habituację i podstawy posłuszeństwa."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="/training/psie-przedszkole" />
@@ -54,11 +54,19 @@ const PsiePrzedszkole = () => {
               </li>
               <SignupInfo
                 showContactForm={false}
-                showButton={true}
-                buttonText="Kalendarz"
-                buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing"
                 price="600 zł/grupowe lub 750 zł/indywidualne"
-                />
+              />
+              <div className="mt-4">
+                <p className="font-medium mt-2">Najbliższe grupy:</p>
+                <ul className="space-y-1 mt-1">
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    Środowe: 30.04, 07.05, 14.05, 21.05, 28.05, 04.06 o 18:00</li>
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    Weekendowe: 17.05, 24.05, 31.05, 08.06, 14.06, 28.06 o 13:00</li>
+                </ul>
+              </div>
             </ul>
           </div>
         }

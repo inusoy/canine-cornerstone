@@ -8,15 +8,15 @@ const PsiaSzkolka = () => {
     <>
       <Helmet>
         <title>Psia Szkółka - Szkolenia dla psów | Szczek Szczek</title>
-        <meta 
-          name="description" 
-          content="Profesjonalne zajęcia z posłuszeństwa dla psów powyżej 5. miesiąca życia. Zajęcia grupowe we Wrocławiu. Nauczymy Twojego psa podstawowych komend i samokontroli." 
+        <meta
+          name="description"
+          content="Profesjonalne zajęcia z posłuszeństwa dla psów powyżej 5. miesiąca życia. Zajęcia grupowe we Wrocławiu. Nauczymy Twojego psa podstawowych komend i samokontroli."
         />
         <link rel="canonical" href="/training/psia-szkolka" />
         <meta property="og:title" content="Psia Szkółka - Szkolenia dla psów | Szczek Szczek" />
-        <meta 
-          property="og:description" 
-          content="Zajęcia z posłuszeństwa dla psów bez ograniczeń wiekowych. Zajęcia grupowe we Wrocławiu. Zapisz swojego psa już dziś!" 
+        <meta
+          property="og:description"
+          content="Zajęcia z posłuszeństwa dla psów bez ograniczeń wiekowych. Zajęcia grupowe we Wrocławiu. Zapisz swojego psa już dziś!"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="/training/psia-szkolka" />
@@ -56,11 +56,19 @@ const PsiaSzkolka = () => {
               </li>
               <SignupInfo
                 showContactForm={false}
-                showButton={true}
-                buttonText="Kalendarz"
-                buttonUrl="https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?usp=sharing"
                 price="600 zł/pakiet"
-                />
+              />
+              <div className="mt-4">
+                <p className="font-medium mt-2">Najbliższe grupy:</p>
+                <ul className="space-y-1 mt-1">
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    Weekendowa: 17.05, 24.05, 31.05, 08.06, 14.06, 28.06 o 12:00</li>
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    Środowe: 21.05, 28.05, 04.05, 11.05, 18.05, 25.05 o 19:00</li>
+                </ul>
+              </div>
             </ul>
           </div>
         }
