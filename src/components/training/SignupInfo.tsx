@@ -8,6 +8,12 @@ interface CustomLink {
   url: string;
 }
 
+// Interfejs dla przycisku
+interface ButtonLink {
+  text: string;
+  url: string;
+}
+
 // Props komponentu
 interface SignupInfoProps {
   showFacebook?: boolean;
@@ -18,6 +24,7 @@ interface SignupInfoProps {
   showButton?: boolean;
   buttonText?: string;
   buttonUrl?: string;
+  buttons?: ButtonLink[];
   price?: string;
   priceAsterisk?: string;
 }
@@ -31,6 +38,7 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
   showButton = false,
   buttonText = "",
   buttonUrl = "",
+  buttons = [],
   price = "",
   priceAsterisk = "",
 }) => {
@@ -70,15 +78,32 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
       )}
       {priceAsterisk && (
         <p className="text-sm text-primary mt-2">{priceAsterisk}</p>)}
-      {showButton && (
-        <div className="mt-4">
-          <Button
-            className="w-full bg-primary text-white hover-lift uppercase font-josefin"
-            onClick={() => window.open(buttonUrl, "_blank")}
-          >
-            {buttonText}
-          </Button>
+      
+      {/* Render multiple buttons if provided */}
+      {buttons.length > 0 ? (
+        <div className="mt-4 space-y-2">
+          {buttons.map((button, index) => (
+            <Button
+              key={index}
+              className="w-full bg-primary text-white hover-lift uppercase font-josefin"
+              onClick={() => window.open(button.url, "_blank")}
+            >
+              {button.text}
+            </Button>
+          ))}
         </div>
+      ) : (
+        // Backwards compatibility for single button
+        showButton && (
+          <div className="mt-4">
+            <Button
+              className="w-full bg-primary text-white hover-lift uppercase font-josefin"
+              onClick={() => window.open(buttonUrl, "_blank")}
+            >
+              {buttonText}
+            </Button>
+          </div>
+        )
       )}
     </div>
   );

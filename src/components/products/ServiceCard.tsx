@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Product } from "@/types/product";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 interface ServiceCardProps {
   product: Product;
@@ -46,10 +47,12 @@ export const ServiceCard = ({ product, fullWidth = false }: ServiceCardProps) =>
             "flex items-center justify-center", 
             fullWidth ? "w-24 h-24 flex-shrink-0" : "mb-4 w-40 h-40"
           )}>
-            <img 
+            <OptimizedImage 
               src={isHovered ? `/icons/dog-${product.id}-hover.svg` : `/icons/dog-${product.id}.svg`} 
-              alt="" 
+              alt={`Ikona ${product.title}`}
               className="w-full h-full transition-all duration-300"
+              width={fullWidth ? 96 : 160}
+              height={fullWidth ? 96 : 160}
             />
           </div>
         )}

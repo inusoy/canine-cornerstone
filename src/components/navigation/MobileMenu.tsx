@@ -14,6 +14,23 @@ interface MobileMenuProps {
 export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: MobileMenuProps) => {
   if (!isOpen) return null;
 
+  // Ensure menu closing function properly resets body styles
+  const handleItemClick = (e: React.MouseEvent, path?: string) => {
+    // Ensure body styles are reset
+    document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    
+    if (path) {
+      onNavigation(e, path);
+    }
+    
+    // Force close the menu
+    onClose();
+  };
+
   return (
     <div
       className="md:hidden fixed inset-0 top-[65px] bg-background z-50"
@@ -49,10 +66,7 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
         </div>
         <div className="border-t pt-4 space-y-4">
           <button
-            onClick={(e) => {
-              onNavigation(e, "about");
-              onClose();
-            }}
+            onClick={(e) => handleItemClick(e, "about")}
             className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
           >
             O MNIE

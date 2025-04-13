@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.szczekszczek.pl/sitemap.xml
+
+# Disable crawling of certain areas
+Disallow: /maintenance

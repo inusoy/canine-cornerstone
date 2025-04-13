@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Card } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -8,6 +9,21 @@ import { ContactForm } from "@/components/contact/ContactForm";
 const Kontakt = () => {
   return (
     <>
+      <Helmet>
+        <title>Kontakt | Szczek Szczek - Szkolenia dla psów we Wrocławiu</title>
+        <meta 
+          name="description" 
+          content="Skontaktuj się z Martą Stach, certyfikowaną trenerką i behawiorystką psów. Zapisy na szkolenia, konsultacje behawioralne i spacery socjalizacyjne we Wrocławiu." 
+        />
+        <link rel="canonical" href="/kontakt" />
+        <meta property="og:title" content="Kontakt | Szczek Szczek - Szkolenia dla psów we Wrocławiu" />
+        <meta 
+          property="og:description" 
+          content="Skontaktuj się z nami, aby zapisać swojego psa na szkolenia, konsultacje behawioralne lub indywidualne zajęcia we Wrocławiu." 
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/kontakt" />
+      </Helmet>
       <Navigation />
       <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4">
