@@ -8,15 +8,15 @@ const SalaZabaw = () => {
     <>
       <Helmet>
         <title>Sala Zabaw i Eksploracji dla psów | Szczek Szczek Wrocław</title>
-        <meta 
-          name="description" 
-          content="Pierwsze takie miejsce dla psów we Wrocławiu. Specjalnie przystosowana sala, gdzie psy mogą zaspokoić potrzeby węszenia, eksploracji i stymulacji umysłowej." 
+        <meta
+          name="description"
+          content="Pierwsze takie miejsce dla psów we Wrocławiu. Specjalnie przystosowana sala, gdzie psy mogą zaspokoić potrzeby węszenia, eksploracji i stymulacji umysłowej."
         />
         <link rel="canonical" href="/training/sala-zabaw" />
         <meta property="og:title" content="Sala Zabaw i Eksploracji dla psów | Szczek Szczek Wrocław" />
-        <meta 
-          property="og:description" 
-          content="Miejsce dla każdego psa niezależnie od wieku i rasy. Szczególnie polecane dla lękliwych psów. Buduj pewność siebie swojego psa poprzez zabawę i eksplorację." 
+        <meta
+          property="og:description"
+          content="Miejsce dla każdego psa niezależnie od wieku i rasy. Szczególnie polecane dla lękliwych psów. Buduj pewność siebie swojego psa poprzez zabawę i eksplorację."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="/training/sala-zabaw" />
@@ -44,15 +44,23 @@ const SalaZabaw = () => {
                     Salka zabaw i eksploracji jest dla każdego psa, niezależnie od wieku, wielkości czy rasy. Szczególnie mile widziane są lękuski, dla których to miejsce będzie idealne do otworzenia się.
                   </ul></span>
               </li>
-              <SignupInfo 
-                showContactForm={false} 
-                showButton={true}
-                buttonText="Kalendarz"
-                buttonUrl="https://docs.google.com/spreadsheets/d/1qSLtZhnc_hfJAbuphwoWLf5KRl-Ij0PMi72gTBPUYsU/edit?usp=drive_link"
+              <SignupInfo
+                showContactForm={false}
+                showButton={false}
+                buttons={[
+                  {
+                    text: "Kalendarz kwiecień",
+                    url: "https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?gid=0#gid=0"
+                  },
+                  {
+                    text: "Kalendarz maj",
+                    url: "https://docs.google.com/spreadsheets/d/1NPlMMLy9wZFFZt47mFxEWFc_iHZqfVIC3SIzh2RH4Bo/edit?gid=0#gid=0"
+                  }
+                ]}
                 price="140 zł/90 min*"
                 priceAsterisk="*czas może być krótszy, bo to Twój pies decyduje"
               />
-            </ul>          
+            </ul>
           </div>
         }
       >
