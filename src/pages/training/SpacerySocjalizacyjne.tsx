@@ -50,7 +50,7 @@ const SpacerySocjalizacyjne = () => {
                 showContactForm={false}
                 showButton={true}
                 buttonText="zapisz się"
-                buttonUrl="https://forms.gle/domaQzLmYNScRwhk9"
+                buttonUrl="https://docs.google.com/forms/d/e/1FAIpQLSfCKpEkO_eVpiTutxaFjCeuqvJCfZoNn7hZazCcDlkkCGjvQg/viewform"
                 price="80 zł/spacer"
               />
             </ul>
