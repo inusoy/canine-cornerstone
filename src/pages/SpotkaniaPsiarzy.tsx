@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '@/components/Navigation';
@@ -10,7 +9,7 @@ import { Event } from '@/types/event';
 import wydarzenia from '@/data/wydarzenia.json';
 import { useIsMobile } from "@/hooks/use-mobile";
 
-const SpotkaniaJPsiarzy: React.FC = () => {
+const SpotkaniaPsiarzy: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
   const [filteredEvents, setFilteredEvents] = useState<Event[]>([]);
   const [showPastEvents, setShowPastEvents] = useState(false);
@@ -55,7 +54,18 @@ const SpotkaniaJPsiarzy: React.FC = () => {
     <>
       <Helmet>
         <title>Spotkania Psiarzy | Szczek Szczek Wrocław</title>
-        <meta name="description" content="Zobacz nadchodzące spotkania dla miłośników psów we Wrocławiu organizowane przez Szczek Szczek." />
+        <meta 
+          name="description" 
+          content="Zobacz nadchodzące spotkania dla miłośników psów we Wrocławiu organizowane przez Szczek Szczek. Bezpieczna przestrzeń do poznania ciekawych ludzi i nowych aktywności." 
+        />
+        <link rel="canonical" href="/spotkania-psiarzy" />
+        <meta property="og:title" content="Spotkania Psiarzy | Szczek Szczek Wrocław" />
+        <meta 
+          property="og:description" 
+          content="Spotkania dla miłośników psów we Wrocławiu. Przyjazna atmosfera, ciekawe aktywności i możliwość poznania nowych ludzi z podobnymi zainteresowaniami." 
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/spotkania-psiarzy" />
       </Helmet>
 
       <Navigation />
@@ -67,7 +77,7 @@ const SpotkaniaJPsiarzy: React.FC = () => {
         >SPOTKANIA PSIARZY</h1>
 
         <p className="mb-8 text-lg">
-          Na spotkaniach psiarzy będziemy podejmować się najróżniejszych aktywności, od rozmów, przez planszówki, picie herbaty, rzeczy kreatywne i rozwijające. Będzie to bezpieczna, spokojna i przyjemna przestrzeń, w której będzie można poznać ciekawych ludzi, a może nawet znaleźć nowe, niepsie hobby… Nawet jeśli coś wydaje się „nie Twoje”, to warto wychodzić ze strefy komfortu i poznawać nowe aktywności!
+          Na spotkaniach psiarzy będziemy podejmować się najróżniejszych aktywności, od rozmów, przez planszówki, picie herbaty, rzeczy kreatywne i rozwijające. Będzie to bezpieczna, spokojna i przyjemna przestrzeń, w której będzie można poznać ciekawych ludzi, a może nawet znaleźć nowe, niepsie hobby… Nawet jeśli coś wydaje się „nie Twoje", to warto wychodzić ze strefy komfortu i poznawać nowe aktywności!
         </p>
 
         <EventFilter
@@ -93,4 +103,4 @@ const SpotkaniaJPsiarzy: React.FC = () => {
   );
 };
 
-export default SpotkaniaJPsiarzy;
+export default SpotkaniaPsiarzy;

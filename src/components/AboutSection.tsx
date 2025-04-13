@@ -9,8 +9,11 @@ const AboutSection = () => {
           <div className="fade-in">
             <img
               src="/images/_DSC7003.jpg"
-              alt="Trainer with dogs"
+              alt="Marta Stach - certyfikowana trenerka i behawiorystka psów"
               className="w-full h-full object-cover rounded-lg mb-4"
+              loading="lazy"
+              width="800"
+              height="600"
             />
           </div>
           <p className="text-lg text-muted-foreground fade-in">
