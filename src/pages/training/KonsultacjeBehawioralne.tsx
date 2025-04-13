@@ -23,7 +23,6 @@ const KonsultacjeBehawioralne = () => {
       </Helmet>
       <TrainingLayout
         title="Konsultacje Behawioralne"
-        subtitle=""
         sidebarContent={
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

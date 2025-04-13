@@ -12,7 +12,6 @@ const LazyScrollArea = lazy(() => import("@/components/ui/scroll-area").then(mod
 
 interface TrainingLayoutProps {
   title: string;
-  subtitle: string;
   children: ReactNode;
   sidebarContent?: ReactNode;
   backgroundImage?: string;
@@ -20,7 +19,6 @@ interface TrainingLayoutProps {
 
 const TrainingLayout = ({
   title,
-  subtitle,
   children,
   sidebarContent,
   backgroundImage,
@@ -49,7 +47,6 @@ const TrainingLayout = ({
           >
             {title}
           </h1>
-          <p className="text-lg text-muted-foreground mb-8">{subtitle}</p>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main content */}

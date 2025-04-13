@@ -23,7 +23,6 @@ const PsiaSzkolka = () => {
       </Helmet>
       <TrainingLayout
         title="Psia Szkółka"
-        subtitle=""
         sidebarContent={
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>

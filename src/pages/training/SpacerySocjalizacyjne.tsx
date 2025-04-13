@@ -23,7 +23,6 @@ const SpacerySocjalizacyjne = () => {
       </Helmet>
       <TrainingLayout
         title="Spacery Socjalizacyjne"
-        subtitle=""
         sidebarContent={
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
