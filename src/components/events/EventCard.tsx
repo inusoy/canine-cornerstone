@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { formatDate } from '@/lib/date-utils';
 import { Event } from '@/types/event';
+import OptimizedImage from "@/components/ui/optimized-image";
 
 interface EventCardProps {
   event: Event;
@@ -12,6 +13,7 @@ interface EventCardProps {
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [embedFailed, setEmbedFailed] = useState(false);
   const isPastEvent = new Date(event.date) < new Date();
   
   // Extract post ID from Instagram URL
@@ -24,13 +26,36 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   // Trigger Instagram embed script after component mount or update
   useEffect(() => {
     setIsLoading(true);
+    
+    // Set a timeout to check if Instagram embed loaded properly
+    const embedTimeout = setTimeout(() => {
+      // If still loading after 5 seconds, assume embed failed
+      if (isLoading) {
+        setEmbedFailed(true);
+        setIsLoading(false);
+      }
+    }, 5000);
+    
     if (window.instgrm) {
       window.instgrm.Embeds.process();
       // Add a small delay to allow processing to complete
-      const timer = setTimeout(() => setIsLoading(false), 1000);
-      return () => clearTimeout(timer);
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        // Check if embed was successful
+        const embedContainer = document.querySelector('.instagram-embed-container iframe');
+        if (!embedContainer) {
+          setEmbedFailed(true);
+        }
+      }, 1000);
+      
+      return () => {
+        clearTimeout(timer);
+        clearTimeout(embedTimeout);
+      };
     }
-  }, [event.instagramUrl]);
+    
+    return () => clearTimeout(embedTimeout);
+  }, [event.instagramUrl, isLoading]);
 
   const toggleExpand = () => {
     setIsExpanded(!isExpanded);
@@ -56,24 +81,49 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
       <div className="relative" onClick={toggleExpand}>
         <div className="cursor-pointer">
           <div className="relative">
-            {/* Instagram embed with loading state */}
-            <div className="instagram-embed-container">
+            {/* Instagram embed with loading state and fallback */}
+            <div className="instagram-embed-container min-h-[300px]">
               {isLoading && (
                 <div className="absolute inset-0 flex items-center justify-center bg-muted/50 z-10">
                   <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
                 </div>
               )}
-              <blockquote 
-                className="instagram-media" 
-                data-instgrm-permalink={event.instagramUrl}
-                data-instgrm-version="14"
-                data-instgrm-captioned="false"
-                data-instgrm-hidecaption="true"
-              >
-                <a href={event.instagramUrl} target="_blank" rel="noopener noreferrer">
-                  Zobacz post na Instagramie
-                </a>
-              </blockquote>
+              
+              {embedFailed && (
+                <div className="flex items-center justify-center h-[300px] bg-muted">
+                  <div className="text-center p-4">
+                    <OptimizedImage
+                      src="/placeholder.svg"
+                      alt={event.title}
+                      className="w-full max-h-[200px] object-contain mb-2"
+                      width={300}
+                      height={200}
+                    />
+                    <a 
+                      href={event.instagramUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      Zobacz post na Instagramie <ExternalLink className="h-4 w-4 inline" />
+                    </a>
+                  </div>
+                </div>
+              )}
+              
+              {!embedFailed && (
+                <blockquote 
+                  className="instagram-media" 
+                  data-instgrm-permalink={event.instagramUrl}
+                  data-instgrm-version="14"
+                  data-instgrm-captioned="false"
+                  data-instgrm-hidecaption="true"
+                >
+                  <a href={event.instagramUrl} target="_blank" rel="noopener noreferrer">
+                    Zobacz post na Instagramie
+                  </a>
+                </blockquote>
+              )}
             </div>
 
             {isPastEvent && (

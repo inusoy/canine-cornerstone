@@ -1,14 +1,17 @@
 import { Logo } from "./ui/logo";
 import { useIsMobile } from "@/hooks/use-mobile";
+import OptimizedImage from "./ui/optimized-image";
 
 const HeroSection = () => {
+  const isMobile = useIsMobile();
+  
   return (
     <section className="relative flex flex-col justify-center min-h-screen px-4 md:pt-36 md:pb-28">
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          {!useIsMobile() && (<Logo showText={false} className="mx-auto justify-center" size="lg96" />
+          {!isMobile && (<Logo showText={false} className="mx-auto justify-center" size="lg96" />
           )}
-          {useIsMobile() && (<Logo showText={false} className="mx-auto justify-center" size="lg48" />
+          {isMobile && (<Logo showText={false} className="mx-auto justify-center" size="lg48" />
           )}
           <h1 className="text-4xl md:text-7xl font-semibold leading-tight fade-in flex flex-col items-center">
             <span className="block">Szczek&#160;Szczek</span>

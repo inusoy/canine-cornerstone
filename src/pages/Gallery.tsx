@@ -1,9 +1,10 @@
-
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 const galleryImages = [
   {
@@ -89,6 +90,11 @@ const Gallery = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Galeria | Szczek Szczek - Szkolenia dla psów we Wrocławiu</title>
+        <meta name="description" content="Galeria zdjęć Szczek Szczek - zobacz zdjęcia z naszych szkoleń, spacerów i zajęć z psami we Wrocławiu." />
+        <link rel="canonical" href="/gallery" />
+      </Helmet>
       <Navigation />
       <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4">
@@ -103,10 +109,12 @@ const Gallery = () => {
               >
                 <CardContent className="p-0">
                   <div className="relative aspect-square">
-                    <img
+                    <OptimizedImage
                       src={image.src}
                       alt={image.alt}
                       className="w-full h-full object-cover"
+                      width={300}
+                      height={300}
                     />
                     <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity flex items-end p-4">
                       <p className="text-white font-medium">{image.title}</p>
@@ -123,10 +131,12 @@ const Gallery = () => {
         <DialogContent className="max-w-3xl p-0 overflow-hidden">
           {selectedImage && (
             <div className="relative">
-              <img
+              <OptimizedImage
                 src={selectedImage.src}
                 alt={selectedImage.alt}
                 className="w-full max-h-[80vh] object-contain"
+                width={1200}
+                height={800}
               />
               <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4">
                 <h3 className="text-xl font-medium">{selectedImage.title}</h3>

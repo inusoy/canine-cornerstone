@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
-import PriceTag from "@/components/training/PriceTag";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 const Nosework = () => {
   return (
@@ -20,10 +20,12 @@ const Nosework = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="/training/nosework" />
+        <link rel="preload" as="image" href="/images/IMG_1069.jpg" />
       </Helmet>
       <TrainingLayout
         title="Nosework"
-        subtitle=""
+        subtitle="Sport kynologiczny oparty na naturalnych zdolnościach węchowych psa"
+        backgroundImage="/images/IMG_1069.jpg"
         sidebarContent={
           <div className="space-y-4">
             <h3 className="text-2xl font-semibold">WAŻNE INFORMACJE</h3>
@@ -54,6 +56,16 @@ const Nosework = () => {
           </div>
         }
       >
+        <div className="mb-8">
+          <OptimizedImage 
+            src="/icons/dog-nosework.svg"
+            alt="Ilustracja psa wykonującego nosework"
+            className="w-32 h-32 mx-auto"
+            width={128}
+            height={128}
+          />
+        </div>
+        
         <h2 className="text-2xl font-semibold mt-8">CZYM JEST NOSEWORK?</h2>
         <p>Nosework jest sportem kynologicznym, zainspirowanym pracą psów w służbach np. przy detekcji materiałów wybuchowych lub narkotyków, poszukiwaniu ludzi czy udaremnianiu przemytów egzotycznych zwierząt.</p>
         <p>Nosework opiera się na naturalnej psiej zdolności i potrzebie - węszeniu. Jest aktywnością, w której pies musi wyszukać i oznaczyć wyuczone wcześniej zapachy. W Polsce przyjęły się: cynamon, goździki i skórka pomarańczy.</p>
