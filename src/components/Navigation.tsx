@@ -115,7 +115,7 @@ const Navigation = () => {
               GALERIA
             </Link>
             <Link to="/spotkania-psiarzy" className="hover:text-primary transition-colors uppercase">
-              SPOTKANIA PSIARZY
+              WYDARZENIA
             </Link>
             <Link to="/kontakt" className="hover:text-primary transition-colors uppercase">
               KONTAKT

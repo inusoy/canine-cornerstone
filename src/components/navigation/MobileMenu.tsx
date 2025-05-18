@@ -83,7 +83,7 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
             className="block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
             onClick={onClose}
           >
-            SPOTKANIA PSIARZY
+            WYDARZENIA
           </Link>
           <Link
             to="/kontakt"

@@ -24,7 +24,7 @@ export const TrainingMenu = ({ onClick, className = "", mobile = false }: Traini
       ))}
       <Link to="/spotkania-psiarzy" className={`block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase ${mobile ? "text-base" : ""
         }`}>
-        SPOTKANIA PSIARZY
+        WYDARZENIA
       </Link>
     </div>
   );

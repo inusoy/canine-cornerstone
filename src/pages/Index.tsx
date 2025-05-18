@@ -115,7 +115,7 @@ const Index = () => {
       },
       {
         "@type": "Service",
-        "name": "Spotkania Psiarzy",
+        "name": "Wydarzenia",
         "description": "Regularne spotkania dla miłośników psów w bezpiecznej, spokojnej i przyjemnej atmosferze. Oferujemy różnorodne aktywności: rozmowy, planszówki, warsztaty kreatywne i inne. To doskonała okazja, by poznać innych psiarzy i odkryć nowe, ciekawe hobby w przyjaznym środowisku."
       }
     ],

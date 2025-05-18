@@ -59,7 +59,7 @@ const SpotkaniaPsiarzy: React.FC = () => {
     const eventSeriesSchema = {
       "@context": "https://schema.org",
       "@type": "EventSeries",
-      "name": "Spotkania Psiarzy Szczek Szczek",
+      "name": "Wydarzenia Szczek Szczek",
       "description": "Regularne spotkania dla miłośników psów we Wrocławiu organizowane przez Szczek Szczek",
       "url": "https://www.szczekszczek.pl/spotkania-psiarzy",
       "organizer": {
@@ -125,13 +125,13 @@ const SpotkaniaPsiarzy: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Spotkania Psiarzy | Szczek Szczek Wrocław</title>
+        <title>Wydarzenia | Szczek Szczek Wrocław</title>
         <meta 
           name="description" 
           content="Zobacz nadchodzące spotkania dla miłośników psów we Wrocławiu organizowane przez Szczek Szczek. Bezpieczna przestrzeń do poznania ciekawych ludzi i nowych aktywności." 
         />
         <link rel="canonical" href="/spotkania-psiarzy" />
-        <meta property="og:title" content="Spotkania Psiarzy | Szczek Szczek Wrocław" />
+        <meta property="og:title" content="Wydarzenia | Szczek Szczek Wrocław" />
         <meta 
           property="og:description" 
           content="Spotkania dla miłośników psów we Wrocławiu. Przyjazna atmosfera, ciekawe aktywności i możliwość poznania nowych ludzi z podobnymi zainteresowaniami." 
@@ -153,7 +153,7 @@ const SpotkaniaPsiarzy: React.FC = () => {
         <h1
           className={`text-5xl font-bryndan mb-6 text-primary ${isMobile ? "text-center" : "text-left"
             } uppercase`}
-        >SPOTKANIA PSIARZY</h1>
+        >WYDARZENIA</h1>
 
         <p className="mb-8 text-lg">
           Na spotkaniach psiarzy będziemy podejmować się najróżniejszych aktywności, od rozmów, przez planszówki, picie herbaty, rzeczy kreatywne i rozwijające. Będzie to bezpieczna, spokojna i przyjemna przestrzeń, w której będzie można poznać ciekawych ludzi, a może nawet znaleźć nowe, niepsie hobby… Nawet jeśli coś wydaje się „nie Twoje", to warto wychodzić ze strefy komfortu i poznawać nowe aktywności!

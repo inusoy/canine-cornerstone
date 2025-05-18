@@ -48,10 +48,6 @@ const SalaZabaw = () => {
                 showButton={false}
                 buttons={[
                   {
-                    text: "Kalendarz kwiecień",
-                    url: "https://docs.google.com/spreadsheets/d/1TwzTY9bLK8lxo3W9Woflez9mRLvlkcnrQSbLvw8fo4U/edit?gid=0#gid=0"
-                  },
-                  {
                     text: "Kalendarz maj",
                     url: "https://docs.google.com/spreadsheets/d/1NPlMMLy9wZFFZt47mFxEWFc_iHZqfVIC3SIzh2RH4Bo/edit?gid=0#gid=0"
                   }
@@ -70,7 +66,7 @@ const SalaZabaw = () => {
         <p>Koncept sali opiera się na jak największej decyzyjności psów. Psy podczas pobytu na sali, motywowane poukrywanymi w najróżniejszych miejscach smaczkami, zwiedzają ją. Podczas zwiedzania, psy rozwiązują różnego rodzaju zagadki węchowe i  intelektualne, a przy tym pokonują różnego rodzaju przeszkody sensoryczne, ale i obcują z przedmiotami, które mogą wywoływać strach.</p>
 
         <p>Za każdym razem ustawienie salki może być inne, co zapewnia psom różnorodność i brak nudy. Najważniejsze jest to, że pies sam wybiera sposób w jaki przeszukuję salkę, dzięki czemu buduje pewność siebie i niezależność. Ostatecznie jednak jest to miejsce, w którym pies może się zrelaksować i być psem.</p>
-        <p>Podczas całej aktywności jestem przy Was obecna, więc nie ma zmartwienia, że nie będziecie wiedzieć, co robić. Wizyta na salce trwa 90 min (w tym rozkładanie smaczków), ale tak naprawdę to pies zadecyduje ile będzie trwał jego czas na salce.</p>
+        <p>Podczas całej aktywności obecny jest behawiorysta, więc nie ma zmartwienia, że nie będziecie wiedzieć, co robić. Wizyta na salce trwa 90 min (w tym rozkładanie smaczków), ale tak naprawdę to pies zadecyduje ile będzie trwał jego czas na salce.</p>
       </TrainingLayout>
     </>
   );

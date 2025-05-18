@@ -31,7 +31,6 @@ const products: Product[] = [
     title: "Sala Zabaw i Eksploracji",
     link: "/training/sala-zabaw",
     homepagePriority: 100,
-    fullWidth: true,
   },
   {
     id: "treningi-indywidualne",
@@ -47,11 +46,23 @@ const products: Product[] = [
   },
   {
     id: "spotkania-psiarzy",
-    title: "Spotkania Psiarzy",
+    title: "Wydarzenia",
     link: "/spotkania-psiarzy",
     homepagePriority: 101,
     fullWidth: true,
-  }
+  },
+  {
+    id: "spotkania-przez-plot",
+    title: "Spotkania Przez Płot",
+    link: "/training/spotkania-przez-plot",
+    homepagePriority: 8,
+  },
+  {
+    id: "treningi-miejskie",
+    title: "Treningi Miejskie",
+    link: "/training/treningi-miejskie",
+    homepagePriority: 9,
+  },
 ];
 
 // Export all products for search functionality
