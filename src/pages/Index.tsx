@@ -128,16 +128,16 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Szczek Szczek | Profesjonalne Szkolenia Psów we Wrocławiu</title>
+        <title>Szczek Szczek | Szkoła dla Psów we Wrocławiu</title>
         <meta 
           name="description" 
           content="Szczek Szczek oferuje profesjonalne szkolenia dla psów we Wrocławiu: nosework, spacery socjalizacyjne, konsultacje behawioralne i więcej. Skontaktuj się już dziś!" 
         />
         <link rel="canonical" href="/" />
-        <meta property="og:title" content="Szczek Szczek | Profesjonalne Szkolenia Psów we Wrocławiu" />
+        <meta property="og:title" content="Szczek Szczek | Szkoła dla Psów we Wrocławiu" />
         <meta 
           property="og:description" 
-          content="Szczek Szczek oferuje profesjonalne szkolenia dla psów we Wrocławiu. Skontaktuj się już dziś!" 
+          content="Szczek Szczek zadbaj o swoją relacje z psem już dziś!" 
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="/" />
