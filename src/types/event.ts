@@ -9,4 +9,6 @@ export interface Event {
   timeEnd?: string;
   price: string;
   formUrl: string;
+  earlyBirdPrice?: string;
+  earlyBirdUntil?: string;
 }

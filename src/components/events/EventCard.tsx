@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, ChevronDown, ChevronUp, ExternalLink, CalendarPlus } from 'lucide-react';
+import { Calendar, ExternalLink, CalendarPlus, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { formatDate, formatEventDateRange } from '@/lib/date-utils';
+import { formatEventDateRange } from '@/lib/date-utils';
 import { Event } from '@/types/event';
 
 interface EventCardProps {
@@ -11,21 +11,16 @@ interface EventCardProps {
 
 function getGoogleCalendarDateTime(date: string, time?: string): string {
   if (!date) return '';
-  // Jeśli nie podano godziny, ustaw na 00:00
   const t = time ? time : '00:00';
-  // Składnia: YYYYMMDDTHHmmssZ (UTC) lub YYYYMMDDTHHmmss (local)
-  // Zakładamy czas lokalny, bez Z
   return date.replace(/-/g, '') + 'T' + t.replace(':', '') + '00';
 }
 
 function getGoogleCalendarDates(event: Event): string {
-  // Start
   const startDate = event.dateStart;
   const startTime = event.timeStart;
   const endDate = event.dateEnd || event.dateStart;
   let endTime = event.timeEnd;
-  
-  // Jeśli nie ma żadnej godziny końca, ustaw 23:59
+
   if (!endTime && startTime) endTime = '23:59';
 
   const start = getGoogleCalendarDateTime(startDate!, startTime);
@@ -37,32 +32,54 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Poprawne obliczanie czy wydarzenie jest przeszłe
   const now = new Date();
   let isPastEvent = false;
   if (event.dateEnd) {
-    // Jeśli wydarzenie kończy się przed dzisiaj 00:00, jest przeszłe
     const end = new Date(event.dateEnd + 'T23:59:59');
     isPastEvent = end < now;
   } else if (event.dateStart) {
-    // Jeśli wydarzenie jednodniowe i kończy się przed dzisiaj 00:00, jest przeszłe
     const end = new Date(event.dateStart + (event.timeEnd ? 'T' + event.timeEnd : 'T23:59:59'));
     isPastEvent = end < now;
   }
 
-  // Trigger Instagram embed script after component mount or update
   useEffect(() => {
     setIsLoading(true);
     if (window.instgrm) {
       window.instgrm.Embeds.process();
-      // Add a small delay to allow processing to complete
       const timer = setTimeout(() => setIsLoading(false), 1000);
       return () => clearTimeout(timer);
     }
   }, [event.instagramUrl]);
 
-  const toggleExpand = () => {
-    setIsExpanded(!isExpanded);
+  const shortDescription = event.description.length > 150
+    ? event.description.slice(0, 150).trim() + '...'
+    : event.description;
+
+  const earlyBirdMatch = event.price?.toLowerCase().includes('early bird');
+  const earlyBirdInfo = earlyBirdMatch ? event.price : null;
+  const mainPrice = earlyBirdMatch ? event.price.replace(/early bird.*$/i, '').trim() : event.price;
+
+  // Early bird logic
+  let showEarlyBird = false;
+  let displayPrice = mainPrice;
+  let earlyBirdDate: Date | null = null;
+  if (event.earlyBirdPrice && event.earlyBirdUntil) {
+    earlyBirdDate = new Date(event.earlyBirdUntil + 'T23:59:59');
+    if (earlyBirdDate >= new Date()) {
+      showEarlyBird = true;
+      displayPrice = event.earlyBirdPrice;
+    }
+  }
+
+  const hasForm = event.formUrl && event.formUrl.trim() !== '';
+  const hasInstagram = event.instagramUrl && event.instagramUrl.trim() !== '';
+  const ctaText = hasForm ? 'Zapisz się' : hasInstagram ? 'Zobacz na Instagramie' : '';
+  const ctaIcon = hasForm ? <Send className="h-4 w-4 mr-1" /> : <ExternalLink className="h-4 w-4 mr-1" />;
+  const ctaUrl = hasForm ? event.formUrl : event.instagramUrl;
+
+  const handleCtaClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (ctaUrl) window.open(ctaUrl, '_blank');
   };
 
   const addToGoogleCalendar = (e: React.MouseEvent) => {
@@ -76,97 +93,101 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
   };
 
   return (
-    <Card className={`overflow-hidden transition-all duration-300 mb-6 ${isPastEvent ? 'opacity-70' : ''}`}>
-      <div className="relative" onClick={toggleExpand}>
-        <div className="cursor-pointer">
-          <div className="relative">
-            {/* Instagram embed with loading state */}
-            <div className="instagram-embed-container">
-              {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center bg-muted/50 z-10">
-                  <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-                </div>
-              )}
-              <blockquote 
-                className="instagram-media" 
-                data-instgrm-permalink={event.instagramUrl}
-                data-instgrm-version="14"
-                data-instgrm-captioned="false"
-                data-instgrm-hidecaption="true"
-              >
-                <a href={event.instagramUrl} target="_blank" rel="noopener noreferrer">
-                  Zobacz post na Instagramie
-                </a>
-              </blockquote>
+    <Card className={`overflow-hidden transition-all duration-300 mb-6 shadow-md ${isPastEvent ? 'opacity-70' : ''}`}>
+      <div className="relative">
+        <div className="instagram-embed-container w-full aspect-[4/3] bg-muted relative">
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center bg-muted/50 z-10">
+              <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
             </div>
-
-            {isPastEvent && (
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                <span className="text-white font-bold text-lg uppercase">Wydarzenie minione</span>
-              </div>
+          )}
+          <blockquote 
+            className="instagram-media" 
+            data-instgrm-permalink={event.instagramUrl}
+            data-instgrm-version="14"
+            data-instgrm-captioned="false"
+            data-instgrm-hidecaption="true"
+          >
+            <a href={event.instagramUrl} target="_blank" rel="noopener noreferrer">
+              Zobacz post na Instagramie
+            </a>
+          </blockquote>
+        </div>
+        {isPastEvent && (
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <span className="text-white font-bold text-lg uppercase">Wydarzenie minione</span>
+          </div>
+        )}
+        <div className="p-4 bg-card text-card-foreground">
+          <div className="flex items-center gap-2 text-primary text-base font-semibold mb-1">
+            <Calendar className="h-5 w-5" />
+            <span>{formatEventDateRange(event)}</span>
+            {event.timeStart && !formatEventDateRange(event).includes('od ' + event.timeStart) && !formatEventDateRange(event).includes(event.timeStart + '–') && (
+              <span>o {event.timeStart}{event.timeEnd && ` - ${event.timeEnd}`}</span>
             )}
           </div>
-          
-          <div className="p-4 bg-card text-card-foreground">
-            <div className="flex justify-between items-center">
-              <div className="inline-flex items-center gap-2 bg-muted text-primary rounded-md px-3 py-1 text-lg font-semibold">
-                <Calendar className="h-5 w-5" />
-                {formatEventDateRange(event)}
-              </div>
-              {!isPastEvent && (
-                <span className="font-bold text-primary">{event.price}</span>
+          <h3 className="text-xl font-bold mt-3 mb-2">{event.title}</h3>
+          {!isPastEvent && displayPrice && (
+            <div className="text-lg font-bold text-primary mb-1">
+              {displayPrice}
+              {showEarlyBird && earlyBirdDate && (
+                <>
+                  <span className="block text-xs text-amber-600 mt-1">Early bird do {earlyBirdDate.toLocaleDateString('pl-PL')}</span>
+                  {event.price && (
+                    <span className="block text-xs text-muted-foreground mt-1">Po {earlyBirdDate.toLocaleDateString('pl-PL')}: {event.price}</span>
+                  )}
+                </>
+              )}
+              {!showEarlyBird && earlyBirdInfo && (
+                <span className="block text-xs text-muted-foreground mt-1">{earlyBirdInfo}</span>
               )}
             </div>
-            <h3 className="text-xl font-bold mt-2">{event.title}</h3>
-            <div className="flex items-center text-sm mt-4 justify-between">
-              <Button 
-                variant="outline" 
-                size="sm" 
-                className="text-xs"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  const url = event.formUrl && event.formUrl.trim() !== '' ? event.formUrl : event.instagramUrl;
-                  if (url) window.open(url, '_blank');
-                }}
-                disabled={isPastEvent}
-                style={isPastEvent ? { pointerEvents: 'none', opacity: 0.5 } : {}}
+          )}
+          <div className="mb-2">
+            <span className="text-sm text-muted-foreground">
+              {isExpanded ? event.description : shortDescription}
+            </span>
+            {event.description.length > 150 && (
+              <Button
+                variant="link"
+                size="sm"
+                className="ml-1 px-1 py-0 text-xs align-baseline"
+                onClick={() => setIsExpanded((v) => !v)}
               >
-                <ExternalLink className="h-4 w-4 mr-1" />
-                Zapisz się
+                {isExpanded ? 'Zwiń' : 'Czytaj więcej'}
               </Button>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                className="text-xs" 
-                onClick={addToGoogleCalendar}
-                disabled={isPastEvent}
-                style={isPastEvent ? { pointerEvents: 'none', opacity: 0.5 } : {}}
-              >
-                <CalendarPlus className="h-4 w-4 mr-1" />
-                Dodaj do kalendarza
-              </Button>
-            </div>
+            )}
+          </div>
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-2 mt-4">
+            <Button
+              variant="default"
+              size="sm"
+              className="w-full sm:w-auto"
+              onClick={handleCtaClick}
+              disabled={isPastEvent || !ctaUrl}
+              style={isPastEvent ? { pointerEvents: 'none', opacity: 0.5 } : {}}
+            >
+              {ctaIcon}
+              {ctaText}
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full sm:w-auto"
+              onClick={addToGoogleCalendar}
+              disabled={isPastEvent}
+              style={isPastEvent ? { pointerEvents: 'none', opacity: 0.5 } : {}}
+            >
+              <CalendarPlus className="h-4 w-4 mr-1" />
+              Dodaj do kalendarza
+            </Button>
           </div>
         </div>
-        <Button 
-          variant="ghost" 
-          size="sm" 
-          className="absolute top-2 right-2 rounded-full bg-background/80 p-1 h-8 w-8"
-          onClick={toggleExpand}
-        >
-          {isExpanded ? <ChevronUp /> : <ChevronDown />}
-        </Button>
       </div>
-      {isExpanded && (
-        <CardContent className="p-4 border-t">
-          <p className="text-sm">{event.description}</p>
-        </CardContent>
-      )}
     </Card>
   );
 };
 
-// Add TypeScript declaration for instgrm global
 declare global {
   interface Window {
     instgrm?: {
