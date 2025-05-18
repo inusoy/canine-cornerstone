@@ -19,5 +19,15 @@
       "timeStart": "17:00",
       "price": "35 zł",
       "formUrl": ""
+    },
+    {
+      "id": "event_20250830_warsztaty_komunikacji",
+      "instagramUrl": "https://www.instagram.com/p/DJi0XMiMV1K/",
+      "title": "Warsztaty Komunikacji Psów: Jak Psom Pomagać, A Nie Przeszkadzać",
+      "description": "Dwudniowe warsztaty komunikacji psów z przygodą, prowadzone przez Magdalenę Wasil (@szczekszczekwroclaw, @pu.lapki). Naucz się, jak pomagać psom w ich naturalnej komunikacji i jak rozumieć ich intencje. Warsztaty skupiają się na praktycznych aspektach wspierania psów w interakcjach i rozwiązywaniu konfliktów. Skierowane do psów ceniących swobodny ruch, potrzebujących więcej doświadczeń z innymi psami (nieśmiałych, kontrolujących, w różnym wieku, asertywnych) oraz ich opiekunów chcących lepiej je zrozumieć. Lokalizacja: ul. Jaskrowa, Bielawa obok Długołęki. Ilość miejsc: 12 dla uczestników z psami, 10 dla obserwatorów. Uwaga: nie dla psów agresywnych po pogryzieniach. Zapisy przez wiadomość prywatną do @szczekszczekwroclaw.",
+      "dateStart": "2025-08-30",
+      "dateEnd": "2025-08-31",
+      "price": "Uczestnik z psem: 1000 zł, Obserwator: 500 zł. Early bird (do 10.06.2025): 850 zł z psem, 450 zł obserwator.",
+      "formUrl": ""
     }
   ]
