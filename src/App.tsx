@@ -20,6 +20,7 @@ import Kontakt from "./pages/Kontakt";
 import Gallery from "./pages/Gallery";
 import Search from "./pages/Search";
 import SpotkaniaPsiarzy from "./pages/SpotkaniaPsiarzy";
+import HokusPokusFunFocus from "./pages/training/HokusPokusFunFocus";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/training/treningi-indywidualne" element={<TreningiIndywidualne />} />
             <Route path="/training/treningi-miejskie" element={<TreningiMiejskie />} />
             <Route path="/training/konsultacje-behawioralne" element={<KonsultacjeBehawioralne />} />
+            <Route path="/training/hokus-pokus-funfocus" element={<HokusPokusFunFocus />} />
             <Route path="/contact" element={<Navigate to="/kontakt" replace />} />
             <Route path="/kontakt" element={<Kontakt />} />
             <Route path="/gallery" element={<Gallery />} />

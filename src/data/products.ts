@@ -1,4 +1,3 @@
-
 import { Product } from "@/types/product";
 
 const products: Product[] = [
@@ -27,10 +26,17 @@ const products: Product[] = [
     homepagePriority: 4,
   },
   {
+    id: "hokus-pokus-funfocus",
+    title: "Hokus Pokus Fun&Focus",
+    link: "/training/hokus-pokus-funfocus",
+    homepagePriority: 5,
+  },
+  {
     id: "sala-zabaw",
     title: "Sala Zabaw i Eksploracji",
     link: "/training/sala-zabaw",
     homepagePriority: 100,
+    fullWidth: true,
   },
   {
     id: "treningi-indywidualne",
