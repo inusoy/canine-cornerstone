@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
+import { trainingProducts } from "@/data/products";
 
 export const ContactForm = () => {
   const { toast } = useToast();
@@ -98,13 +99,12 @@ export const ContactForm = () => {
             name="program"
             value={formData.program}
             onChange={handleChange}
+            required
           >
-            <option value="">WYBIERZ PROGRAM</option>
-            <option value="nosework">NOSEWORK</option>
-            <option value="obedience">OBEDIENCE</option>
-            <option value="dog-school">SZKOŁA DLA PSÓW</option>
-            <option value="puppy-kindergarten">PRZEDSZKOLE DLA SZCZENIĄT</option>
-            <option value="socialisation-walks">SOCJALIZACYJNE SPACERY</option>
+            <option value="" disabled>WYBIERZ PROGRAM</option>
+            {trainingProducts.map(product => (
+              <option key={product.id} value={product.id}>{product.title}</option>
+            ))}
             <option value="other">INNE</option>
           </select>
         </div>
