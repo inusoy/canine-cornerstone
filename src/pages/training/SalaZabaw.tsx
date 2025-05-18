@@ -50,6 +50,10 @@ const SalaZabaw = () => {
                   {
                     text: "Kalendarz maj",
                     url: "https://docs.google.com/spreadsheets/d/1NPlMMLy9wZFFZt47mFxEWFc_iHZqfVIC3SIzh2RH4Bo/edit?gid=0#gid=0"
+                  },
+                  {
+                    text: "Kalendarz czerwiec",
+                    url: "https://docs.google.com/spreadsheets/d/1Lb8auky9Vn8E8DpN4rD11lTR1wZf6tpXJfKNfUX7Ms8/edit?usp=drive_link"
                   }
                 ]}
                 price="140 zł/90 min*"
