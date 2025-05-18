@@ -22,17 +22,22 @@ const SpotkaniaPsiarzy: React.FC = () => {
 
   useEffect(() => {
     const now = new Date();
-    // Filter events based on date
     let filtered = events;
 
     if (!showPastEvents) {
-      filtered = events.filter(event => new Date(event.date) >= now);
+      filtered = events.filter(event => {
+        // Wydarzenie jest nadchodzące jeśli kończy się dziś lub później
+        const end = event.dateEnd
+          ? new Date(event.dateEnd + 'T23:59:59')
+          : new Date(event.dateStart + (event.timeEnd ? 'T' + event.timeEnd : 'T23:59:59'));
+        return end >= now;
+      });
     }
 
-    // Sort events by date
     filtered = [...filtered].sort((a, b) => {
-      const dateA = new Date(a.date).getTime();
-      const dateB = new Date(b.date).getTime();
+      // Sortuj po dacie rozpoczęcia
+      const dateA = new Date(a.dateStart).getTime();
+      const dateB = new Date(b.dateStart).getTime();
       return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
     });
 
@@ -47,13 +52,13 @@ const SpotkaniaPsiarzy: React.FC = () => {
     setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
   };
 
-  const hasUpcomingEvents = events.some(event => new Date(event.date) >= new Date());
+  const hasUpcomingEvents = events.some(event => new Date(event.dateEnd || event.dateStart) >= new Date());
   const isMobile = useIsMobile();
 
   // Prepare structured data for events (Schema.org)
   const getEventStructuredData = () => {
     // Filter only upcoming events for structured data
-    const upcomingEvents = events.filter(event => new Date(event.date) >= new Date());
+    const upcomingEvents = events.filter(event => new Date(event.dateEnd || event.dateStart) >= new Date());
     
     // Create EventSeries schema
     const eventSeriesSchema = {
@@ -82,10 +87,10 @@ const SpotkaniaPsiarzy: React.FC = () => {
         "@type": "Event",
         "name": event.title,
         "description": event.description,
-        "startDate": new Date(event.date).toISOString(),
+        "startDate": new Date(event.dateStart).toISOString(),
         "endDate": (() => {
           // Add 2 hours to start date for end date if not specified
-          const endDate = new Date(event.date);
+          const endDate = new Date(event.dateStart);
           endDate.setHours(endDate.getHours() + 2);
           return endDate.toISOString();
         })(),

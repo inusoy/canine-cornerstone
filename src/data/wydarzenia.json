@@ -1,24 +1,23 @@
-
 [
     {
-        "id": 1,
-        "title": "Wydarzenie 1",
-        "description": "Opis wydarzenia 1",
-        "date": "2023-10-01",
-        "location": "Lokalizacja 1"
+      "id": "wydarzenie_20250516_1800",
+      "instagramUrl": "https://www.instagram.com/p/DJWv1VpMbhx",
+      "title": "Wieczór Planszówek",
+      "description": "Zapraszamy na 'Wieczór Planszówek'! Jeśli lubisz gry planszowe i jesteś opiekunem psa, to spotkanie jest właśnie dla Ciebie. Wydarzenie, prowadzone przez Michała (@michalpsiarz), odbędzie się w Sali na Gwareckiej 8/3L we Wrocławiu. To doskonała okazja do rozwinięcia swoich pasji, cieszenia się dobrą zabawą, przekąskami i miłym towarzystwem – zwłaszcza innych miłośników psów i gier! Co w planach? Tajemnicze rozgrywki, z pewnością znajdzie się coś zarówno dla początkujących, jak i zaawansowanych graczy. Pamiętaj, wydarzenie skierowane jest do opiekunów psów chętnych do wspólnej zabawy. Ilość miejsc ograniczona. Obowiązują zapisy!",
+      "dateStart": "2025-05-16",
+      "timeStart": "18:00",
+      "timeEnd": "22:00",
+      "price": "30 zł",
+      "formUrl": ""
     },
     {
-        "id": 2,
-        "title": "Wydarzenie 2",
-        "description": "Opis wydarzenia 2",
-        "date": "2023-10-02",
-        "location": "Lokalizacja 2"
-    },
-    {
-        "id": 3,
-        "title": "Wydarzenie 3",
-        "description": "Opis wydarzenia 3",
-        "date": "2023-10-03",
-        "location": "Lokalizacja 3"
+      "id": "wydarzenie_20250619_1700",
+      "instagramUrl": "https://www.instagram.com/p/DJWv1VpMbhx",
+      "title": "Wieczór Planszówek",
+      "description": "Zapraszamy na 'Wieczór Planszówek'! Jeśli lubisz gry planszowe i jesteś opiekunem psa, to spotkanie jest właśnie dla Ciebie. Wydarzenie, prowadzone przez Michała (@michalpsiarz), odbędzie się w Sali na Gwareckiej 8/3L we Wrocławiu. To doskonała okazja do rozwinięcia swoich pasji, cieszenia się dobrą zabawą, przekąskami i miłym towarzystwem – zwłaszcza innych miłośników psów i gier! Co w planach? Tajemnicze rozgrywki, z pewnością znajdzie się coś zarówno dla początkujących, jak i zaawansowanych graczy. Pamiętaj, wydarzenie skierowane jest do opiekunów psów chętnych do wspólnej zabawy. Ilość miejsc ograniczona. Obowiązują zapisy!",
+      "dateStart": "2025-06-19",
+      "timeStart": "17:00",
+      "price": "35 zł",
+      "formUrl": ""
     }
-]
+  ]

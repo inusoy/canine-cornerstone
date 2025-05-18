@@ -2,25 +2,54 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, ChevronDown, ChevronUp, ExternalLink, CalendarPlus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { formatDate } from '@/lib/date-utils';
+import { formatDate, formatEventDateRange } from '@/lib/date-utils';
 import { Event } from '@/types/event';
 
 interface EventCardProps {
   event: Event;
 }
 
+function getGoogleCalendarDateTime(date: string, time?: string): string {
+  if (!date) return '';
+  // Jeśli nie podano godziny, ustaw na 00:00
+  const t = time ? time : '00:00';
+  // Składnia: YYYYMMDDTHHmmssZ (UTC) lub YYYYMMDDTHHmmss (local)
+  // Zakładamy czas lokalny, bez Z
+  return date.replace(/-/g, '') + 'T' + t.replace(':', '') + '00';
+}
+
+function getGoogleCalendarDates(event: Event): string {
+  // Start
+  const startDate = event.dateStart;
+  const startTime = event.timeStart;
+  const endDate = event.dateEnd || event.dateStart;
+  let endTime = event.timeEnd;
+  
+  // Jeśli nie ma żadnej godziny końca, ustaw 23:59
+  if (!endTime && startTime) endTime = '23:59';
+
+  const start = getGoogleCalendarDateTime(startDate!, startTime);
+  const end = getGoogleCalendarDateTime(endDate!, endTime);
+  return `${start}/${end}`;
+}
+
 const EventCard: React.FC<EventCardProps> = ({ event }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const isPastEvent = new Date(event.date) < new Date();
-  
-  // Extract post ID from Instagram URL
-  const getPostId = (url: string) => {
-    const regex = /\/p\/([^/]+)/;
-    const match = url.match(regex);
-    return match ? match[1] : '';
-  };
-  
+
+  // Poprawne obliczanie czy wydarzenie jest przeszłe
+  const now = new Date();
+  let isPastEvent = false;
+  if (event.dateEnd) {
+    // Jeśli wydarzenie kończy się przed dzisiaj 00:00, jest przeszłe
+    const end = new Date(event.dateEnd + 'T23:59:59');
+    isPastEvent = end < now;
+  } else if (event.dateStart) {
+    // Jeśli wydarzenie jednodniowe i kończy się przed dzisiaj 00:00, jest przeszłe
+    const end = new Date(event.dateStart + (event.timeEnd ? 'T' + event.timeEnd : 'T23:59:59'));
+    isPastEvent = end < now;
+  }
+
   // Trigger Instagram embed script after component mount or update
   useEffect(() => {
     setIsLoading(true);
@@ -38,16 +67,11 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
 
   const addToGoogleCalendar = (e: React.MouseEvent) => {
     e.stopPropagation();
-    
     const title = encodeURIComponent(event.title);
     const details = encodeURIComponent(event.description);
     const location = encodeURIComponent("Wrocław");
-    const dates = encodeURIComponent(
-      new Date(event.date).toISOString().replace(/-|:|\.\d+/g, '')
-    );
-    
-    const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=${dates}/${dates}`;
-    
+    const dates = getGoogleCalendarDates(event);
+    const googleCalendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}&dates=${dates}`;
     window.open(googleCalendarUrl, '_blank');
   };
 
@@ -85,11 +109,13 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
           
           <div className="p-4 bg-card text-card-foreground">
             <div className="flex justify-between items-center">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-5 w-5 text-primary" />
-                <span className="font-semibold">{formatDate(event.date)}</span>
+              <div className="inline-flex items-center gap-2 bg-muted text-primary rounded-md px-3 py-1 text-lg font-semibold">
+                <Calendar className="h-5 w-5" />
+                {formatEventDateRange(event)}
               </div>
-              <span className="font-bold text-primary">{event.price}</span>
+              {!isPastEvent && (
+                <span className="font-bold text-primary">{event.price}</span>
+              )}
             </div>
             <h3 className="text-xl font-bold mt-2">{event.title}</h3>
             <div className="flex items-center text-sm mt-4 justify-between">
@@ -101,6 +127,8 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                   e.stopPropagation();
                   window.open(event.formUrl, '_blank');
                 }}
+                disabled={isPastEvent}
+                style={isPastEvent ? { pointerEvents: 'none', opacity: 0.5 } : {}}
               >
                 <ExternalLink className="h-4 w-4 mr-1" />
                 Zapisz się
@@ -110,6 +138,8 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                 size="sm" 
                 className="text-xs" 
                 onClick={addToGoogleCalendar}
+                disabled={isPastEvent}
+                style={isPastEvent ? { pointerEvents: 'none', opacity: 0.5 } : {}}
               >
                 <CalendarPlus className="h-4 w-4 mr-1" />
                 Dodaj do kalendarza
