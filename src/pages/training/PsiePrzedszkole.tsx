@@ -60,10 +60,13 @@ const PsiePrzedszkole = () => {
                 <ul className="space-y-1 mt-1">
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Środowe: 30.04, 07.05, 14.05, 21.05, 28.05, 04.06 o 18:00</li>
+                    E1 Środowe: 21.05, 28.05, 04.06 o 18:00</li>
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Weekendowe: 17.05, 24.05, 31.05, 08.06, 14.06, 28.06 o 13:00</li>
+                    E2 Weekendowe: 24.05, 31.05, 08.06, 14.06, 28.06, 19.07 o 13:00</li>
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    E4 11.06, 18.06, 25.06, 02.07, 09.07, 16.07 o 18:00</li>
                 </ul>
               </div>
             </ul>

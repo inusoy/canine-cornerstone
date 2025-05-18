@@ -63,7 +63,8 @@ const HokusPokusFunFocus = () => {
           </div>
         }
       >
-        {/* <p className="font-bold text-lg mb-2">CZUJESZ, ŻE CHCESZ ROBIĆ Z PSEM COŚ WIĘCEJ? CHCESZ PODKRĘCIĆ JEGO MOTYWACJĘ W TRENINGU? A MOŻE NAUCZYĆ SIĘ SZTUCZEK I PODSTAW KSZTAŁTOWANIA, SUPER SIĘ RAZEM BAWIĄC? TE ZAJĘCIA SĄ DLA WAS!</p>
+        {
+        <p></p>/* <p className="font-bold text-lg mb-2">CZUJESZ, ŻE CHCESZ ROBIĆ Z PSEM COŚ WIĘCEJ? CHCESZ PODKRĘCIĆ JEGO MOTYWACJĘ W TRENINGU? A MOŻE NAUCZYĆ SIĘ SZTUCZEK I PODSTAW KSZTAŁTOWANIA, SUPER SIĘ RAZEM BAWIĄC? TE ZAJĘCIA SĄ DLA WAS!</p>
         <p>Fun & Focus wprowadzi Was w tajniki motywowania psa! Poznacie nowe sztuczki, nauczycie się uczyć psa poprzez kształtowanie, a nawet rozwiązywać z nim nietypowe zagadki (czy znajdzie on ukryty smakołyk pod kubeczkiem?). To doskonała okazja do budowania więzi i lepszego zrozumienia swojego pupila, a także do świetnej zabawy, która sprawi, że Wasze treningi już nigdy nie będą nudne! Każde z pięciu spotkań będzie naładowane wiedzą, którą będziecie mogli wykorzystać w przyszłości, we wszystkich treningach!</p>
 
         <h2 className="text-2xl font-semibold mt-8">CZEGO UCZY HOKUS POKUS FUN&FOCUS W SZCZEK SZCZEK?</h2>
