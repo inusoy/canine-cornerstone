@@ -125,7 +125,8 @@ const EventCard: React.FC<EventCardProps> = ({ event }) => {
                 className="text-xs"
                 onClick={(e) => {
                   e.stopPropagation();
-                  window.open(event.formUrl, '_blank');
+                  const url = event.formUrl && event.formUrl.trim() !== '' ? event.formUrl : event.instagramUrl;
+                  if (url) window.open(url, '_blank');
                 }}
                 disabled={isPastEvent}
                 style={isPastEvent ? { pointerEvents: 'none', opacity: 0.5 } : {}}
