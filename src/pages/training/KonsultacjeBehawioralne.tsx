@@ -29,10 +29,6 @@ const KonsultacjeBehawioralne = () => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <span className="text-primary mr-2">•</span>
-                <span><b>Małe grupy 2-4 psy</b></span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
                 <span> <b>Lokalizacja:</b><ul>Umówione wcześniej miejsce lub Wasz dom.</ul>
                 </span>
               </li>

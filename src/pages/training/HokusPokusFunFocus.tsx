@@ -29,7 +29,7 @@ const HokusPokusFunFocus = () => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <span className="text-primary mr-2">•</span>
-                <span><b>Zajęcia:</b> Grupowe (do 3 psów) lub indywidualne. Kurs składa się z 5 zajęć.</span>
+                <span><b>Zajęcia:</b> Grupowe (do 3 psów) lub indywidualne.</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-2">•</span>
@@ -47,9 +47,9 @@ const HokusPokusFunFocus = () => {
                 <span className="text-primary mr-2">•</span>
                 <span><b>Kiedy?</b>
                   <ul className="pl-4">
-                    <li><b>FUN&FOCUS - Edycja 1 (WTORKOWA):</b> 27.05.2025, 03.06.2025, 10.06.2025, 17.06.2025, 24.06.2025 o 18:00</li>
-                    <li><b>FUN&FOCUS - Edycja 2 (ŚRODOWA):</b> 28.05.2025, 04.06.2025, 11.06.2025, 18.06.2025, 25.06.2025 o 9:00</li>
-                    <li><b>FUN&FOCUS - Edycja 3 (PIĄTKOWA):</b> 13.06.2025, 20.06.2025, 27.06.2025, 11.07.2025, 18.07.2025 o 18:45</li>
+                    <li><b>Grupa wtorkowa:</b> 27.05.2025, 03.06.2025, 10.06.2025, 17.06.2025, 24.06.2025 o 18:00</li>
+                    <li><b>Grupa środowa:</b> 28.05.2025, 04.06.2025, 11.06.2025, 18.06.2025, 25.06.2025 o 9:00</li>
+                    <li><b>Grupa piątkowa:</b> 13.06.2025, 20.06.2025, 27.06.2025, 11.07.2025, 18.07.2025 o 18:45</li>
                   </ul>
                   <span className="block mt-2 text-sm">Nabór do grup indywidualnych lub kolejnych grup stałe trwa. Skontaktuj się, aby dowiedzieć się więcej.</span>
                 </span>

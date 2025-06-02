@@ -7,15 +7,15 @@ const SpotkaniaPrzezPlot = () => {
     <>
       <Helmet>
         <title>Spotkania Przez Płot dla psów | Szczek Szczek Wrocław</title>
-        <meta 
-          name="description" 
-          content="Warsztaty komunikacyjne przez płot we Wrocławiu, ul. Mączna 6b (wejście od parku). Bezpieczne interakcje dla psów. Najbliższa edycja 15.06, 10:00-14:00." 
+        <meta
+          name="description"
+          content="Warsztaty komunikacyjne przez płot we Wrocławiu, ul. Mączna 6b (wejście od parku). Bezpieczne interakcje dla psów. Najbliższa edycja 15.06, 10:00-14:00."
         />
         <link rel="canonical" href="/training/spotkania-przez-plot" />
         <meta property="og:title" content="Spotkania Przez Płot dla psów | Szczek Szczek Wrocław" />
-        <meta 
-          property="og:description" 
-          content="Warsztaty 'Spotkania Przez Płot' (ul. Mączna 6b, Wrocław) pozwalają psom na bezpieczne interakcje. Dowiedz się więcej i zapisz się!" 
+        <meta
+          property="og:description"
+          content="Warsztaty 'Spotkania Przez Płot' (ul. Mączna 6b, Wrocław) pozwalają psom na bezpieczne interakcje. Dowiedz się więcej i zapisz się!"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="/training/spotkania-przez-plot" />
@@ -28,30 +28,18 @@ const SpotkaniaPrzezPlot = () => {
             <ul className="space-y-2">
               <li className="flex items-start">
                 <span className="text-primary mr-2">•</span>
-                <span><b>Najbliższa edycja:</b> 15.06.2025 r.</span> {/* Zakładając rok bieżący/przyszły */}
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span><b>Godziny:</b> 10:00 - 14:00 (4 godziny)</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
                 <span>
                   <b>Lokalizacja:</b>{' '}
-                  <a 
+                  <a
                     href="https://maps.app.goo.gl/xwXLZd8fydas9UN99"
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-primary hover:underline" // Załóżmy, że masz klasę .text-primary dla linków
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
                   >
                     Plac na Mącznej 6b, Wrocław
                   </a>
                   . Wejście od strony parku.
                 </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span><b>Interakcje:</b> Kilka wyjść dla każdego psa, praca w parach (możliwość pracy z większą ilością psów)</span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-2">•</span>
@@ -61,15 +49,23 @@ const SpotkaniaPrzezPlot = () => {
                   </ul>
                 </span>
               </li>
-               <SignupInfo
+              <SignupInfo
                 showFacebook={false}
                 showInstagram={false}
                 showSMS={false}
                 showContactForm={true}
-                showButton={true}
-                buttonText="Wypełnij ankietę zgłoszeniową"
-                buttonUrl="https://docs.google.com/forms/d/e/1FAIpQLSftnxtut_GU1suGBcR2GNmMGb7V2NshWICNe1YYkDqLFXLJZA/viewform"
+                showButton={false}
                 price="180 zł"
+                buttons={[
+                  {
+                    text: "Formularz zapisowy 15.06",
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSftnxtut_GU1suGBcR2GNmMGb7V2NshWICNe1YYkDqLFXLJZA/viewform"
+                  },
+                  {
+                    text: "Formularz zapisowy 19.06",
+                    url: "https://forms.gle/baat5mbEQ4yjuykW8"
+                  }
+                ]}
               />
               <li className="flex items-start">
                 <span className="font-semibold">Wysłanie ankiety nie jest równoznaczne z zapisem na spotkanie. Opiekunowie zakwalifikowanych psów otrzymają SMS z potwierdzeniem.</span>
@@ -78,13 +74,7 @@ const SpotkaniaPrzezPlot = () => {
           </div>
         }
       >
-        <div className="p-4 mb-6 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700">
-          <p>
-            Najbliższe warsztaty komunikacyjne przez płot odbędą się <strong>15.06 (sobota) w godzinach 10:00 - 14:00</strong> na placu szkoleniowym przy ul. Mącznej 6b we Wrocławiu (wejście od strony parku).
-          </p>
-        </div>
-
-        <p>
+        {/* <p>
           Zamysłem spotkań przez płot jest to, że bariera pomiędzy psami pomaga zwiększyć poczucie bezpieczeństwa psów (ale i opiekunów), a przy tym pomaga obniżyć psie emocje przed ewentualną bezpośrednią interakcją. Przy czym psy mogą prezentować zachowania, które byłyby dla nich trudne w bezpośrednich interakcjach ze względu na wysoki poziom emocji.
         </p>
         <p>
@@ -126,7 +116,7 @@ const SpotkaniaPrzezPlot = () => {
         <h2 className="text-2xl font-semibold mt-8">WAŻNE</h2>
         <p>
           Spotkania przez płot są formą wsparcia w procesie socjalizacji i modyfikacji zachowań, ale nie zastąpią pełnej terapii behawioralnej w przypadku głębokich problemów. Jeśli Twój pies wykazuje silne zachowania agresywne lub lękowe, skonsultuj się ze mną – być może potrzebna będzie najpierw indywidualna praca.
-        </p>
+        </p> */}
       </TrainingLayout>
     </>
   );

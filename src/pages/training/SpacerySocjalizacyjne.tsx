@@ -8,15 +8,15 @@ const SpacerySocjalizacyjne = () => {
     <>
       <Helmet>
         <title>Spacery Socjalizacyjne dla psów | Szczek Szczek Wrocław</title>
-        <meta 
-          name="description" 
-          content="Spacery socjalizacyjne to bezpieczna forma poznawania psów ze sobą. Małe grupy 2-4 psów dobieranych indywidualnie. Pomagamy psom nauczyć się komunikacji." 
+        <meta
+          name="description"
+          content="Spacery socjalizacyjne to bezpieczna forma poznawania psów ze sobą. Małe grupy 2-4 psów dobieranych indywidualnie. Pomagamy psom nauczyć się komunikacji."
         />
         <link rel="canonical" href="/training/spacery-socjalizacyjne" />
         <meta property="og:title" content="Spacery Socjalizacyjne dla psów | Szczek Szczek Wrocław" />
-        <meta 
-          property="og:description" 
-          content="Dzięki kontrolowanym warunkom, szanowaniu granic i nie forsowaniu interakcji, psy mogą w spokoju poznawać się i rozmawiać ze sobą." 
+        <meta
+          property="og:description"
+          content="Dzięki kontrolowanym warunkom, szanowaniu granic i nie forsowaniu interakcji, psy mogą w spokoju poznawać się i rozmawiać ze sobą."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="/training/spacery-socjalizacyjne" />
@@ -48,12 +48,19 @@ const SpacerySocjalizacyjne = () => {
                 showInstagram={false}
                 showSMS={false}
                 showContactForm={false}
-                showButton={true}
-                buttonText="zapisz się"
-                buttonUrl="https://docs.google.com/forms/d/e/1FAIpQLSegxVfahbabw8i6OIU_2zWxMzKmc96C4qiZ9lmnxXOwyTlX3g/viewform"
+                showButton={false}
+                buttons={[
+                  {
+                    text: "Formularz zapisowy czerwiec",
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSegxVfahbabw8i6OIU_2zWxMzKmc96C4qiZ9lmnxXOwyTlX3g/viewform"
+                  }
+                ]}
                 price="80 zł/spacer"
               />
             </ul>
+            <li className="flex items-start">
+              <span className="font-semibold">Wysłanie ankiety nie jest równoznaczne z zapisem na spotkanie. Opiekunowie zakwalifikowanych psów otrzymają SMS z potwierdzeniem.</span>
+            </li>
           </div>
         }
       >
