@@ -15,7 +15,6 @@ import SalaZabaw from "./pages/training/SalaZabaw";
 import TreningiIndywidualne from "./pages/training/TreningiIndywidualne";
 import KonsultacjeBehawioralne from "./pages/training/KonsultacjeBehawioralne";
 import SpotkaniaPrzezPlot from "./pages/training/SpotkaniaPrzezPlot";
-import TreningiMiejskie from "./pages/training/TreningiMiejskie";
 import Kontakt from "./pages/Kontakt";
 import Gallery from "./pages/Gallery";
 import Search from "./pages/Search";
@@ -45,7 +44,6 @@ const App = () => (
             <Route path="/training/spotkania-przez-plot" element={<SpotkaniaPrzezPlot />} />
             <Route path="/training/sala-zabaw" element={<SalaZabaw />} />
             <Route path="/training/treningi-indywidualne" element={<TreningiIndywidualne />} />
-            <Route path="/training/treningi-miejskie" element={<TreningiMiejskie />} />
             <Route path="/training/konsultacje-behawioralne" element={<KonsultacjeBehawioralne />} />
             <Route path="/training/hokus-pokus-funfocus" element={<HokusPokusFunFocus />} />
             <Route path="/contact" element={<Navigate to="/kontakt" replace />} />

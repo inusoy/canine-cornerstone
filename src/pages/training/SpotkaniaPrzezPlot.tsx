@@ -58,12 +58,12 @@ const SpotkaniaPrzezPlot = () => {
                 price="180 zł"
                 buttons={[
                   {
-                    text: "Formularz zapisowy 15.06",
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSftnxtut_GU1suGBcR2GNmMGb7V2NshWICNe1YYkDqLFXLJZA/viewform"
+                    text: "Formularz zapisowy 20.07",
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSexAjW2g9oeHxU1FfMK8FqSiHAOmwNlegNI8zdTn3fQ5ZMhDQ/viewform"
                   },
                   {
-                    text: "Formularz zapisowy 19.06",
-                    url: "https://forms.gle/baat5mbEQ4yjuykW8"
+                    text: "Formularz zapisowy 26.07",
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSexAjW2g9oeHxU1FfMK8FqSiHAOmwNlegNI8zdTn3fQ5ZMhDQ/viewform"
                   }
                 ]}
               />

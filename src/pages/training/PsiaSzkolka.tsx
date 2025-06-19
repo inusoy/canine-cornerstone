@@ -62,13 +62,10 @@ const PsiaSzkolka = () => {
                 <ul className="space-y-1 mt-1">
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Weekendy: 24.05, 31.05, 08.06, 14.06, 28.06 o 12:00</li>
+                    Środy: <b>02.07</b>, 09.07, 16.07, 23.07, 30.07, 06.08 o 19:00</li>
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Środy: 21.05, 28.05, 04.05, 11.05, 18.05, 25.05 o 19:00</li>
-                  <li>
-                    <span className="text-primary mr-2">•</span>
-                    Środy: 11.06, 18.06, 25.06, 02.07, 09.07, 16.07 o 20:00</li>
+                    Środy: <b>30.07</b>, 06.08, 13.08, 20.08, 27.08, 03.09 o 20:00</li>
                 </ul>
               </div>
             </ul>

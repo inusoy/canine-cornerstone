@@ -43,22 +43,19 @@ const HokusPokusFunFocus = () => {
                 <span className="text-primary mr-2">•</span>
                 <span><b>Ile spotkań?</b> 5 spotkań, każde po 45-60 minut.</span>
               </li>
-              <li className="flex items-start">
-                <span className="text-primary mr-2">•</span>
-                <span><b>Kiedy?</b>
-                  <ul className="pl-4">
-                    <li><b>Grupa wtorkowa:</b> 27.05.2025, 03.06.2025, 10.06.2025, 17.06.2025, 24.06.2025 o 18:00</li>
-                    <li><b>Grupa środowa:</b> 28.05.2025, 04.06.2025, 11.06.2025, 18.06.2025, 25.06.2025 o 9:00</li>
-                    <li><b>Grupa piątkowa:</b> 13.06.2025, 20.06.2025, 27.06.2025, 11.07.2025, 18.07.2025 o 18:45</li>
-                  </ul>
-                  <span className="block mt-2 text-sm">Nabór do grup indywidualnych lub kolejnych grup stałe trwa. Skontaktuj się, aby dowiedzieć się więcej.</span>
-                </span>
-              </li>
               <SignupInfo
                 showContactForm={false}
                 price="450 zł/grupowe LUB 550 zł/indywidualne"
                 priceAsterisk="*Cena za cały kurs (5 spotkań)."
               />
+              <div className="mt-4">
+                <p className="font-medium mt-2">Najbliższe grupy:</p>
+                <ul className="space-y-1 mt-1">
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    Wtorki: <b>15.07</b>, 22.07, 29.07, 05.08, 12.08 o 18:00</li>
+                </ul>
+              </div>
             </ul>
           </div>
         }
