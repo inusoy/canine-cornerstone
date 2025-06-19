@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import TrainingLayout from "@/components/training/TrainingLayout";
 import PriceTag from "@/components/training/PriceTag";
 import SignupInfo from "@/components/training/SignupInfo";
+import OptimizedImage from "@/components/ui/optimized-image";
 
 const SpacerySocjalizacyjne = () => {
   return (
@@ -67,6 +68,13 @@ const SpacerySocjalizacyjne = () => {
           </div>
         }
       >
+        <div className="w-full pt-4">
+          <OptimizedImage
+            src="/images/socjale.jpg"
+            alt="Spacery socjalizacyjne - psy biegające po trawie"
+            className="w-full h-64 md:h-80 lg:h-96 object-cover"
+          />
+        </div>
         <p>
           Spacery socjalizacyjne to najbezpieczniejsza i jedna z najlepszych form poznawania psów ze sobą. Dzięki kontrolowanym warunkom, szanowaniu granic i nie forsowaniu interakcji, psy mogą w spokoju poznawać się i „rozmawiać" ze sobą.
         </p>
