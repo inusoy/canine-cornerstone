@@ -55,7 +55,7 @@ const Nosework = () => {
                     url: "https://docs.google.com/spreadsheets/d/1RIzyHNW8nGlUKQgptj9wYnF6dme0LSOvuK0QPZjwbLY/edit?usp=sharing"
                   }
                 ]}
-                price="80 zł/45 min" />
+                price="90 zł/30-45 min" />
             </ul>
           </div>
         }

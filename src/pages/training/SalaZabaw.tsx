@@ -56,7 +56,7 @@ const SalaZabaw = () => {
                     url: "https://docs.google.com/spreadsheets/d/1RIzyHNW8nGlUKQgptj9wYnF6dme0LSOvuK0QPZjwbLY/edit?usp=sharing"
                   }
                 ]}
-                price="140 zł/90 min*"
+                price="150 zł/90 min*"
                 priceAsterisk="*czas może być krótszy, bo to Twój pies decyduje"
               />
             </ul>
