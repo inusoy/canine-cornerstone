@@ -32,9 +32,9 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
-            <Route 
-              path="/" 
-              element={siteConfig.maintenanceMode ? <MaintenancePage /> : <Navigate to="/home" replace />} 
+            <Route
+              path="/"
+              element={siteConfig.maintenanceMode ? <MaintenancePage /> : <Navigate to="/home" replace />}
             />
             <Route path="/home" element={<Index />} />
             <Route path="/training/nosework" element={<Nosework />} />
