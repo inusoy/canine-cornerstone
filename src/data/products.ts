@@ -36,7 +36,7 @@ const products: Product[] = [
     title: "Sala Zabaw i Eksploracji",
     link: "/training/sala-zabaw",
     homepagePriority: 100,
-    // fullWidth: true,
+    fullWidth: true,
   },
   {
     id: "treningi-indywidualne",
