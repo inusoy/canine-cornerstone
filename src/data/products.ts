@@ -63,12 +63,12 @@ const products: Product[] = [
     link: "/training/spotkania-przez-plot",
     homepagePriority: 8,
   },
-  // {
-  //   id: "treningi-miejskie",
-  //   title: "Treningi Miejskie",
-  //   link: "/training/treningi-miejskie",
-  //   homepagePriority: 9,
-  // },
+  {
+    id: "lekout",
+    title: "LękOut",
+    link: "/training/lekout",
+    homepagePriority: 9,
+  },
 ];
 
 // Export all products for search functionality
