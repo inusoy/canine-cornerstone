@@ -21,5 +21,27 @@
       "earlyBirdPrice": "Uczestnik z psem: 850 zł, Obserwator: 450 zł.",
       "earlyBirdUntil": "2025-06-10",
       "formUrl": ""
+    },
+    {
+      "id": "event_20251018_warsztaty_socjalziacji",
+      "instagramUrl": "https://www.instagram.com/p/DL9p027skak/",
+      "title": "wojtkowo-szczekszczekowe warsztaty z socjalizacji: Jak wykorzystać wiedzę o psiej komunikacji w praktyce?",
+      "description": "No i stało się! Zosia i Piotr Wojtków odwiedzą Wrocław! 💪🏻 Zapraszamy na warsztaty socjalizacyjne prowadzone przez Zosię i Piotra pod Wrocławiem! Warsztaty odbędą się 18.10 i 19.10 na placu przy ulicy Jaskrowej w Bielawie, obok Długołęki. Warsztaty zostaną podzielone na dwa dni. Każdy pies będzie miał wejścia pierwszego i drugiego dnia!W pierwszy dzień warsztatów, po spotkaniach na placu uczestnicy z psami i obserwatorzy będą mogli przyjść do szkoły dla psów Szczek Szczek na Gwareckiej 8/3L we Wrocławiu, gdzie będziemy omawiać filmy nagrane podczas warsztatów, przy okazji integrując się! W spotkaniu integracyjnym nie mogą brać udziału psy, chyba, że zostanie to indywidualnie omówione ze mną.",
+      "dateStart": "2025-10-18",
+      "timeStart": "10:00",
+      "dateEnd": "2025-10-19",
+      "timeEnd": "17:00",
+      "price": "1150 zł uczestnik z psem, 550 zł obserwator",
+      "formUrl": ""
+    },
+    {
+      "id": "event_20250801_zmierzh_1",
+      "instagramUrl": "https://www.instagram.com/p/DMI09uBsuNS",
+      "title": "spotkanie psiarzy: oglądanie Zmierzhu",
+      "description": "Jak jak obiecałam - robimy oglądanie ✨Zmierzchu✨. Nie po to mam białą ścianę w lokalu, żeby z niej nie skorzystać. Kiedy? 01.08 o 19:00. Gdzie? W sali na Gwareckiej 8/3L we Wrocławiu! Składka na przekąski: 35zł/osoba. Obowiązują zapisy!",
+      "dateStart": "2025-08-01",
+      "timeStart": "19:00",
+      "price": "35 zł na przekąski",
+      "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSf8RqXxWlHstS3lPDIXYdczmYqxm7dpnvOu4Lix4lBLC7nPcg/viewform"
     }
   ]
