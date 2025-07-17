@@ -52,8 +52,8 @@ const HokusPokusFunFocus = () => {
                 <p className="font-medium mt-2">Najbliższe grupy:</p>
                 <ul className="space-y-1 mt-1">
                   <li>
-                    <span className="text-primary mr-2">•</span>
-                    Wtorki: <b>15.07</b>, 22.07, 29.07, 05.08, 12.08 o 18:00</li>
+                    <span className="text-primary mr-2">•</span>                     
+                    Wtorki: <b>12.08</b>, 19.08, 26.08, 02.09, 09.09 o 20:00 </li>
                 </ul>
               </div>
             </ul>
