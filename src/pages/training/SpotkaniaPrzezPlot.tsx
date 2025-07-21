@@ -74,6 +74,49 @@ const SpotkaniaPrzezPlot = () => {
           </div>
         }
       >
+        <p>
+          Zamysłem spotkań przez płot jest to, że bariera pomiędzy psami pomaga zwiększyć poczucie bezpieczeństwa psów (ale i opiekunów), a przy tym pomaga obniżyć psie emocje przed ewentualną bezpośrednią interakcją. Przy czym psy mogą prezentować zachowania, które byłyby dla nich trudne w bezpośrednich interakcjach ze względu na wysoki poziom emocji.
+        </p>
+        <p>
+          Podczas czterogodzinnych warsztatów każdy pies będzie miał kilka wyjść, podczas których będzie miał interakcje z różnymi psami w parach (ale jest opcja też na większą ilość psów). W kontrolowanych warunkach, z pomocą bariery, psy uczą się spokoju i właściwej komunikacji.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8">DLACZEGO WARTO WYBRAĆ SPOTKANIA PRZEZ PŁOT?</h2>
+        <p>Głównym celem tych warsztatów jest stworzenie bezpiecznej przestrzeni, gdzie psy mogą, mimo bariery, obserwować inne psy, uczyć się ich sygnałów i stopniowo obniżać poziom swoich emocji. Bariera daje psom (i ich opiekunom) większy komfort i poczucie kontroli.</p>
+        
+        <h2 className="text-2xl font-semibold mt-8">CZY PIES BĘDZIE IZOLOWANY?</h2>
+        <p>Nie! Chodzi o kontrolowaną interakcję na odległość. Psy mają możliwość obserwacji, komunikacji wokalnej i zapachowej. Bariera służy jako narzędzie do budowania pewności siebie i redukcji stresu, a nie jako forma izolacji. Umożliwia psom naukę w ich własnym tempie.</p>
+        
+        <h2 className="text-2xl font-semibold mt-8">CO WYRÓŻNIA SPOTKANIA PRZEZ PŁOT W SZCZEK SZCZEK?</h2>
+        <p>Kładziemy nacisk na indywidualne potrzeby każdego psa. Podczas warsztatów psy są dobierane w pary (lub małe grupy, jeśli sytuacja na to pozwala) w sposób przemyślany. Celem jest zapewnienie każdemu psu pozytywnych doświadczeń i możliwości nauki spokojnego reagowania na obecność innych psów.</p>
+        
+        <h2 className="text-2xl font-semibold mt-8">JAK WYGLĄDAJĄ WARSZTATY SPOTKAŃ PRZEZ PŁOT?</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Warsztaty trwają cztery godziny.</li>
+          <li>Każdy pies ma kilka indywidualnych sesji (wyjść) do strefy interakcji przy płocie.</li>
+          <li>Psy pracują w parach, z możliwością dostosowania do większej liczby psów, jeśli jest to korzystne.</li>
+          <li>Cały czas jestem z Wami, monitoruję sytuację, tłumaczę zachowania psów i pomagam w budowaniu pozytywnych skojarzeń.</li>
+          <li>Opiekunowie uczą się, jak wspierać swojego psa w trudnych dla niego sytuacjach.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8">CO DAJĄ PSOM SPOTKANIA PRZEZ PŁOT?</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Zwiększają poczucie bezpieczeństwa psa w obecności innych psów.</li>
+          <li>Pomagają obniżyć poziom emocji i stresu związanego z interakcjami.</li>
+          <li>Umożliwiają psom prezentowanie i naukę zachowań komunikacyjnych w bezpiecznym środowisku.</li>
+          <li>Wspierają budowanie pozytywnych skojarzeń z innymi psami.</li>
+          <li>Uczą psy radzenia sobie z frustracją lub nadmierną ekscytacją.</li>
+        </ul>
+
+        <h2 className="text-2xl font-semibold mt-8">CO ZYSKASZ TY JAKO OPIEKUN?</h2>
+        <p>
+          Zrozumiesz lepiej komunikację swojego psa i nauczysz się, jak go wspierać. Dowiesz się, jak interpretować sygnały wysyłane przez psy i jak reagować, aby pomóc psu poczuć się pewniej. Zdobędziesz narzędzia do pracy nad emocjami swojego psa również w codziennych sytuacjach. To także okazja do wzmocnienia Waszej relacji.
+        </p>
+
+        <h2 className="text-2xl font-semibold mt-8">WAŻNE</h2>
+        <p>
+          Spotkania przez płot są formą wsparcia w procesie socjalizacji i modyfikacji zachowań, ale nie zastąpią pełnej terapii behawioralnej w przypadku głębokich problemów. Jeśli Twój pies wykazuje silne zachowania agresywne lub lękowe, skonsultuj się ze mną – być może potrzebna będzie najpierw indywidualna praca.
+        </p>
         {/* <p>
           Zamysłem spotkań przez płot jest to, że bariera pomiędzy psami pomaga zwiększyć poczucie bezpieczeństwa psów (ale i opiekunów), a przy tym pomaga obniżyć psie emocje przed ewentualną bezpośrednią interakcją. Przy czym psy mogą prezentować zachowania, które byłyby dla nich trudne w bezpośrednich interakcjach ze względu na wysoki poziom emocji.
         </p>

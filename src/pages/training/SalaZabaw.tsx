@@ -63,6 +63,21 @@ const SalaZabaw = () => {
           </div>
         }
       >
+        {/* Video promocyjny sali */}
+        <div className="mb-8">
+          <video
+            className="w-full max-w-sm mx-auto lg:mx-0 lg:float-left lg:mr-8 lg:mb-4 rounded-lg shadow-lg"
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/images/sala-preview.jpg"
+          >
+            <source src="/clips/sala_eksploracji.mp4" type="video/mp4" />
+            Twoja przeglądarka nie obsługuje odtwarzania wideo.
+          </video>
+        </div>
+
         <h2 className="text-2xl font-semibold mt-8">CZYM JEST SALA ZABAW I EKSPLORACJI?</h2>
         <p>
           Sala zabaw i eksploracji to pierwsze takie miejsce dla psów na mapie Wrocławia. Odpowiednio przystosowana sala pozwoli Twojemu psu zaspokoić potrzeby węszenia, eksploracji i stymulacji umysłowej.</p>
