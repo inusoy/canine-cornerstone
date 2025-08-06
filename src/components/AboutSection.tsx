@@ -17,7 +17,7 @@ const AboutSection = () => {
             />
           </div>
           <p className="text-lg text-muted-foreground fade-in">
-            Nazywam się Marta Stach. Jestem certyfikowaną trenerką i behawiorystką psów, ale też psycholożką! Od zawsze fascynowały mnie psychika oraz zachowania ludzi i zwierząt. Dlatego już w podstawówce wyznaczyłam sobie cel zostania psychologiem i wspierania ludzi. Zwierzęta były obecne w moim życiu odkąd pamiętam, próbowałam wymyślić sposób na ich obecność w zawodzie psychologa, ale stale mi się to nie spinało.
+            Nazywam się Marta Stach. Jestem certyfikowaną trenerką, behawiorystką psów i instruktorką noseworku, ale też psycholożką! Od zawsze fascynowały mnie psychika oraz zachowania ludzi i zwierząt. Dlatego już w podstawówce wyznaczyłam sobie cel zostania psychologiem i wspierania ludzi. Zwierzęta były obecne w moim życiu odkąd pamiętam, próbowałam wymyślić sposób na ich obecność w zawodzie psychologa, ale stale mi się to nie spinało.
           </p>
           <p className="text-lg text-muted-foreground fade-in">
             Aż w 2022 roku w moim życiu pojawił się labrador retriever - Heban. Był tym czego nieświadomie szukałam przez całe moje życie. Z Hebana zrodziła się pasja do psów i szkolenia. Za to z mojej ukochanej psychologii wyodrębnił się człon PSY.
@@ -28,6 +28,16 @@ const AboutSection = () => {
           <p className="text-lg text-muted-foreground fade-in">
             Moim szczególnym zainteresowaniem jest psia komunikacja, zwłaszcza na linii pies-pies. W swojej pracy opieram się na metodach opartych na zrozumieniu psa z poszanowaniem jego emocji. Zależy mi na rozwiązaniu problemu, a nie zaleczeniu objawów. Pies i jego opiekun są teamem, dlatego szczególny nacisk kładę na relację i zrozumienie, nie tylko psa, ale i opiekuna. 
           </p>
+           <div className="fade-in">
+            <img
+              src="/images/Marta.jpg"
+              alt="Marta Stach - certyfikowana trenerka i behawiorystka psów"
+              className="w-full h-full object-cover rounded-lg"
+              loading="lazy"
+              width="600"
+              height="800"
+            />
+          </div>
         </div>
       </div>
     </section>
