@@ -47,12 +47,12 @@ const Nosework = () => {
                 showButton={false}
                 buttons={[
                   {
-                    text: "Kalendarz lipiec",
-                    url: "https://docs.google.com/spreadsheets/d/1RIzyHNW8nGlUKQgptj9wYnF6dme0LSOvuK0QPZjwbLY/edit?usp=sharing"
-                  },
-                  {
                     text: "Kalendarz sierpień",
                     url: "https://docs.google.com/spreadsheets/d/1YuM5pkm6wepRO89s2YcuLPW3pFZWweeMQMBPa8UfebM/edit?usp=sharing"
+                  },
+                  {
+                    text: "Kalendarz wrzesień",
+                    url: "https://docs.google.com/spreadsheets/d/1umuu33OJ0PLsMmqfpyDKjqK6daEYafcFLkzt7fdqncM/edit?gid=0#gid=0"
                   }
                 ]}
                 price="90 zł/30-45 min" />
