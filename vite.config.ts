@@ -3,6 +3,24 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { VitePWA } from "vite-plugin-pwa";
+import sitemap from "vite-plugin-sitemap";
+import { glob } from "glob";
+
+const trainingRoutes = glob
+  .sync("src/pages/training/*.tsx")
+  .map((file) => {
+    const fileName = path.basename(file, ".tsx");
+    return `/training/${fileName.toLowerCase()}`;
+  });
+
+const dynamicRoutes = [
+  "/home",
+  ...trainingRoutes,
+  "/kontakt",
+  "/gallery",
+  "/spotkania-psiarzy",
+  "/search",
+];
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -13,6 +31,29 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === "development" && componentTagger(),
+    sitemap({
+      hostname: "https://www.szczekszczek.pl",
+      dynamicRoutes,
+      changefreq: "weekly",
+      priority: 0.8,
+      // @ts-ignore
+      transform: ({ changefreq, priority, lastmod }, route) => {
+        let newPriority = priority;
+        if (route === "/home") {
+          newPriority = 1.0;
+        } else if (route === "/gallery" || route === "/spotkania-psiarzy") {
+          newPriority = 0.7;
+        } else if (route === "/search") {
+          newPriority = 0.6;
+        }
+        return {
+          loc: route,
+          changefreq,
+          priority: newPriority,
+          lastmod,
+        };
+      },
+    }),
     VitePWA({
       registerType: "autoUpdate",
       workbox: {
