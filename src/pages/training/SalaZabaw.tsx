@@ -48,12 +48,12 @@ const SalaZabaw = () => {
                 showButton={false}
                 buttons={[
                   {
-                    text: "Kalendarz sierpień",
-                    url: "https://docs.google.com/spreadsheets/d/1YuM5pkm6wepRO89s2YcuLPW3pFZWweeMQMBPa8UfebM/edit?usp=sharing"
-                  },
-                  {
                     text: "Kalendarz wrzesień",
                     url: "https://docs.google.com/spreadsheets/d/1umuu33OJ0PLsMmqfpyDKjqK6daEYafcFLkzt7fdqncM/edit?gid=0#gid=0"
+                  },
+                  {
+                    text: "Kalendarz październik",
+                    url: "https://docs.google.com/spreadsheets/d/1dAvs0sJ81peLZeP7BAt6qoq18Hf3n4voDdG4oMmDd6k/edit?usp=sharing"
                   }
                 ]}
                 price="150 zł/90 min*"

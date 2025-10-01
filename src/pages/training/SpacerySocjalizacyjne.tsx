@@ -52,12 +52,12 @@ const SpacerySocjalizacyjne = () => {
                 showButton={false}
                 buttons={[
                   {
-                    text: "Formularz zapisowy sierpień",
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSeZMJYlGb2MSn05uKfWmv2Jul_vn2Fr8Qtyj5QOpp3rQyjbcw/viewform"
-                  },
-                  {
                     text: "Formularz zapisowy wrzesień",
                     url: "https://docs.google.com/forms/d/1qmX9_Nd5G3Fa3Ain5kq0C5d8R2cBJ68E6joIBrMZc2I/viewform?edit_requested=true"
+                  },
+                  {
+                    text: "Formularz zapisowy październik",
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSfH1nsDfruUYwrSbkdCbL3-lT_aHNAfO_XsV9nnmSlROjRHjA/viewform"
                   }
                 ]}
                 price="80 zł/spacer"
