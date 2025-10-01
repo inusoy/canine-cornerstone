@@ -22,11 +22,11 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
     document.body.style.top = '';
     document.body.style.left = '';
     document.body.style.right = '';
-    
+
     if (path) {
       onNavigation(e, path);
     }
-    
+
     // Force close the menu
     onClose();
   };
@@ -65,12 +65,19 @@ export const MobileMenu = ({ isOpen, onClose, onSearchOpen, onNavigation }: Mobi
           </Accordion>
         </div>
         <div className="border-t pt-4 space-y-4">
-          <button
+          {/* <button
             onClick={(e) => handleItemClick(e, "about")}
             className="block w-full text-left px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
           >
             O MNIE
-          </button>
+          </button> */}
+          <Link
+            to="/about"
+            className="block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"
+            onClick={onClose}
+          >
+            O NAS
+          </Link>
           <Link
             to="/gallery"
             className="block px-4 py-2 hover:bg-muted rounded-md transition-colors uppercase"

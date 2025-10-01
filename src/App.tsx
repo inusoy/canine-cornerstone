@@ -20,8 +20,9 @@ import Kontakt from "./pages/Kontakt";
 import Gallery from "./pages/Gallery";
 import Search from "./pages/Search";
 import SpotkaniaPsiarzy from "./pages/SpotkaniaPsiarzy";
-import HokusPokusFunFocus from "./pages/training/HokusPokusFunFocus";
 import ScrollToTop from "./components/ScrollToTop";
+import About from "./pages/About";
+import TeamMemberPage from "./pages/TeamMemberPage";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,8 @@ const App = () => (
               element={siteConfig.maintenanceMode ? <MaintenancePage /> : <Navigate to="/home" replace />}
             />
             <Route path="/home" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/about/:id" element={<TeamMemberPage />} />
             <Route path="/training/nosework" element={<Nosework />} />
             <Route path="/training/psia-szkolka" element={<PsiaSzkolka />} />
             <Route path="/training/psie-przedszkole" element={<PsiePrzedszkole />} />
@@ -46,7 +49,6 @@ const App = () => (
             <Route path="/training/sala-zabaw" element={<SalaZabaw />} />
             <Route path="/training/treningi-indywidualne" element={<TreningiIndywidualne />} />
             <Route path="/training/konsultacje-behawioralne" element={<KonsultacjeBehawioralne />} />
-            <Route path="/training/hokus-pokus-funfocus" element={<HokusPokusFunFocus />} />
             <Route path="/training/lekout" element={<LekOut />} />
             <Route path="/contact" element={<Navigate to="/kontakt" replace />} />
             <Route path="/kontakt" element={<Kontakt />} />

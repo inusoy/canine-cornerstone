@@ -26,12 +26,6 @@ const products: Product[] = [
     homepagePriority: 4,
   },
   {
-    id: "hokus-pokus-funfocus",
-    title: "Hokus Pokus Fun&Focus",
-    link: "/training/hokus-pokus-funfocus",
-    homepagePriority: 5,
-  },
-  {
     id: "sala-zabaw",
     title: "Sala Zabaw i Eksploracji",
     link: "/training/sala-zabaw",
@@ -54,8 +48,7 @@ const products: Product[] = [
     id: "spotkania-psiarzy",
     title: "Wydarzenia",
     link: "/spotkania-psiarzy",
-    homepagePriority: 101,
-    fullWidth: true,
+    homepagePriority: 5,
   },
   {
     id: "spotkania-przez-plot",

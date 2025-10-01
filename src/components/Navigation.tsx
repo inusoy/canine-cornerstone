@@ -105,12 +105,15 @@ const Navigation = () => {
                 <TrainingMenu className="p-2 space-y-1" />
               </div>
             </div>
-            <button
+            {/* <button
               onClick={(e) => handleNavigation(e, "about")}
               className="hover:text-primary transition-colors uppercase"
             >
               O MNIE
-            </button>
+            </button> */}
+            <Link to="/about" className="hover:text-primary transition-colors uppercase">
+              O NAS
+            </Link>
             <Link to="/gallery" className="hover:text-primary transition-colors uppercase">
               GALERIA
             </Link>
