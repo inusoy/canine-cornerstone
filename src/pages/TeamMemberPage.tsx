@@ -58,6 +58,12 @@ const TeamMemberPage = () => {
                   <p key={i} className="text-muted-foreground leading-relaxed">{p}</p>
                 ))}
               </div>
+              <h3 className="text-2xl font-semibold text-primary font-bryndan uppercase">Doświadczenie</h3>
+              <div className="space-y-4">
+                {member.experience.map((p, i) => (
+                  <p key={i} className="text-muted-foreground leading-relaxed">{p}</p>
+                ))}
+              </div>
               {member.credentialSections && member.credentialSections.length > 0 && (
                 <div className="space-y-6">
                   {member.credentialSections.map(section => (
