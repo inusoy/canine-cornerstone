@@ -54,13 +54,33 @@ export const teamMembers: TeamMember[] = [
         ]
     },
     {
-        id: 'wspolpracowniczka-1',
+        id: 'weronika-samstyko',
         name: 'Weronika Samstyko',
-        role: 'Behawiorysta/zoopsycholog',
+        role: 'Behawiorystka i zoopsycholożka, wolontariuszka we wrocławskim schronisku. Prowadzi LękOut i Salę Zabaw i Eksploracji.',
         image: '/images/Weronika.jpg',
         bio: [
-            'Behawiorystka i zoopsycholożka, wolontariuszka we wrocławskim schronisku. Prowadzi LękOut i Salę Zabaw i Eksploracji.',
+            'Nazywam się Weronika Samstyko. Zwierzęta towarzyszą mi od dziecka, ale to właśnie psy stały się centrum mojej drogi zawodowej.',
+            'Ukończyłam kurs behawiorysty/zoopsychologa, jednak wiedzę zdobywałam dużo wcześniej - podczas wspólnych treningów z własnym psem, pracy wolontaryjnej w schronisku oraz licznych kursów specjalistycznych.',
+            'W pracy stawiam na uważność i holistyczne podejście - wierzę, że każdy pies ma swoją historię, emocje i potrzeby, które należy zrozumieć, aby pomóc mu budować spokojne i szczęśliwe życie.',
+            'Z pasją zgłębiam tematykę zaburzeń separacyjnych, a także zdrowego żywienia zwierząt, które traktuję jako ważny element ich dobrostanu.'
         ],
+        credentialSections: [
+            {
+                title: 'Kwalifikacje',
+                items: [
+                    'Kurs Zoopsycholog/Behawiorysta spec. psy- Polska Akademia Zoopsychologii i Ani maloterapii',
+                    'Inżynier zootechniki'
+                ]
+            },
+            {
+                title: 'W toku i dodatkowo',
+                items: [
+                    'Kurs doszkalający dla instruktorów noseworku - Natalia Kujawa',
+                    'Magister zootechniki (specjalizacja żywienie zwierząt i paszoznawstwo) - w trakcie',
+                ],
+                note: 'Lista nie obejmuje krótszych webinarów i seminariów.'
+            }
+        ]
     },
 ];
 
