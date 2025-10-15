@@ -45,26 +45,11 @@ const SpacerySocjalizacyjne = () => {
                   </ul></span>
               </li>
               <SignupInfo
-                showFacebook={false}
-                showInstagram={false}
-                showSMS={false}
                 showContactForm={false}
-                showButton={false}
-                buttons={[
-                  {
-                    text: "Formularz zapisowy wrzesień",
-                    url: "https://docs.google.com/forms/d/1qmX9_Nd5G3Fa3Ain5kq0C5d8R2cBJ68E6joIBrMZc2I/viewform?edit_requested=true"
-                  },
-                  {
-                    text: "Formularz zapisowy październik",
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSfH1nsDfruUYwrSbkdCbL3-lT_aHNAfO_XsV9nnmSlROjRHjA/viewform"
-                  }
-                ]}
-                price="80 zł/spacer"
               />
             </ul>
             <li className="flex items-start">
-              <span className="font-semibold">Wysłanie ankiety nie jest równoznaczne z zapisem na spotkanie. Opiekunowie zakwalifikowanych psów otrzymają SMS z potwierdzeniem.</span>
+              <span className="font-semibold">Uczestnicy spacerów socjalizacyjnych otrzymają dostęp do zamkniętej grupy na Facebooku.</span>
             </li>
           </div>
         }

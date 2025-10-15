@@ -42,20 +42,24 @@ const Nosework = () => {
                     Dla psów na poziomie początkującym i na poziomie klas 0 oraz 1 w wiodących organizacjach nosework w Polsce.
                   </ul></span>
               </li>
-              <SignupInfo
+            <SignupInfo
                 showContactForm={false}
                 showButton={false}
                 buttons={[
                   {
-                    text: "Kalendarz wrzesień",
-                    url: "https://docs.google.com/spreadsheets/d/1umuu33OJ0PLsMmqfpyDKjqK6daEYafcFLkzt7fdqncM/edit?gid=0#gid=0"
-                  },
-                  {
                     text: "Kalendarz październik",
                     url: "https://docs.google.com/spreadsheets/d/1dAvs0sJ81peLZeP7BAt6qoq18Hf3n4voDdG4oMmDd6k/edit?usp=sharing"
+                  },
+                  {
+                    text: "Kalendarz listopad",
+                    url: "https://docs.google.com/spreadsheets/d/1zn-FRLZgXNX07UfR1EQSFKJEAo5s9GtBUNsMqGDrIwk/"
                   }
                 ]}
-                price="90 zł/30-45 min" />
+                priceMultiple={[
+                  { description: 'Pojedyncze zajęcia u Marty', price: '90 zł/30 - 45 min' },
+                  { description: 'Pakiet Nos w Ruch u Marty', price: '500 zł/6 zajęć' },
+                  { description: 'Pakiet Nos w Ruch u Weroniki', price: '400 zł/6 zajęć' }
+                ]}/>
             </ul>
           </div>
         }

@@ -27,6 +27,7 @@ interface SignupInfoProps {
   buttons?: ButtonLink[];
   price?: string;
   priceAsterisk?: string;
+  priceMultiple?: { description: string; price: string }[];
 }
 
 export const SignupInfo: React.FC<SignupInfoProps> = ({
@@ -41,6 +42,7 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
   buttons = [],
   price = "",
   priceAsterisk = "",
+  priceMultiple = [],
 }) => {
   return (
     <div>
@@ -76,9 +78,18 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
           {price}
         </PriceTag>
       )}
+      {priceMultiple && (
+        <ul className="list-disc list-inside text-sm text-primary mt-2">
+          {priceMultiple.map((item, index) => (
+            <PriceTag key={index} className="mb-1">
+              {item.description}:<br />{item.price}
+            </PriceTag>
+          ))}
+        </ul>
+      )}
       {priceAsterisk && (
         <p className="text-sm text-primary mt-2">{priceAsterisk}</p>)}
-      
+
       {/* Render multiple buttons if provided */}
       {buttons.length > 0 ? (
         <div className="mt-4 space-y-2">

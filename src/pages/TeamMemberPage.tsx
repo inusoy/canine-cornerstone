@@ -15,7 +15,7 @@ const TeamMemberPage = () => {
   }
 
   const title = `${member.name} | Zespół Szczek Szczek`;
-  const description = `${member.name} – ${member.role}. Poznaj profil członka zespołu Szczek Szczek.`;
+  const description = `${member.name} – ${member.role[0]}. Poznaj profil członka zespołu Szczek Szczek.`;
 
   return (
     <>
@@ -51,7 +51,13 @@ const TeamMemberPage = () => {
                 <h1 className="text-3xl md:text-4xl font-semibold font-bryndan uppercase text-primary mb-2">
                   {member.name}
                 </h1>
-                <p className="text-sm tracking-wide uppercase text-primary/80 font-medium">{member.role}</p>
+                <div className="flex flex-wrap gap-2">
+                  {member.role?.map((r, i) => (
+                    <span key={i} className="text-sm tracking-wide uppercase text-primary/80 font-medium">
+                      {r}
+                    </span>
+                  ))}
+                </div>
               </div>
               <div className="space-y-4">
                 {member.bio.map((p, i) => (

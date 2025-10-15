@@ -7,7 +7,7 @@ export type CredentialSection = {
 export type TeamMember = {
     id: string; // slug used in URL
     name: string;
-    role: string;
+    role: string[];
     image: string;
     bio: string[]; // paragraphs for detail page
     experience?: string[]; // paragraphs of experience items
@@ -18,7 +18,7 @@ export const teamMembers: TeamMember[] = [
     {
         id: 'marta-stach',
         name: 'Marta Stach',
-        role: 'Założycielka SZCZEK SZCZEK. Behawiorystka, trenerka psów, instruktorka noseworku i psycholożka.',
+        role: ['Założycielka SZCZEK SZCZEK. Behawiorystka, trenerka psów, instruktorka noseworku i psycholożka.'],
         image: '/images/Marta.jpg',
         bio: [
             'Nazywam się Marta Stach. Jestem certyfikowaną trenerką, behawiorystką psów, instruktorką noseworku i ludzką psycholożką!',
@@ -56,7 +56,7 @@ export const teamMembers: TeamMember[] = [
     {
         id: 'weronika-samstyko',
         name: 'Weronika Samstyko',
-        role: 'Behawiorystka i zoopsycholożka, wolontariuszka we wrocławskim schronisku. Prowadzi LękOut i Salę Zabaw i Eksploracji.',
+        role: ['Behawiorystka, zoopsycholozka, instruktorka noseworku w trakcie szkolenia i wolontariuszka we wrocławskim schronisku.', 'Spotkacie ją na noseworku, lekout i sali zabaw i eksploracji.'],
         image: '/images/Weronika.jpg',
         bio: [
             'Nazywam się Weronika Samstyko. Zwierzęta towarzyszą mi od dziecka, ale to właśnie psy stały się centrum mojej drogi zawodowej.',
