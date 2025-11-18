@@ -47,18 +47,17 @@ const Nosework = () => {
                 showButton={false}
                 buttons={[
                   {
-                    text: "Kalendarz październik",
-                    url: "https://docs.google.com/spreadsheets/d/1dAvs0sJ81peLZeP7BAt6qoq18Hf3n4voDdG4oMmDd6k/edit?usp=sharing"
-                  },
-                  {
                     text: "Kalendarz listopad",
                     url: "https://docs.google.com/spreadsheets/d/1zn-FRLZgXNX07UfR1EQSFKJEAo5s9GtBUNsMqGDrIwk/"
+                  },
+                  {
+                    text: "Kalendarz grudzień",
+                    url: "https://docs.google.com/spreadsheets/d/1aqimZd2eyuBnIqtoyvrjfSHzDd_e3sluIDKp4Nuyfyc/edit?usp=drive_link"
                   }
                 ]}
                 priceMultiple={[
-                  { description: 'Pojedyncze zajęcia u Marty', price: '90 zł/30 - 45 min' },
-                  { description: 'Pakiet Nos w Ruch u Marty', price: '500 zł/6 zajęć' },
-                  { description: 'Pakiet Nos w Ruch u Weroniki', price: '400 zł/6 zajęć' }
+                  { description: 'Pojedyncze zajęcia', price: '90 zł/30 - 45 min' },
+                  { description: 'Pakiet dla początkujących Nos w Ruch', price: '500 zł/6 zajęć' }
                 ]}/>
             </ul>
           </div>

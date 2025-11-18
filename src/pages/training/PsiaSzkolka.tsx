@@ -62,13 +62,8 @@ const PsiaSzkolka = () => {
                 <ul className="space-y-1 mt-1">
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Środy: <b>05.11</b>, 12.11, 19.11, 26.11, 03.12, 10.12 o 19:00</li>
+                    Środy: <b>10.12</b>, 17.12, 07.01, 14.01, 21.01, 28.01 o 20:00</li>
                 </ul>
-                <ul className="space-y-1 mt-1">
-                  <li>
-                    <span className="text-primary mr-2">•</span>
-                    Soboty: <b>15.11</b>, 22.11, 29.11, 06.12, 13.12, 20.12 o 12:00</li>
-                  </ul>
               </div>
             </ul>
           </div>
