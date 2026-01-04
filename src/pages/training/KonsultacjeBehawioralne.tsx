@@ -32,7 +32,7 @@ const KonsultacjeBehawioralne = () => {
                 <span> <b>Lokalizacja:</b><ul>Umówione wcześniej miejsce lub Wasz dom.</ul>
                 </span>
               </li>
-              <SignupInfo showContactForm={false} price="200 zł + dojazd/90 min"/>
+              <SignupInfo showContactForm={false} price="220 zł + dojazd/90 min"/>
             </ul>
           </div>
         }
