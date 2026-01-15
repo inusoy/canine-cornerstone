@@ -51,6 +51,10 @@ const PsiePrzedszkole = () => {
                 <span> <b>Kiedy?</b><ul>Grupy w weekendy i w tygodniu.</ul>
                 </span>
               </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span> <b>Prowadząca:</b> Dagmara Selent</span>
+              </li>
               <SignupInfo
                 showContactForm={false}
                 price="600 zł/grupowe lub 750 zł/indywidualne"
@@ -60,11 +64,11 @@ const PsiePrzedszkole = () => {
                 <ul className="space-y-1 mt-1">
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Soboty: <b>10.01</b>, 17.01, 24.01, 31.01, 07.02, 14.02 o 12:00
+                    Soboty: <b>14.02</b> (13:00), 21.02 (13:00), 07.03 (13:00), 14.03 (11:00), 21.03 (13:00), 28.03 (13:00)
                   </li>
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Piątki: <b>16.01</b>, 23.01, 30.01, 06.02, 13.02, 20.02 o 18:00
+                    Środy: <b>11.02</b>, 18.02, 25.02, 04.03, 11.03, 18.03 o 18:00
                   </li>
                 </ul>
               </div>
