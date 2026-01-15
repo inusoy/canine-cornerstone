@@ -47,12 +47,12 @@ const Nosework = () => {
                 showButton={false}
                 buttons={[
                   {
-                    text: "Kalendarz grudzień",
-                    url: "https://docs.google.com/spreadsheets/d/1aqimZd2eyuBnIqtoyvrjfSHzDd_e3sluIDKp4Nuyfyc/edit?usp=drive_link"
-                  },
-                  {
                     text: "Kalendarz styczeń",
                     url: "https://docs.google.com/spreadsheets/d/1naIqbilqVRlaQSqHnA2DgAu2k9ICGHm7jZOOP3tDbQI/edit?usp=sharing"
+                  },
+                  {
+                    text: "Kalendarz luty",
+                    url: "https://docs.google.com/spreadsheets/d/106JVPi0lVx7GHk8KFKMhvv4Wp-1nvLCdZjS3rdNziu4/edit?gid=0#gid=0"
                   }
                 ]}
                 priceMultiple={[

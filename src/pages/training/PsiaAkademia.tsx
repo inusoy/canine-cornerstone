@@ -32,7 +32,7 @@ const PsiaAkademia = () => {
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-2">•</span>
-                <span><b>Lokalizacja:</b><ul>Plac treningowy na Mącznej 6b</ul></span>
+                <span><b>Lokalizacja:</b><ul>Plac treningowy na Mącznej 6b we Wrocławiu</ul></span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-2">•</span>
@@ -52,6 +52,19 @@ const PsiaAkademia = () => {
               showContactForm={false}
               price="520 zł/pakiet lub 480 zł dla absolwentów szkoleń w Szczek Szczek"
             />
+            <div className="mt-4">
+              <p className="font-medium mt-2">Najbliższe grupy:</p>
+              <ul className="space-y-1 mt-1">
+                <li>
+                  <span className="text-primary mr-2">•</span>
+                   Soboty: <b>07.02</b>, 14.02, 21.02, 14.03, 21 lub niedziela 22.03 o 13:00
+                </li>
+                <li>
+                  <span className="text-primary mr-2">•</span>
+                   Czwartki: <b>12.02</b>, 19.02, 26.02, 05.03, 12.03 o 18:00
+                </li>
+              </ul>
+            </div>
           </div>
         }
       >
