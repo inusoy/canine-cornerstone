@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import TrainingLayout from "@/components/training/TrainingLayout";
 import SignupInfo from "@/components/training/SignupInfo";
 
@@ -45,6 +46,14 @@ const LekOut = () => {
                                     >
                                         Sala na Gwareckiej 8/3L we Wrocławiu.
                                     </a>
+                                </span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-primary mr-2">•</span>
+                                <span><b>Prowadzi: </b>
+                                    <Link to="/about/weronika-samstyko" className="text-primary hover:underline">
+                                        Weronika Samstyko
+                                    </Link>
                                 </span>
                             </li>
                             <SignupInfo showContactForm={false}

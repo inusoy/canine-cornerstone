@@ -14,6 +14,12 @@ const products: Product[] = [
     homepagePriority: 2,
   },
   {
+    id: "psia-akademia",
+    title: "Psia Akademia",
+    link: "/training/psia-akademia",
+    homepagePriority: 2.5,
+  },
+  {
     id: "nosework",
     title: "Nosework",
     link: "/training/nosework",

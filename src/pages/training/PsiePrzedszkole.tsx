@@ -82,7 +82,7 @@ const PsiePrzedszkole = () => {
           <li>Jak motywować, bawić się i skupiać na sobie szczeniaka.</li>
           <li>Podstaw posłuszeństwa m.in. do mnie, siad, zostań, zostaw, na miejsce, noga, poczekaj - proszę.</li>
           <li>Pewności siebie poprzez elementy integracji sensorycznej.</li>
-          <li>Jak prawidłowo socjalizować psa.</li>
+          <li>Jak prawidłowo socjalizować psa (na zajęciach nie będzie szczenięcych ganianek).</li>
           <li>Wprowadzenia do treningu kooperacyjnego.</li>
         </ul>
 

@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Nosework from "./pages/training/Nosework";
 import PsiaSzkolka from "./pages/training/PsiaSzkolka";
+import PsiaAkademia from "./pages/training/PsiaAkademia";
 import PsiePrzedszkole from "./pages/training/PsiePrzedszkole";
 import SpacerySocjalizacyjne from "./pages/training/SpacerySocjalizacyjne";
 import SalaZabaw from "./pages/training/SalaZabaw";
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/about/:id" element={<TeamMemberPage />} />
             <Route path="/training/nosework" element={<Nosework />} />
             <Route path="/training/psia-szkolka" element={<PsiaSzkolka />} />
+            <Route path="/training/psia-akademia" element={<PsiaAkademia />} />
             <Route path="/training/psie-przedszkole" element={<PsiePrzedszkole />} />
             <Route path="/training/spacery-socjalizacyjne" element={<SpacerySocjalizacyjne />} />
             <Route path="/training/spotkania-przez-plot" element={<SpotkaniaPrzezPlot />} />
