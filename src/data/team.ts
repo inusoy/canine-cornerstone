@@ -82,6 +82,37 @@ export const teamMembers: TeamMember[] = [
             }
         ]
     },
+    {
+        id: 'dagmara-selent',
+        name: 'Dagmara Selent',
+        role: [
+            'Behawiorystka, trenerka szkolenia psów, trenerka aktywności węchowych w trakcie szkolenia i wolontariuszka w Ekostraży.',
+            'Spotkacie ją na zajęciach grupowych psiego przedszkola i psiej szkółki.'
+        ],
+        image: '/images/Dagmara.jpg',
+        bio: [
+            'Zwierzęta zawsze stanowiły ważny element mojego życia, ale z jakiegoś powodu nie myślałam o tym, żeby wiązać z nimi swoją karierę zawodową. Najpierw spędziłam 6 lat w szkole artystycznej, a potem zrobiłam studia inżynierskie.',
+            'Wszystko zmieniło się, kiedy w moim życiu pojawiła się Fanta - charci mieszaniec, z ogromnymi pokładami energii i małą pewnością siebie. Poszłam na kurs trenerski w Wojtków Szkolenia i po jego zakończeniu płynnie przeszłam na kurs dla behawiorystów. W międzyczasie pochłonęłam mnóstwo książek, webinarów i wzięłam udział w wielu zajęciach z moją Fantą. Próbowałyśmy różnych sportów, ale największą miętę poczułyśmy do noseworku, dlatego zapisałam się na kurs Trenera Aktywności Węchowych.',
+            'Uważam, że każde zwierzę to jednostka, która zasługuje na szacunek. Dlatego podczas treningów z psami nie korzystam z narzędzi do zadawania bólu. Podczas szkolenia i konsultacji stawiam na zrozumienie potrzeb i emocji (zarówno psich, jak i ludzkich), a granice stawiam w sposób jasny, ale łagodny.'
+        ],
+        credentialSections: [
+            {
+                title: 'Kursy',
+                items: [
+                    'Kurs trenera szkolenia psów - prowadzący: Zosia Zaniewska-Wojtków, Piotr Wojtków',
+                    'Kurs behawiorysty psów - prowadzący: Zosia Zaniewska-Wojtków, Piotr Wojtków'
+                ]
+            },
+            {
+                title: 'W toku',
+                items: [
+                    'Kurs trenera aktywności węchowych - Nosework Europa i Chilaland Nosework Poznań'
+                ],
+                note: 'Lista nie obejmuje krótszych webinarów i seminariów.'
+
+            }
+        ]
+    },
 ];
 
 export const getTeamMemberById = (id: string) => teamMembers.find(m => m.id === id);
