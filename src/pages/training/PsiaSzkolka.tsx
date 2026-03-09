@@ -68,10 +68,6 @@ const PsiaSzkolka = () => {
                     <span className="text-primary mr-2">•</span>
                     Poniedziałki: <b>09.03</b> (18:30), 16.03 (18:30), 23.03 (18:30), 30.03 (18:30), 13.04 (18:30), 20.04 (18:30)
                   </li>
-                  <li>
-                    <span className="text-primary mr-2">•</span>
-                    Soboty: <b>21.03</b> (12:00), 28.03 (12:00), 11.04 (12:00), 18.04 (12:00), 02.05 (12:00), 09.05 (12:00)
-                  </li>
                 </ul>
               </div>
             </ul>

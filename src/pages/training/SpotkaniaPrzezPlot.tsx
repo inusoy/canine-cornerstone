@@ -56,12 +56,6 @@ const SpotkaniaPrzezPlot = () => {
                 showContactForm={true}
                 showButton={false}
                 price="180 zł"
-                buttons={[
-                  {
-                    text: "Formularz zapisowy 17.08",
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSc58ufGZ4K4x3PsFPiXQKXW-IbhJOkilcrkVY_eYoOvh4c7Jw/viewform"
-                  }
-                ]}
               />
               <li className="flex items-start">
                 <span className="font-semibold">Wysłanie ankiety nie jest równoznaczne z zapisem na spotkanie. Opiekunowie zakwalifikowanych psów otrzymają SMS z potwierdzeniem.</span>
