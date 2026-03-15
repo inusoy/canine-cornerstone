@@ -1,9 +1,10 @@
 import { useState, useMemo } from 'react';
-import { ChevronLeft, ChevronRight, CalendarDays, Plus } from 'lucide-react';
+import { ChevronLeft, ChevronRight, CalendarDays, Plus, AlertCircle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { Skeleton } from '@/components/ui/skeleton';
 import { AddEventDialog } from '@/components/schedule/AddEventDialog';
-import { TRAINERS, LOCATIONS, MOCK_EVENTS } from '@/data/scheduleData';
+import { useSupabaseSchedule } from '@/hooks/useSupabaseSchedule';
 import type { ScheduleEvent, Trainer } from '@/types/schedule';
 import { cn } from '@/lib/utils';
 
@@ -130,6 +131,8 @@ function EventBlock({ layout, trainer }: { layout: EventLayout; trainer: Trainer
 // ─── ScheduleView ─────────────────────────────────────────────────────────────
 
 export default function ScheduleView() {
+  const { trainers, locations, events, loading, error, refetch } = useSupabaseSchedule();
+
   const [weekOffset, setWeekOffset]           = useState(0);
   const [activeTrainers, setActiveTrainers]   = useState<Set<string>>(new Set());
   const [activeLocations, setActiveLocations] = useState<Set<string>>(new Set());
@@ -160,12 +163,12 @@ export default function ScheduleView() {
 
   const filteredEvents = useMemo(
     () =>
-      MOCK_EVENTS.filter((e) => {
+      events.filter((e) => {
         if (activeTrainers.size > 0 && !activeTrainers.has(e.trainerId)) return false;
         if (activeLocations.size > 0 && !activeLocations.has(e.locationId)) return false;
         return true;
       }),
-    [activeTrainers, activeLocations],
+    [events, activeTrainers, activeLocations],
   );
 
   const eventsByDay = useMemo(() => {
@@ -182,6 +185,75 @@ export default function ScheduleView() {
     weekDays.forEach((d) => (map[d] = layoutDay(eventsByDay[d])));
     return map;
   }, [eventsByDay, weekDays]);
+
+  // ── Loading skeleton ──────────────────────────────────────────────────────
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-6 space-y-4">
+          <div className="flex items-center gap-3">
+            <Skeleton className="h-9 w-9 rounded-lg" />
+            <div className="space-y-1">
+              <Skeleton className="h-5 w-36" />
+              <Skeleton className="h-3 w-52" />
+            </div>
+          </div>
+          <Separator />
+          <div className="flex items-center justify-between">
+            <Skeleton className="h-8 w-24" />
+            <Skeleton className="h-5 w-48" />
+            <Skeleton className="h-8 w-24" />
+          </div>
+          <div className="border rounded-lg overflow-hidden">
+            {/* Header row skeleton */}
+            <div className="flex border-b">
+              <div className="w-14 shrink-0 border-r bg-muted/30" />
+              {Array.from({ length: 7 }).map((_, i) => (
+                <div key={i} className="flex-1 py-3 flex flex-col items-center gap-1 border-r last:border-r-0">
+                  <Skeleton className="h-3 w-6" />
+                  <Skeleton className="h-7 w-7 rounded-full" />
+                  <Skeleton className="h-2 w-5" />
+                </div>
+              ))}
+            </div>
+            {/* Body skeleton */}
+            <div className="flex" style={{ height: 8 * HOUR_H }}>
+              <div className="w-14 shrink-0 border-r bg-muted/10" />
+              {Array.from({ length: 7 }).map((_, colIdx) => (
+                <div key={colIdx} className="flex-1 border-r last:border-r-0 relative p-1.5 space-y-1">
+                  {colIdx % 3 === 0 && <Skeleton className="absolute rounded" style={{ top: HOUR_H * 1.5, left: 4, right: 4, height: HOUR_H * 1.5 }} />}
+                  {colIdx % 3 === 1 && <Skeleton className="absolute rounded" style={{ top: HOUR_H * 3,   left: 4, right: 4, height: HOUR_H }} />}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // ── Error state ───────────────────────────────────────────────────────────
+  if (error) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center space-y-4 px-4">
+          <div className="flex justify-center">
+            <div className="p-3 rounded-full bg-destructive/10">
+              <AlertCircle className="h-8 w-8 text-destructive" />
+            </div>
+          </div>
+          <div>
+            <p className="font-semibold text-base">Nie udało się pobrać danych</p>
+            <p className="text-sm text-muted-foreground mt-1">{error}</p>
+          </div>
+          <Button variant="outline" onClick={refetch} className="gap-2">
+            <RefreshCw className="h-4 w-4" />
+            Spróbuj ponownie
+          </Button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -249,7 +321,7 @@ export default function ScheduleView() {
           {/* Trainer filter */}
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-xs text-muted-foreground font-medium w-20 shrink-0">Trenerka:</span>
-            {TRAINERS.map((t) => {
+            {trainers.map((t) => {
               const c = COLORS[t.colorCode];
               const active = activeTrainers.has(t.id);
               return (
@@ -284,7 +356,7 @@ export default function ScheduleView() {
           {/* Location filter */}
           <div className="flex flex-wrap items-center gap-2">
             <span className="text-xs text-muted-foreground font-medium w-20 shrink-0">Lokalizacja:</span>
-            {LOCATIONS.map((l) => {
+            {locations.map((l) => {
               const active = activeLocations.has(l.id);
               return (
                 <button
@@ -415,7 +487,7 @@ export default function ScheduleView() {
                       <EventBlock
                         key={layout.event.id}
                         layout={layout}
-                        trainer={TRAINERS.find((t) => t.id === layout.event.trainerId)}
+                        trainer={trainers.find((t) => t.id === layout.event.trainerId)}
                       />
                     ))}
                   </div>
@@ -430,8 +502,8 @@ export default function ScheduleView() {
 
       {/* Controlled add-event dialog */}
       <AddEventDialog
-        trainers={TRAINERS}
-        locations={LOCATIONS}
+        trainers={trainers}
+        locations={locations}
         open={dialogOpen}
         onOpenChange={setDialogOpen}
         defaultDate={dialogDate}
