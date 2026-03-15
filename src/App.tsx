@@ -24,6 +24,7 @@ import SpotkaniaPsiarzy from "./pages/SpotkaniaPsiarzy";
 import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import TeamMemberPage from "./pages/TeamMemberPage";
+import ScheduleView from '@/pages/ScheduleView';
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/spotkania-psiarzy" element={<SpotkaniaPsiarzy />} />
             <Route path="/search" element={<Search />} />
             <Route path="*" element={<NotFound />} />
+            <Route path="/grafik" element={<ScheduleView />} />
           </Routes>
         </BrowserRouter>
       </HelmetProvider>
