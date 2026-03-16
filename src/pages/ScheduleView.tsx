@@ -5,6 +5,7 @@ import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
 import { AddEventDialog } from '@/components/schedule/AddEventDialog';
 import { ScheduleEventBlock, type EventLayout } from '@/components/schedule/ScheduleEventBlock';
+import { EVENT_STATUS_CONFIG, TRAINER_LEFT_BORDER_CLASS } from '@/config/event-status';
 import { useSupabaseSchedule } from '@/hooks/useSupabaseSchedule';
 import type { ScheduleEvent } from '@/types/schedule';
 import { cn } from '@/lib/utils';
@@ -470,20 +471,23 @@ export default function ScheduleView() {
                     <div className="space-y-1 overflow-y-auto max-h-[92px] pr-0.5">
                       {visibleDayEvents.map((ev) => {
                         const trainer = trainers.find((t) => t.id === ev.trainerId);
-                        const color = trainer ? TRAINER_FILTER_COLORS[trainer.colorCode] : null;
+                        const statusConfig = EVENT_STATUS_CONFIG[ev.status];
+                        const trainerBorderClass = trainer
+                          ? TRAINER_LEFT_BORDER_CLASS[trainer.colorCode]
+                          : 'border-l-4 border-l-slate-400';
                         return (
                           <button
                             key={ev.id}
                             type="button"
                             onClick={() => openEditDialog(ev)}
-                            className="w-full rounded px-1.5 py-1 text-left text-[11px] leading-tight transition-colors hover:brightness-95"
-                            style={{
-                              backgroundColor: color?.light ?? '#e2e8f0',
-                              color: color?.text ?? '#334155',
-                              borderLeft: `3px solid ${color?.solid ?? '#94a3b8'}`,
-                            }}
+                            className={cn(
+                              'w-full rounded px-1.5 py-1 text-left text-[11px] leading-tight transition-colors hover:brightness-95 border',
+                              statusConfig.monthPillClass,
+                              trainerBorderClass,
+                            )}
                             title={`${ev.startTime} ${ev.title}`}
                           >
+                            <span className={cn('inline-block h-1.5 w-1.5 rounded-full mr-1.5 align-middle', statusConfig.dotClass)} />
                             <span className="font-medium">{ev.startTime}</span> {ev.title}
                           </button>
                         );

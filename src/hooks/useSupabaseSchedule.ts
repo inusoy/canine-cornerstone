@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
-import type { Trainer, Location, ScheduleEvent, LocationType } from '@/types/schedule';
+import type { Trainer, Location, ScheduleEvent, LocationType, EventStatus } from '@/types/schedule';
 
 // ─── Raw Supabase row shapes (snake_case) ─────────────────────────────────────
 
@@ -27,6 +27,7 @@ interface EventRow {
   location_id: string;
   is_external_rent: boolean;
   dogs_list: string[] | null;
+  status: EventStatus | null;
 }
 
 // ─── Mappers ──────────────────────────────────────────────────────────────────
@@ -59,6 +60,7 @@ function mapEvent(row: EventRow): ScheduleEvent {
     locationId:     row.location_id,
     isExternalRent: row.is_external_rent,
     dogsList:       row.dogs_list ?? [],
+    status:         row.status ?? 'available',
   };
 }
 

@@ -11,19 +11,15 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
+import { Badge } from '@/components/ui/badge';
 import { useToast } from '@/components/ui/use-toast';
+import { EVENT_STATUS_CONFIG, TRAINER_LEFT_BORDER_CLASS } from '@/config/event-status';
 import { supabase } from '@/lib/supabase';
 import type { ScheduleEvent, Trainer } from '@/types/schedule';
 
 const GRID_START = 7;
 const GRID_END = 22;
 const HOUR_H = 64;
-
-const COLORS = {
-  rose: { solid: '#f43f5e', light: '#ffe4e6', text: '#9f1239', border: '#fecdd3' },
-  emerald: { solid: '#10b981', light: '#d1fae5', text: '#064e3b', border: '#a7f3d0' },
-  violet: { solid: '#8b5cf6', light: '#ede9fe', text: '#4c1d95', border: '#ddd6fe' },
-} as const;
 
 function toMinutes(t: string): number {
   const [h, m] = t.split(':').map(Number);
@@ -56,7 +52,8 @@ export function ScheduleEventBlock({
   const endM = Math.min(toMinutes(event.endTime), GRID_END * 60) - GRID_START * 60;
   const top = (startM / 60) * HOUR_H;
   const height = Math.max(((endM - startM) / 60) * HOUR_H, 20);
-  const c = trainer ? COLORS[trainer.colorCode] : null;
+  const statusConfig = EVENT_STATUS_CONFIG[event.status];
+  const trainerBorderClass = trainer ? TRAINER_LEFT_BORDER_CLASS[trainer.colorCode] : 'border-l-4 border-l-slate-400';
 
   async function handleDelete() {
     setIsDeleting(true);
@@ -83,26 +80,23 @@ export function ScheduleEventBlock({
 
   return (
     <div
-      className="absolute z-10 rounded overflow-hidden text-[11px] leading-tight cursor-pointer select-none border"
+      className={[
+        'absolute z-10 rounded overflow-hidden text-[11px] leading-tight cursor-pointer select-none border',
+        statusConfig.blockClass,
+        trainerBorderClass,
+      ].join(' ')}
       style={{
         top,
         height,
         left: `calc(${(col / numCols) * 100}% + 2px)`,
         width: `calc(${(1 / numCols) * 100}% - 4px)`,
-        backgroundColor: c?.light ?? '#f1f5f9',
-        borderColor: c?.border ?? '#e2e8f0',
-        borderLeftWidth: '3px',
-        borderLeftColor: c?.solid ?? '#94a3b8',
       }}
       onClick={(e) => {
         e.stopPropagation();
         onEdit(event);
       }}
     >
-      <div
-        className="px-1.5 py-1 overflow-hidden h-full flex flex-col"
-        style={{ color: c?.text ?? '#334155' }}
-      >
+      <div className="px-1.5 py-1 overflow-hidden h-full flex flex-col">
         <div className="flex items-start justify-between gap-1">
           <span className="font-semibold truncate pr-1">{event.title}</span>
           <div className="flex items-center gap-0.5 shrink-0">
@@ -150,6 +144,11 @@ export function ScheduleEventBlock({
             </AlertDialog>
           </div>
         </div>
+        {height >= 30 && (
+          <Badge variant="outline" className={`w-fit px-1.5 py-0 text-[10px] leading-none ${statusConfig.badgeClass}`}>
+            {statusConfig.label}
+          </Badge>
+        )}
         {height >= 36 && <span className="opacity-70 truncate">{event.startTime}–{event.endTime}</span>}
         {height >= 52 && trainer && <span className="opacity-60 truncate mt-auto">{trainer.initials}</span>}
       </div>

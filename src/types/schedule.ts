@@ -14,6 +14,14 @@ export interface Location {
   type: LocationType;
 }
 
+export type EventStatus =
+  | 'available'
+  | 'booked'
+  | 'paid'
+  | 'cancelled'
+  | 'group_open'
+  | 'special_event';
+
 export interface ScheduleEvent {
   id: string;
   title: string;
@@ -28,4 +36,5 @@ export interface ScheduleEvent {
   locationId: string;
   isExternalRent: boolean;
   dogsList: string[];
+  status: EventStatus;
 }

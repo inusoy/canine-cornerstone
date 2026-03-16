@@ -20,9 +20,10 @@ import {
 } from '@/components/ui/select';
 import { Separator } from '@/components/ui/separator';
 import { useToast } from '@/components/ui/use-toast';
+import { EVENT_STATUS_OPTIONS } from '@/config/event-status';
 import { supabase } from '@/lib/supabase';
 import { TimePicker } from './TimePicker';
-import type { Trainer, Location, ScheduleEvent } from '@/types/schedule';
+import type { Trainer, Location, ScheduleEvent, EventStatus } from '@/types/schedule';
 
 function addOneHour(time: string): string {
   if (!time || !time.includes(':')) return '';
@@ -60,6 +61,7 @@ export function AddEventDialog({
   const [trainerId, setTrainerId] = useState('');
   const [locationId, setLocationId] = useState('');
   const [dogs, setDogs]           = useState('');
+  const [status, setStatus]       = useState<EventStatus>('available');
   const [isExternalRent, setIsExternalRent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -76,6 +78,7 @@ export function AddEventDialog({
         setTrainerId(eventToEdit.trainerId);
         setLocationId(eventToEdit.locationId);
         setDogs(eventToEdit.dogsList.join(', '));
+        setStatus(eventToEdit.status);
         setIsExternalRent(eventToEdit.isExternalRent);
       } else {
         setTitle('');
@@ -85,6 +88,7 @@ export function AddEventDialog({
         setTrainerId('');
         setLocationId('');
         setDogs('');
+        setStatus('available');
         setIsExternalRent(false);
       }
       setIsSubmitting(false);
@@ -134,6 +138,7 @@ export function AddEventDialog({
       location_id: locationId,
       is_external_rent: isExternalRent,
       dogs_list: parsedDogs,
+      status,
     };
 
     const { error } = eventToEdit
@@ -222,6 +227,23 @@ export function AddEventDialog({
                 Zaznacz, jeśli wydarzenie nie ma przypisanej trenerki Szczek Szczek.
               </p>
             </div>
+          </div>
+
+          {/* Status */}
+          <div className="space-y-1.5">
+            <Label>Status</Label>
+            <Select value={status} onValueChange={(value) => setStatus(value as EventStatus)} disabled={isSubmitting}>
+              <SelectTrigger>
+                <SelectValue placeholder="Wybierz status" />
+              </SelectTrigger>
+              <SelectContent>
+                {EVENT_STATUS_OPTIONS.map((item) => (
+                  <SelectItem key={item.value} value={item.value}>
+                    {item.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
           </div>
 
           <Separator />
