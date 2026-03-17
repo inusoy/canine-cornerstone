@@ -61,7 +61,7 @@ const PsiaAkademia = () => {
                 </li>
                 <li>
                   <span className="text-primary mr-2">•</span>
-                   Czwartki: <b>19.03</b>, 26.03, 02.04, 09.04, 16.04 o 18:00
+                   Czwartki: <b>09.04</b> o 18:00, 16.04 o 18:00, 23.04 o 18:00, 30.04 o 18:00, 07.05 o 18:00
                 </li>
               </ul>
             </div>
