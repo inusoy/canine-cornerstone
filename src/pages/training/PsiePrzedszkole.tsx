@@ -96,7 +96,7 @@ const PsiePrzedszkole = () => {
 
         <h2 className="text-2xl font-semibold mt-8">CO OTRZYMACIE?</h2>
         <p>
-          Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, na zakończenie kursu otrzymacie dyplom! Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji.
+          Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, na zakończenie kursu otrzymacie dyplom! Dostaniecie również zniżkę na salkę zabaw i eksploracji.
         </p>
         <p>Zadbajcie o Waszą relację i dalsze wspólne życie już dziś!</p>
 
