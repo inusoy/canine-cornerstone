@@ -64,7 +64,15 @@ const PsiePrzedszkole = () => {
                 <ul className="space-y-1 mt-1">
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Środy: <b>01.04</b> (18:00), 08.04 (18:00), 15.04 (18:00), 22.04 (18:00), 29.04 (18:00), 06.04 (18:00)
+                    Piątki: <b>08.05</b> (19:00), 15.05 (19:00), 22.05 (19:00), 29.05 (19:00), 05.06 (19:00), 12.06 (19:00)
+                  </li>
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    Soboty: <b>09.05</b> (13:00), 16.05 (13:00), 23.05 (13:00), 30.05 (13:00), 06.06 (13:00), 13.06 (13:00)
+                  </li>
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    Środy: <b>13.05</b> (18:00), 20.05 (18:00), 27.05 (18:00), 03.06 (18:00), 10.06 (18:00), 17.06 (18:00)
                   </li>
                 </ul>
               </div>
@@ -88,7 +96,7 @@ const PsiePrzedszkole = () => {
 
         <h2 className="text-2xl font-semibold mt-8">CO OTRZYMACIE?</h2>
         <p>
-          Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, dostaniecie na start powitalny prezent, coś dla psa i człowieka, a na zakończenie dyplom. Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji.
+          Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, na zakończenie kursu otrzymacie dyplom! Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji.
         </p>
         <p>Zadbajcie o Waszą relację i dalsze wspólne życie już dziś!</p>
 

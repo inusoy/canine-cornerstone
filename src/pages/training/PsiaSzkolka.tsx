@@ -66,7 +66,11 @@ const PsiaSzkolka = () => {
                 <ul className="space-y-1 mt-1">
                   <li>
                     <span className="text-primary mr-2">•</span>
-                    Piątki: <b>10.04</b> (19:00), 17.04 (19:00), 24.04 (19:00), 08.05 (19:00), 15.05 (19:00), 22.05 (19:00)
+                    Piątki: <b>08.05</b> (18:00), 15.05 (18:00), 22.05 (18:00), 29.05 (18:00), 05.06 (18:00), 12.06 (18:00)
+                  </li>
+                  <li>
+                    <span className="text-primary mr-2">•</span>
+                    Soboty: <b>09.05</b> (14:00), 16.05 (14:00), 23.05 (14:00), 30.05 (14:00), 06.06 (14:00), 13.06 (14:00)
                   </li>
                 </ul>
               </div>
@@ -89,7 +93,7 @@ const PsiaSzkolka = () => {
 
         <h2 className="text-2xl font-semibold mt-8">CO OTRZYMACIE?</h2>
         <p>
-          Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, dostaniecie na start powitalny prezent, coś dla psa i człowieka, a na zakończenie dyplom. Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji lub nosework.
+          Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, na zakończenie kursu otrzymacie dyplom! Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji lub nosework.
         </p>
         <p>Zadbajcie o Waszą relację i wspólne życie już dziś!</p>
         <h2 className="text-2xl font-semibold mt-8">WAŻNE</h2>

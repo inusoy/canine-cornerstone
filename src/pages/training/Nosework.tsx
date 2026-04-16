@@ -49,11 +49,17 @@ const Nosework = () => {
                   {
                     text: "Kalendarz kwiecień",
                     url: "https://docs.google.com/spreadsheets/d/1l0vEv6NPx1ophLoakXQubnzU4c5CcKGP2ZMPmKSR0lo/edit?usp=sharing"
+                  },
+                  {
+                    text: "Kalendarz maj",
+                    url: "https://docs.google.com/spreadsheets/d/1QLZBOx8Q8PH0009Db4rCNSMWZdMpFjOsA4qScjKTfBM/edit?usp=sharing"
                   }
                 ]}
                 priceMultiple={[
-                  { description: 'Pojedyncze zajęcia', price: '90 zł/30 - 45 min' },
-                  { description: 'Pakiet dla początkujących Nos w Ruch', price: '500 zł/6 zajęć' }
+                  { description: 'Pojedyncze zajęcia', price: '105 zł/30 - 45 min' },
+                  { description: 'Pakiet 4 zajęć', price: '390 zł/4 zajęcia' },
+                  { description: 'Pakiet 6 zajęć', price: '570 zł/6 zajęć' },
+                  { description: 'Nosework w parach', price: '80 zł/30 - 45 min' }
                 ]}/>
             </ul>
           </div>
