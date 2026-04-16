@@ -71,10 +71,15 @@ const products: Product[] = [
 ];
 
 // Export all products for search functionality
-export const allProducts = products.sort((a, b) => a.homepagePriority - b.homepagePriority);
+export const allProducts = products
+  .filter(product => product.enabled !== false)
+  .sort((a, b) => a.homepagePriority - b.homepagePriority);
 
 // Export only training-related products for the training menu and homepage
 // This is a filtered and sorted version of the products array
 export const trainingProducts = products.filter(product => 
   product.link.startsWith("/training/")
+  && product.enabled !== false
 ).sort((a, b) => a.homepagePriority - b.homepagePriority);
+
+// Note: add `enabled: false` to any product above to hide it from the homepage and menu

@@ -7,4 +7,5 @@ export interface Product {
   fullWidth?: boolean;
   description?: string;
   price?: string;
+  enabled?: boolean;
 }
