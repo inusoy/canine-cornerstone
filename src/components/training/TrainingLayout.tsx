@@ -1,14 +1,8 @@
 import { ReactNode } from "react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Suspense, lazy } from "react";
-
-// Lazy-load components for better performance
-const LazyScrollArea = lazy(() => import("@/components/ui/scroll-area").then(module => ({ default: module.ScrollArea })));
 
 interface TrainingLayoutProps {
   title: string;
@@ -56,21 +50,11 @@ const TrainingLayout = ({
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className={isMobile ? "" : "sticky top-28"}>
+              <div className="lg:sticky lg:top-28">
                 <Card className="p-6 shadow-md">
-                  {isMobile ? (
-                    <div className="space-y-6">
-                      {sidebarContent}
-                    </div>
-                  ) : (
-                    <Suspense fallback={<div className="p-4 animate-pulse">Ładowanie...</div>}>
-                      <LazyScrollArea className="max-h-[calc(100vh-200px)]">
-                        <div className="space-y-6">
-                          {sidebarContent}
-                        </div>
-                      </LazyScrollArea>
-                    </Suspense>
-                  )}
+                  <div className="space-y-6 lg:max-h-[calc(100vh-9rem)] lg:overflow-y-auto lg:pr-2">
+                    {sidebarContent}
+                  </div>
                 </Card>
               </div>
             </div>
