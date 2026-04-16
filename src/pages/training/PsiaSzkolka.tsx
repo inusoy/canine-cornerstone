@@ -93,7 +93,7 @@ const PsiaSzkolka = () => {
 
         <h2 className="text-2xl font-semibold mt-8">CO OTRZYMACIE?</h2>
         <p>
-          Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, na zakończenie kursu otrzymacie dyplom! Dostaniecie również zniżkę na spacer socjalizacyjny i salkę zabaw i eksploracji lub nosework.
+          Każdy uczestnik otrzyma dostęp do webinarów i materiałów przygotowanych na potrzeby kursu. Dodatkowo, na zakończenie kursu otrzymacie dyplom! Dostaniecie również zniżkę na salkę zabaw i eksploracji lub nosework.
         </p>
         <p>Zadbajcie o Waszą relację i wspólne życie już dziś!</p>
         <h2 className="text-2xl font-semibold mt-8">WAŻNE</h2>
