@@ -86,8 +86,8 @@ export const teamMembers: TeamMember[] = [
         id: 'dagmara-selent',
         name: 'Dagmara Selent',
         role: [
-            'Behawiorystka, trenerka szkolenia psów, trenerka aktywności węchowych w trakcie szkolenia i wolontariuszka w Ekostraży.',
-            'Spotkacie ją na zajęciach grupowych psiego przedszkola i psiej szkółki.'
+            'Behawiorystka, trenerka szkolenia psów, instruktor noseworku i wolontariuszka w Ekostraży.',
+            'Spotkacie ją na noseworku, zajęciach grupowych psiego przedszkola i psiej szkółki.'
         ],
         image: '/images/Dagmara.jpg',
         bio: [
@@ -97,19 +97,12 @@ export const teamMembers: TeamMember[] = [
         ],
         credentialSections: [
             {
-                title: 'Kursy',
+                title: 'Kwalifikacje',
                 items: [
                     'Kurs trenera szkolenia psów - prowadzący: Zosia Zaniewska-Wojtków, Piotr Wojtków',
-                    'Kurs behawiorysty psów - prowadzący: Zosia Zaniewska-Wojtków, Piotr Wojtków'
-                ]
-            },
-            {
-                title: 'W toku',
-                items: [
+                    'Kurs behawiorysty psów - prowadzący: Zosia Zaniewska-Wojtków, Piotr Wojtków',
                     'Kurs trenera aktywności węchowych - Nosework Europa i Chilaland Nosework Poznań'
-                ],
-                note: 'Lista nie obejmuje krótszych webinarów i seminariów.'
-
+                ]
             }
         ]
     },

@@ -57,11 +57,7 @@ const PsiaAkademia = () => {
               <ul className="space-y-1 mt-1">
                 <li>
                   <span className="text-primary mr-2">•</span>
-                   Weekendowy: <b>28.03</b>, 11.04, 18.04 lub 19.04, 10.05, 16.05 o 12:00
-                </li>
-                <li>
-                  <span className="text-primary mr-2">•</span>
-                   Czwartki: <b>09.04</b> o 18:00, 16.04 o 18:00, 23.04 o 18:00, 30.04 o 18:00, 07.05 o 18:00
+                   Weekendowy: Sob. <b>23.05</b> (12:00), Sob. 30.05 (12:00), Sob. 13.06 (12:00), Niedz. 21.06 (12:00), Niedz. 28.06 (12:00)
                 </li>
               </ul>
             </div>
