@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from '@emailjs/browser';
 import { trainingProducts } from "@/data/products";
+import { pushToDataLayer } from "@/lib/analytics";
 
 export const ContactForm = () => {
   const { toast } = useToast();
@@ -47,6 +48,14 @@ export const ContactForm = () => {
         },
         '_kObRF1b779O1PnpK'
       );
+      // SUKCES: Push do dataLayer z danymi First-Party dla Enhanced Conversions
+      pushToDataLayer('generate_lead', {
+        form_id: 'contact_main',
+        program_selected: formData.program,
+        user_data: {
+          email: formData.email, // GTM zahashuje to przed wysyłką do Google Ads
+        }
+      });
       toast({
         title: "WIADOMOŚĆ WYSŁANA",
         description: "DZIĘKUJEMY ZA KONTAKT. ODPOWIEMY NAJSZYBCIEJ JAK TO MOŻLIWE."

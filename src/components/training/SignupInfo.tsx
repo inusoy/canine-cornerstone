@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import PriceTag from './PriceTag';
+import { pushToDataLayer } from "@/lib/analytics";
 
 // Interfejs dla niestandardowego linku
 interface CustomLink {
@@ -30,6 +31,14 @@ interface SignupInfoProps {
   priceMultiple?: { description: string; price: string }[];
 }
 
+// Funkcja pomocnicza w komponencie
+const handleContactClick = (method: string, targetUrl: string) => {
+  pushToDataLayer('contact_click', {
+    contact_method: method,
+    target_url: targetUrl
+  });
+};
+
 export const SignupInfo: React.FC<SignupInfoProps> = ({
   showFacebook = true,
   showInstagram = true,
@@ -51,19 +60,19 @@ export const SignupInfo: React.FC<SignupInfoProps> = ({
         {showFacebook && (
           <li className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span> Poprzez wiadomość prywatną na <a href="https://www.facebook.com/profile.php?id=100089173953561">Facebooku</a>,</span>
+            <span> Poprzez wiadomość prywatną na <a href="https://www.facebook.com/profile.php?id=100089173953561" onClick={() => handleContactClick('facebook', 'https://www.facebook.com/profile.php?id=100089173953561')}>Facebooku</a>,</span>
           </li>
         )}
         {showInstagram && (
           <li className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span> Poprzez wiadomość prywatną na <a href="https://www.instagram.com/szczekszczekwroclaw/">Instagramie</a>,</span>
+            <span> Poprzez wiadomość prywatną na <a href="https://www.instagram.com/szczekszczekwroclaw/" onClick={() => handleContactClick('instagram', 'https://www.instagram.com/szczekszczekwroclaw/')}>Instagramie</a>,</span>
           </li>
         )}
         {showSMS && (
           <li className="flex items-start">
             <span className="text-primary mr-2">•</span>
-            <span>SMSem <a href="tel:+48504267825">+48 504 267 825</a>.</span>
+            <span>SMSem <a href="tel:+48504267825" onClick={() => handleContactClick('sms', 'tel:+48504267825')}>+48 504 267 825</a>.</span>
           </li>
         )}
         {showContactForm && (

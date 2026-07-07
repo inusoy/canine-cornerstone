@@ -24,45 +24,54 @@ import SpotkaniaPsiarzy from "./pages/SpotkaniaPsiarzy";
 import ScrollToTop from "./components/ScrollToTop";
 import About from "./pages/About";
 import TeamMemberPage from "./pages/TeamMemberPage";
+import { usePageView } from "./hooks/usePageView";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <HelmetProvider>
-        <Toaster />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route
-              path="/"
-              element={siteConfig.maintenanceMode ? <MaintenancePage /> : <Navigate to="/home" replace />}
-            />
-            <Route path="/home" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/about/:id" element={<TeamMemberPage />} />
-            <Route path="/training/nosework" element={<Nosework />} />
-            <Route path="/training/psia-szkolka" element={<PsiaSzkolka />} />
-            <Route path="/training/psia-akademia" element={<PsiaAkademia />} />
-            <Route path="/training/psie-przedszkole" element={<PsiePrzedszkole />} />
-            <Route path="/training/spacery-socjalizacyjne" element={<SpacerySocjalizacyjne />} />
-            <Route path="/training/spotkania-przez-plot" element={<SpotkaniaPrzezPlot />} />
-            <Route path="/training/sala-zabaw" element={<SalaZabaw />} />
-            <Route path="/training/treningi-indywidualne" element={<TreningiIndywidualne />} />
-            <Route path="/training/konsultacje-behawioralne" element={<KonsultacjeBehawioralne />} />
-            <Route path="/training/lekout" element={<LekOut />} />
-            <Route path="/contact" element={<Navigate to="/kontakt" replace />} />
-            <Route path="/kontakt" element={<Kontakt />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/spotkania-psiarzy" element={<SpotkaniaPsiarzy />} />
-            <Route path="/search" element={<Search />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </HelmetProvider>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const AnalyticsWrapper = () => {
+  usePageView();
+  return null;
+};
+
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <HelmetProvider>
+          <Toaster />
+          <BrowserRouter>
+            <AnalyticsWrapper />
+            <ScrollToTop />
+            <Routes>
+              <Route
+                path="/"
+                element={siteConfig.maintenanceMode ? <MaintenancePage /> : <Navigate to="/home" replace />}
+              />
+              <Route path="/home" element={<Index />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/about/:id" element={<TeamMemberPage />} />
+              <Route path="/training/nosework" element={<Nosework />} />
+              <Route path="/training/psia-szkolka" element={<PsiaSzkolka />} />
+              <Route path="/training/psia-akademia" element={<PsiaAkademia />} />
+              <Route path="/training/psie-przedszkole" element={<PsiePrzedszkole />} />
+              <Route path="/training/spacery-socjalizacyjne" element={<SpacerySocjalizacyjne />} />
+              <Route path="/training/spotkania-przez-plot" element={<SpotkaniaPrzezPlot />} />
+              <Route path="/training/sala-zabaw" element={<SalaZabaw />} />
+              <Route path="/training/treningi-indywidualne" element={<TreningiIndywidualne />} />
+              <Route path="/training/konsultacje-behawioralne" element={<KonsultacjeBehawioralne />} />
+              <Route path="/training/lekout" element={<LekOut />} />
+              <Route path="/contact" element={<Navigate to="/kontakt" replace />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/spotkania-psiarzy" element={<SpotkaniaPsiarzy />} />
+              <Route path="/search" element={<Search />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </HelmetProvider>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
