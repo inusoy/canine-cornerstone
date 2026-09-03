@@ -39,7 +39,7 @@ const Nosework = () => {
                 <span className="text-primary mr-2">•</span>
                 <span><b>Dla kogo?</b>
                   <ul>
-                    Dla psów na poziomie początkującym i na poziomie klas 0 oraz 1 w wiodących organizacjach nosework w Polsce.
+                    Dla psów na każdym poziomie zaawansowania i startujących od zera.
                   </ul></span>
               </li>
             <SignupInfo
