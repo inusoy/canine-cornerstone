@@ -13,6 +13,7 @@ export const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     program: "",
     message: ""
   });
@@ -43,6 +44,7 @@ export const ContactForm = () => {
           to_email: 'kontakt@szczekszczek.pl',
           from_name: formData.name,
           from_email: formData.email,
+          phone_number: formData.phone,
           program: formData.program,
           message: formData.message,
         },
@@ -60,7 +62,7 @@ export const ContactForm = () => {
         title: "WIADOMOŚĆ WYSŁANA",
         description: "DZIĘKUJEMY ZA KONTAKT. ODPOWIEMY NAJSZYBCIEJ JAK TO MOŻLIWE."
       });
-      setFormData({ name: "", email: "", program: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", program: "", message: "" });
     } catch (error) {
       console.error("Error sending email:", error);
       toast({
@@ -97,6 +99,16 @@ export const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-2 uppercase">TELEFON</label>
+          <Input
+            name="phone"
+            type="tel"
+            placeholder="Opcjonalnie – ułatwi nam to szybki kontakt w sprawie Twojego psa."
+            value={formData.phone}
+            onChange={handleChange}
           />
         </div>
         <div>

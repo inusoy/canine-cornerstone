@@ -52,15 +52,6 @@ const PsiaAkademia = () => {
               showContactForm={false}
               price="520 zł/pakiet lub 480 zł dla absolwentów szkoleń w Szczek Szczek"
             />
-            <div className="mt-4">
-              <p className="font-medium mt-2">Najbliższe grupy:</p>
-              <ul className="space-y-1 mt-1">
-                <li>
-                  <span className="text-primary mr-2">•</span>
-                   Weekendowy: Sob. <b>23.05</b> (12:00), Sob. 30.05 (12:00), Sob. 13.06 (12:00), Niedz. 21.06 (12:00), Niedz. 28.06 (12:00)
-                </li>
-              </ul>
-            </div>
           </div>
         }
       >
