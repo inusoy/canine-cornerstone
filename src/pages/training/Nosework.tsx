@@ -47,8 +47,8 @@ const Nosework = () => {
                 showButton={false}
                 buttons={[
                   {
-                    text: "Kalendarz październik",
-                    url: "https://docs.google.com/spreadsheets/d/1-dzv4tycE_pzda-MepLWS05iA9v8DlDiuf4bcwn1SLE/edit?usp=sharing"
+                    text: "Kalendarz listopad",
+                    url: "https://docs.google.com/spreadsheets/d/1U-kQxfYH4AZr0QOtuobZLLng_nWqxKQMyrmZoCcZn-E/edit?usp=sharing"
                   }
                 ]}
                 priceMultiple={[
